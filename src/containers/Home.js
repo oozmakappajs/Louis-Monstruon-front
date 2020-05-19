@@ -1,11 +1,15 @@
 import React from 'react';
 import '../styles/scss/main.scss';
+import logo from '../assets/logo/logo_1.png';
 
 const Home = () => {
   return (
     <>
-     <h1>HOLA OOZMAKAPPA.JS aqui va el logo bebé</h1>
-      <p className="sass">esto es sass</p>
+     <h1>HELLO OOZMAKAPPA.JS</h1>
+      <p> Here goes the logo baby</p>
+      <div class='image-container'>
+        <img src={logo} alt="logo"/>
+      </div>
     </>
   )
 }
