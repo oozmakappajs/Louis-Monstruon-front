@@ -7,11 +7,11 @@ const Home = () => {
     <>
       <h1>HELLO OOZMAKAPPA.JS</h1>
       <p> Here goes the logo baby</p>
-      <div className='image-container'>
+      <div className="image-container">
         <img src={logo} alt="logo" />
       </div>
     </>
-  )
-}
+  );
+};
 
 export default Home;

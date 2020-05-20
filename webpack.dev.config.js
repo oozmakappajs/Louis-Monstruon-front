@@ -12,7 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js',
     publicPath: 'http://localhost:9000/',
-    chunkFilename: 'js/[id].[chunkhash].js'
+    chunkFilename: 'js/[id].[chunkhash].js',
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
@@ -29,11 +29,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ]
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.css$/,
@@ -42,10 +38,10 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1
-            }
+              importLoaders: 1,
+            },
           },
-        ]
+        ],
       },
       {
         test: /\.jpg|png|gif|woff|eot|ttf|svg|mp4|webm$/,
@@ -53,15 +49,15 @@ module.exports = {
           loader: 'file-loader',
           options: {
             outputPath: 'assets/',
-          }
-        }
+          },
+        },
       },
-    ]
+    ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public/index.html')
+      template: path.resolve(__dirname, 'public/index.html'),
     }),
     new WebpackPwaManifestPlugin({
       name: 'Louis Monstruon',
@@ -72,12 +68,10 @@ module.exports = {
       icons: [
         {
           src: path.resolve('src/assets/images/logo_1.png'),
-          sizes: [96, 128, 192, 256, 384, 512]
-        }
-      ]
+          sizes: [96, 128, 192, 256, 384, 512],
+        },
+      ],
     }),
-    new WorkboxWebpackPlugin.GenerateSW()
+    new WorkboxWebpackPlugin.GenerateSW(),
   ],
-}
-
-
+};

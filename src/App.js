@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from '../containers/Home.js';
+import Home from './pages/Home';
 
 const App = () => {
   console.log('TESTING REACT');
@@ -11,6 +11,6 @@ const App = () => {
       </Switch>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
