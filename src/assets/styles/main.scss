@@ -6,7 +6,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: map-get(map-get($palette, darkTheme), background);
+  // background-color: map-get(map-get($palette, darkTheme), background);
   color: map-get(map-get($palette, primary), purple);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;

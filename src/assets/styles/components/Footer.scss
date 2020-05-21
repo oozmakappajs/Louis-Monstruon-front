@@ -1,0 +1,13 @@
+@import '../lib/palette.scss';
+
+.Footer {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &__brand {
+    // color: map-get(map-get($palette,greyColors),black);
+    color: map-get(map-get($palette, primary), blue);
+  }
+}
