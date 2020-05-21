@@ -1,10 +1,5 @@
 {
   "version": 2,
-  "name": "Louis Monstruon",
-  "alias": [
-    "lm",
-    "louismonstruon"
-  ],
   "builds": [
     {
       "use": "@now/static-build",
@@ -12,6 +7,10 @@
     }
   ],
   "routes": [
+    {
+      "src": "(.*).css",
+      "dest": "/$1.css"
+    },
     {
       "src": "(.*).js",
       "dest": "/$1.js"
