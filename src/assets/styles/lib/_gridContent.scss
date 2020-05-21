@@ -1,0 +1,21 @@
+.content {
+  grid-area: content;
+  display: grid;
+  width: 100%;
+  min-height: 300px;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35% 32.5% 32.5%;
+}
+
+@media screen and (min-width: 375px) {
+  .content {
+    grid-template-rows: 36% 32% 32%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
