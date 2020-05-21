@@ -1,8 +1,38 @@
 import React from 'react';
 
-const Profile = () => {
+import '../assets/styles/pages/profile.scss';
+
+const Profile = (props) => {
   return (
-    <h1>Esta el la pantalla de Profile</h1>
+    <>
+      <header className="header">
+        <h2>Header</h2>
+      </header>
+      <main className="content">
+        <section className="profile_header">
+          <div>
+            <p>Header Profile</p>
+          </div>
+        </section>
+        <section className="profile_content">
+          <div>
+            <p>favorites | history purchase</p>
+          </div>
+          <div>
+            <p>favorites | history purchase</p>
+          </div>
+          <div>
+            <p>favorites | history purchase</p>
+          </div>
+          <div>
+            <p>favorites | history purchase</p>
+          </div>
+        </section>
+      </main>
+      <nav className="menu_navigation">
+        <h2>Menu de Navegación</h2>
+      </nav>
+    </>
   );
 };
 

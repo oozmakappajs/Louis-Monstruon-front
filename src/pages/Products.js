@@ -1,8 +1,93 @@
 import React from 'react';
 
-const Products = () => {
+import '../assets/styles/pages/products.scss';
+
+const Products = (props) => {
   return (
-    <h1>Esta el la pantalla de todos los Products de la categoria</h1>
+    <>
+      <header className="header">
+        <h2>Header</h2>
+      </header>
+      <main className="content">
+        <section className="products">
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+          <div>
+            <p>product</p>
+          </div>
+        </section>
+      </main>
+      <nav className="menu_navigation">
+        <h2>Menu de Navegación</h2>
+      </nav>
+    </>
   );
 };
 

@@ -1,8 +1,45 @@
 import React from 'react';
 
-const Settings = () => {
+import '../assets/styles/pages/settings.scss';
+
+const Settings = (props) => {
   return (
-    <h1>Esta el la pantalla de Settings</h1>
+    <>
+      <header className="header">
+        <h2>Header</h2>
+      </header>
+      <main className="content">
+        <section className="settings">
+          <div>
+            <p>setting option</p>
+          </div>
+          <div>
+            <p>setting option</p>
+          </div>
+          <div>
+            <p>setting option</p>
+          </div>
+          <div>
+            <p>setting option</p>
+          </div>
+          <div>
+            <p>setting option</p>
+          </div>
+          <div>
+            <p>setting option</p>
+          </div>
+          <div>
+            <p>setting option</p>
+          </div>
+          <div>
+            <p>setting option</p>
+          </div>
+        </section>
+      </main>
+      <nav className="menu_navigation">
+        <h2>Menu de Navegación</h2>
+      </nav>
+    </>
   );
 };
 
