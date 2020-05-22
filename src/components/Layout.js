@@ -5,7 +5,7 @@ import Footer from './Footer';
 const Layout = ({ children }) => {
   return (
     <>
-      <Header />
+      <Header type="logo" />
       {children}
       <Footer icons={true} />
     </>

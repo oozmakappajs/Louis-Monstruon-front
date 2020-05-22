@@ -13,4 +13,59 @@
     text-decoration: none;
     font-family: 'Permanent Marker', cursive;
   }
+  &__page-name {
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    &--arrow {
+      width: calc(100% - 32px);
+      text-align: center;
+      vertical-align: middle;
+      line-height: 30px;
+    }
+  }
+  &__container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 8px;
+  }
+  &__icon {
+    color: map-get(map-get($palette,greyColors),black);
+    background: map-get(map-get($palette,greyColors),silver);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      font-size: 16px;
+    }
+    &--arrow {
+      margin-left: 6px;
+    }
+    &--list {
+      &:hover {
+        border-radius: 50%;
+        background: map-get(map-get($palette,greyColors),black);
+        color:map-get(map-get($palette,lightTheme),white);
+      }
+    }
+  }
+  &__search {
+    justify-content: space-between;
+    &--bar {
+      width: calc(100% - 50px);
+      margin: 4px;
+      height: 32px;
+      border-radius: 20px;
+      background:#cccccc52 0% 0% no-repeat padding-box;
+      border-radius: 19px;
+    }
+    &--icon {
+      margin-right: 8px;
+    }
+  }
 }
