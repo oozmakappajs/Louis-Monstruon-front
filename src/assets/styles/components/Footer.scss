@@ -22,5 +22,11 @@
       color: map-get(map-get($palette,lightTheme),white);
       opacity: 1;
     }
-  }  
+  } 
+  &__terms {
+    color: map-get(map-get($palette,greyColors),black);
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+  } 
 }
