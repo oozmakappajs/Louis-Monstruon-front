@@ -1,0 +1,10 @@
+.results {
+  grid-area: 1 / 1 / 4 / 2;
+  overflow: scroll;
+}
+
+@media screen and (min-width: 500px) { 
+  .results {
+    grid-area: 1 / 1 / 4 / 3;
+  }
+}
