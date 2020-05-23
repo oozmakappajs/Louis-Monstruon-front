@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ArrowBackIos, FilterList } from '@material-ui/icons';
+import { ArrowBackIos, FilterList, Search } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/Header.scss';
 
@@ -58,7 +58,10 @@ const Header = (props) => (
     {
       props.type === 'search' && (
         <header className="header header__search">
-          <input type="text" className="header__search--bar" />
+          <div className="header__search--bar-container">
+            <input type="text" placeholder="Buscar" className="header__search--bar" />
+            <Search />
+          </div>
           <Link className="header__icon header__icon--list header__search--icon" to="/">
             <FilterList />
           </Link>
