@@ -5,7 +5,23 @@ import Card from './Card';
 const MainCarousel = () => {
   return (
     <div className="MainCarousel">
-      <Card />
+      <div className="MainCarousel__container">
+        <div className="MainCarousel-item">
+          <Card />
+        </div>
+        <div className="MainCarousel-item">
+          <Card />
+        </div>
+        <div className="MainCarousel-item">
+          <Card />
+        </div>
+        <div className="MainCarousel-item">
+          <Card />
+        </div>
+        <div className="MainCarousel-item">
+          <Card />
+        </div>
+      </div>
     </div>
   );
 };

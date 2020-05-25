@@ -24,6 +24,9 @@ const SmallCarousel = () => {
         <div className="SmallCarousel-item">
           <SmallCard />
         </div>
+        <div className="SmallCarousel-item">
+          <SmallCard />
+        </div>
       </div>
     </div>
   );
