@@ -13,10 +13,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5px 0;
   &--success {
     border: 2px solid map-get(map-get($palette,alert),success);
   }
   &--error {
     border: 2px solid map-get(map-get($palette,alert),failure);
+  }
+  &--blue {
+    background-color: map-get(map-get($palette,buttons),blue);
+    color: map-get(map-get($palette,lightTheme),white);
+  }
+  &--gradient {
+    color: map-get(map-get($palette,lightTheme),white);
+    background: transparent linear-gradient(90deg, #5533FF 0%, #0BD6FC 100%) 0% 0% no-repeat padding-box;
   }
 }

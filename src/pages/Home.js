@@ -15,7 +15,10 @@ const Home = () => {
       <SmallCarousel />
       <ProductCard />
       <div>
-        <Button />
+        <Button type="success" />
+        <Button type="error" />
+        <Button type="blue" />
+        <Button type="gradient" />
         <Tag />
         <Range />
         <Modal modal />
