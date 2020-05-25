@@ -16,9 +16,11 @@
   margin: 5px 0;
   &--success {
     border: 2px solid map-get(map-get($palette,alert),success);
+    color: map-get(map-get($palette,greyColors),black);
   }
   &--error {
     border: 2px solid map-get(map-get($palette,alert),failure);
+    color: map-get(map-get($palette,greyColors),black);
   }
   &--blue {
     background-color: map-get(map-get($palette,buttons),blue);

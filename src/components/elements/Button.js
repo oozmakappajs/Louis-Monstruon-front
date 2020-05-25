@@ -21,7 +21,7 @@ const Button = (props) => {
       {
         props.type === 'blue' && (
           <button type="submit" className="Button Button--blue">
-            Paypal
+            PayPal
           </button>
         )
       }

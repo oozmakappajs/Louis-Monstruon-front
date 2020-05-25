@@ -1,7 +1,7 @@
 @import '../lib/palette';
 @import '../lib/fonts';
 
-.QuantityCounter{
+.QuantityCounter {
   width: 86px;
   height: 24px;
   background: map-get(map-get($palette,lightTheme),white);

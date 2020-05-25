@@ -1,5 +1,5 @@
 import React from 'react';
-import { LocalGroceryStoreOutlined, Favorite, FavoriteBorder } from '@material-ui/icons';
+import { AddShoppingCart, LocalGroceryStoreOutlined, Favorite, FavoriteBorder } from '@material-ui/icons';
 import '../../assets/styles/elements/IconButton.scss';
 
 const IconButton = (props) => {
@@ -7,9 +7,15 @@ const IconButton = (props) => {
     <>
       {
         props.type === 'cart' && (
-          <button type="button" className="IconButton IconButton--cart">
-            <LocalGroceryStoreOutlined />
-          </button>
+          !props.isBuying ? (
+            <button type="button" className="IconButton IconButton--cart">
+              <LocalGroceryStoreOutlined />
+            </button>
+          ) : (
+            <button type="button" className="IconButton IconButton--cart">
+              <AddShoppingCart />
+            </button>
+          )
         )
       }
       {
