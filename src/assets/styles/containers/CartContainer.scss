@@ -1,0 +1,37 @@
+@import '../lib/palette';
+@import '../lib/fonts';
+
+.CartContainer {
+  font-family: 'Quicksand', sans-serif;
+  color: map-get(map-get($palette,greyColors), black);
+  height: 100vh;
+  &__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &-description {
+      color: map-get(map-get($palette,lightTheme), white);
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+    }
+    &-item {
+      display: flex;
+      width: calc(100% - 60px);
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 30px;
+      border-bottom: solid 1px #C1C1C1;
+      color: black;
+      min-height: 30px;
+      &--total {
+        font-weight: 900;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

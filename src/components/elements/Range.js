@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/elements/Range.scss';
+import '../../assets/styles/components/elements/Range.scss';
 
 const Range = () => {
   return (

@@ -1,5 +1,6 @@
-@import '../lib/palette';
-@import '../lib/fonts';
+@import '../../lib/fonts';
+@import  '../../lib/palette';
+
 
 .IconButton {
   width: 18px;
@@ -24,5 +25,14 @@
   &--cart {
     background: map-get(map-get($palette,secondary),purple);
     color: map-get(map-get($palette,darkTheme),content);
+  }
+  &--delete {
+    background: map-get(map-get($palette,lightTheme),white);
+    color: map-get(map-get($palette,alert),failure);
+    width: 24px;
+    height: 24px;
+    svg {
+      font-size: 16px;
+    }
   }
 }

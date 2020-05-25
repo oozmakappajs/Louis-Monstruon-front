@@ -10,6 +10,7 @@ import Range from '../components/elements/Range';
 import Modal from '../containers/Modal';
 import QuantityCounter from '../components/elements/QuantityCounter';
 import ProductContainer from '../containers/ProductContainer';
+import CartContainer from '../containers/CartContainer';
 
 const Home = () => {
   return (
@@ -30,6 +31,7 @@ const Home = () => {
         <IconButton type="cart" />
         <QuantityCounter />
         <ProductContainer />
+        <CartContainer />
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { RemoveCircleOutline, AddCircle } from '@material-ui/icons';
-import '../../assets/styles/elements/QuantityCounter.scss';
+import '../../assets/styles/components/elements/QuantityCounter.scss';
 
 const QuantityCounter = () => {
   return (

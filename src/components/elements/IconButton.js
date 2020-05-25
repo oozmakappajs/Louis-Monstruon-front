@@ -1,6 +1,6 @@
 import React from 'react';
-import { AddShoppingCart, LocalGroceryStoreOutlined, Favorite, FavoriteBorder } from '@material-ui/icons';
-import '../../assets/styles/elements/IconButton.scss';
+import { AddShoppingCart, LocalGroceryStoreOutlined, Favorite, FavoriteBorder, DeleteOutlined } from '@material-ui/icons';
+import '../../assets/styles/components/elements/IconButton.scss';
 
 const IconButton = (props) => {
   return (
@@ -29,6 +29,13 @@ const IconButton = (props) => {
               <FavoriteBorder />
             </button>
           )
+        )
+      }
+      {
+        props.type === 'delete' && (
+          <button type="button" className="IconButton IconButton--fav IconButton--delete">
+            <DeleteOutlined />
+          </button>
         )
       }
     </>
