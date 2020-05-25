@@ -1,0 +1,22 @@
+@import '../lib/palette';
+@import '../lib/fonts';
+
+.Button {
+  width: 283px;
+  height: 50px;
+  background: map-get(map-get($palette,lightTheme),white) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 4px #00000029;
+  border-radius: 25px;
+  opacity: 1;
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &--success {
+    border: 2px solid map-get(map-get($palette,alert),success);
+  }
+  &--error {
+    border: 2px solid map-get(map-get($palette,alert),failure);
+  }
+}
