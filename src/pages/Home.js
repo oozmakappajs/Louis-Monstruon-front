@@ -1,14 +1,14 @@
 import React from 'react';
 import '../assets/styles/main.scss';
-import Card from '../components/Carousel/Card';
-import SmallCard from '../components/Carousel/SmallCard';
+import MainCarousel from '../components/Carousel/MainCarousel';
+import SmallCarousel from '../components/Carousel/SmallCarousel';
 import ProductCard from '../components/ProductCard';
 
 const Home = () => {
   return (
     <>
-      <Card />
-      <SmallCard />
+      <MainCarousel />
+      <SmallCarousel />
       <ProductCard />
     </>
   );

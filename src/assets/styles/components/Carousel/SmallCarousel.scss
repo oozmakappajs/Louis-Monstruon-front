@@ -1,0 +1,27 @@
+.SmallCarousel {
+  width: 100%;
+  overflow: scroll;
+  position: relative;
+  &__container {
+    white-space: nowrap;
+    margin: 30px 0px;
+  }
+  &-item {
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+    &:hover ~ & {
+      transform: translate3d(100px, 0, 0);
+    }
+  }
+}
+.SmallCarousel__container:hover .SmallCarousel-item {
+  opacity: 0.3;
+}
+.SmallCarousel__container:hover .SmallCarousel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
