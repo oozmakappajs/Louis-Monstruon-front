@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/components/Carousel/MainCarousel.scss';
+import '../../assets/styles/containers/Carousel/MainCarousel.scss';
 import Card from './Card';
 
 const MainCarousel = () => {

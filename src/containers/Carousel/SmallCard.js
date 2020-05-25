@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/components/Carousel/SmallCard.scss';
+import '../../assets/styles/containers/Carousel/SmallCard.scss';
 import product from '../../assets/images/products/dino2.jpg';
 
 const SmallCard = () => {

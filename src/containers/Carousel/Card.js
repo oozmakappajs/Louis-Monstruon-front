@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/components/Carousel/Card.scss';
+import '../../assets/styles/containers/Carousel/Card.scss';
 import product from '../../assets/images/products/dino2.jpg';
 
 const Card = () => {
