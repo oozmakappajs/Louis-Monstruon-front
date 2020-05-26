@@ -18,6 +18,7 @@ import UserProfile from '../containers/UserProfile';
 import UserGroupedButtons from '../containers/UserGroupedButtons';
 import UserCard from '../containers/UserCard';
 import Settings from '../containers/Settings';
+import CardNotification from '../components/CardNotification';
 
 const Home = () => {
   return (
@@ -48,6 +49,7 @@ const Home = () => {
       <UserCard />
       <UserCard icon />
       <Settings />
+      <CardNotification />
     </>
   );
 };
