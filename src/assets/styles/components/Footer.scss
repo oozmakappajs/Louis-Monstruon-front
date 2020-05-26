@@ -9,6 +9,7 @@
   position: absolute;
   bottom: 0;
   border-top: 1px solid map-get(map-get($palette, greyColors), silver);
+  background: map-get(map-get($palette, lightTheme), white);
   &__icon {
     color: map-get(map-get($palette,greyColors),black);
     width: 32px;
@@ -29,4 +30,8 @@
     font-family: 'Quicksand', sans-serif;
     text-decoration: none;
   } 
+  &__transparent {
+    background: transparent;
+    border: none;
+  }
 }

@@ -56,6 +56,17 @@ const Header = (props) => (
       )
     }
     {
+      props.type === 'back' && (
+        <header className="header header--transparent ">
+          <div className="header__container">
+            <Link className="header__icon" to="/">
+              <ArrowBackIos className="header__icon--arrow" />
+            </Link>
+          </div>
+        </header>
+      )
+    }
+    {
       props.type === 'search' && (
         <header className="header header__search">
           <div className="header__search--bar-container">

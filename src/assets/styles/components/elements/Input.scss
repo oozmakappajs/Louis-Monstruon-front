@@ -6,14 +6,17 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: calc(100% - 70px); 
-  margin:0 35px;
+  width: calc(100% - 70px);
+  margin: 0 35px;
   margin-bottom:10px;
  &__input {
   font-family: 'Quicksand', sans-serif;
   border-bottom: 2px solid;
   width: 100%;
   font-size: 16px;
+  background: transparent;
+  padding: 10px 0;
+  opacity: 1;
     &:focus {
       outline: none;
     }

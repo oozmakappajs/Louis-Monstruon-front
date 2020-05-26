@@ -30,7 +30,7 @@ const Footer = (props) => (
           </Link>
         </footer>
       ) : (
-        <footer className="Footer">
+        <footer className="Footer Footer__transparent">
           <Link className="Footer__terms" to="/">
             terms and Conditions
           </Link>

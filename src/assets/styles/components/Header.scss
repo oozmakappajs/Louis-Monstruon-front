@@ -8,6 +8,12 @@
   justify-content: space-around;
   align-items: center;
   border-bottom: 1px solid map-get(map-get($palette, greyColors), silver);
+  background: map-get(map-get($palette, lightTheme), white);
+  position: absolute;
+  &--transparent {
+    background: transparent;
+    border: none;
+  }
   &__brand {
     color:  map-get(map-get($palette,primary),blue);
     text-decoration: none;
