@@ -10,11 +10,11 @@ const Settings = () => {
       <ul className="Settings__menu">
         <li className="Settings__menu-item">
           <p>Tema</p>
-          <SwitchButton />
+          <SwitchButton theme />
         </li>
         <li className="Settings__menu-item">
           <p>Push notifications</p>
-          ICON
+          <SwitchButton />
         </li>
         <li className="Settings__menu-item">
           <p>Push notifications</p>

@@ -23,6 +23,12 @@
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 34px;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 10px;
+  align-items: center;
+  color: grey;
+  padding-left: 10px;
   &:before {
     position: absolute;
     content: "";
@@ -39,10 +45,21 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+  &__off {
+    &:before {
+      content: "off";
+      background-image: none;
+      color: white;
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 input:checked + .slider {
-  background-color: white;
+  background-color: map-get(map-get($palette,darkTheme),content);
   box-shadow: 0px 0px 4px #00000029;
 }
 
