@@ -11,7 +11,8 @@
   justify-content: space-between;
   align-items: center;
   min-height: 50px;
-  background: map-get(map-get($palette, greyColors), lighter);
+  // background: map-get(map-get($palette, greyColors), lighter);
+  background: red;
   &__icon {
     margin-right: 8px;
   }
