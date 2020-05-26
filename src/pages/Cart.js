@@ -1,5 +1,4 @@
 import React from 'react';
-
 import '../assets/styles/pages/cart.scss';
 
 const Cart = (props) => {

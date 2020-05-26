@@ -1,33 +1,37 @@
 import React from 'react';
-
-import logo from '../assets/images/logo_2.png';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import '../assets/styles/pages/register.scss';
+import InputComponent from '../components/elements/InputComponent';
+import Button from '../components/elements/Button';
+import Logo from '../components/elements/Logo';
 
-const Register = (props) => {
+const Register = () => {
   return (
     <div className="modalView">
-      <header className="modalView_header">
-        <h2>Only button back</h2>
-      </header>
-      <main className="modalView_content">
+      <Header type="back" />
+      <main className="modalView_content register__modal">
         <section className="register">
-          <img src={logo} alt="Logo" className="auth_logo" />
-          <form>
-            <input type="text" placeholder="Correo" />
-            <input type="text" placeholder="Contraseña" />
-            <button type="submit">Iniciar sesion</button>
+          <Logo />
+          <form className="register__form">
+            <div className="register__form-inputs">
+              <InputComponent title="Nombre" />
+              <InputComponent title="Email" />
+              <InputComponent title="Confirma tu contraseña" />
+            </div>
+            <Button name="blueBase" buttonType="submit">Iniciar sesion</Button>
           </form>
         </section>
+        <div className="register__separator" />
         <section className="nextStep">
-          <button type="button">Siguiente</button>
-          <button type="button">Registrate con Google</button>
+          <Button name="purpleBase" buttonType="button">Siguiente</Button>
+          <Button name="google" buttonType="button">Registrate con </Button>
         </section>
       </main>
-      <footer className="modalView_termsAndConditions">
-        <h2>Terminos y condiciones</h2>
-      </footer>
+      <Footer />
     </div>
   );
 };
 
 export default Register;
+
