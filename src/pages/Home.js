@@ -15,8 +15,9 @@ import InputComponent from '../components/elements/InputComponent';
 import Logo from '../components/elements/Logo';
 import UserDetails from '../components/UserDetails';
 import UserProfile from '../containers/UserProfile';
-import UserGroupedButtons from '../containers/UserGroupedButtons'
+import UserGroupedButtons from '../containers/UserGroupedButtons';
 import UserCard from '../containers/UserCard';
+import Settings from '../containers/Settings';
 
 const Home = () => {
   return (
@@ -46,6 +47,7 @@ const Home = () => {
       <UserCard icon />
       <UserCard />
       <UserCard icon />
+      <Settings />
     </>
   );
 };
