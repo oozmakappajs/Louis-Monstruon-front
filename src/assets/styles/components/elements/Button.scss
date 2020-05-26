@@ -14,6 +14,9 @@
   justify-content: center;
   align-items: center;
   margin: 5px 0;
+  &:focus {
+    outline: none;
+  }
   &--success {
     border: 2px solid map-get(map-get($palette,alert),success);
     color: map-get(map-get($palette,greyColors),black);

@@ -1,0 +1,27 @@
+@import '../../lib/fonts';
+@import  '../../lib/palette';
+
+.InputComponent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - 70px); 
+  margin:0 35px;
+  margin-bottom:10px;
+ &__input {
+  font-family: 'Quicksand', sans-serif;
+  border-bottom: 2px solid;
+  width: 100%;
+  font-size: 16px;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: black;
+      font-size: 16px;
+      text-align: center;
+      opacity: 1 !important;
+    }
+  }
+}
