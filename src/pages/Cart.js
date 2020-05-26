@@ -1,17 +1,25 @@
 import React from 'react';
 
+import { getGlobalState } from '../Context';
+
 import '../assets/styles/pages/cart.scss';
 
 const Cart = (props) => {
+  const [{ cart }, dispatch] = getGlobalState();
+
+  const handleRemoveToCart = (payload) => {
+    return dispatch({ type: 'REMOVE_TO_CART' }, payload);
+  };
+
   return (
     <>
       <header className="header">
         <h2>Header</h2>
       </header>
       <main className="content">
-        <section className="cart">
+        <section className="cart" cart={cart}>
           <div>
-            <p>item cart</p>
+            <p onClick={() => handleRemoveToCart(2)}>item cart</p>
           </div>
           <div>
             <p>item cart</p>

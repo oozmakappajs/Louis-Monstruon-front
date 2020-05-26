@@ -1,7 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+
+import { Provider } from './Context';
+import reducer from './reducers/index';
 import App from './App';
 
 const container = document.getElementById('app');
 
-ReactDOM.render(<App />, container);
+render(
+  <Provider reducer={reducer}>
+    <App />
+  </Provider>,
+  container,
+);

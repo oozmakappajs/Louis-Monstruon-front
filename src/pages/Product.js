@@ -1,8 +1,32 @@
 import React from 'react';
 
+import { getGlobalState } from '../Context';
+
 import '../assets/styles/pages/product.scss';
 
 const Product = (props) => {
+  const [{ isAuth }, dispatch] = getGlobalState();
+
+  const item = {
+    id: '2a34a',
+    name: 'Producto 2',
+    count: 1,
+  };
+
+  const handleLike = () => {
+    if (!isAuth) {
+      props.history.push('/login');
+    }
+  };
+
+  const handleAddToCart = (payload) => {
+    return dispatch({ type: 'ADD_TO_CART', payload });
+  };
+
+  const goToPayment = () => {
+    props.history.push(`/payment?items=${item.id}`);
+  };
+
   return (
     <>
       <header className="header">
@@ -16,9 +40,9 @@ const Product = (props) => {
           <div className="product_actions">
             <p>product name</p>
             <p>product selection</p>
-            <p>product like</p>
-            <p>product payment button</p>
-            <p>product add to cart</p>
+            <button type="button" onClick={handleLike}>Like</button>
+            <button type="button" onClick={goToPayment}>Pagar</button>
+            <button type="button" onClick={() => handleAddToCart(item)}>Add to Cart</button>
           </div>
           <div className="product_description">
             <p>

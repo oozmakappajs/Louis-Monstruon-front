@@ -3,6 +3,11 @@ import React from 'react';
 import '../assets/styles/pages/notFound.scss';
 
 const NotFound = (props) => {
+
+  const goToProducts = () => {
+    props.history.push('/');
+  };
+
   return (
     <>
       <header className="header">
@@ -17,6 +22,7 @@ const NotFound = (props) => {
               💔😥
             </span>
           </p>
+          <button type="button" onClick={goToProducts}>Ver más productos</button>
         </section>
       </main>
       <nav className="menu_navigation">

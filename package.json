@@ -8,10 +8,11 @@
     "build:app": "webpack --config ./webpack.config.js --mode production",
     "build:dll": "webpack --config ./webpack.dll.config.js --mode production",
     "start:dev": "webpack-dev-server --config ./webpack.dev.config.js",
-    "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
+    "format": "prettier --write '{*.js,src/**/*.js}'",
     "lint": "eslint src/",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",

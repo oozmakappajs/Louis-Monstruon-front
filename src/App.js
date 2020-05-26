@@ -1,5 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+
+import { getGlobalState } from './Context';
 
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -15,11 +17,25 @@ import Payment from './pages/Payment';
 import NotFound from './pages/NotFound';
 
 const App = () => {
+  const [{ isAuth }] = getGlobalState();
+
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/register">
+          {
+            !isAuth ?
+              <Register /> :
+              <Redirect to="/" />
+          }
+        </Route>
+        <Route exact path="/login">
+          {
+            !isAuth ?
+              <Login /> :
+              <Redirect to="/" />
+          }
+        </Route>
         <Route exact path="/" component={Home} />
         <Route exact path="/notifications" component={Notifications} />
         <Route exact path="/search" component={Search} />
