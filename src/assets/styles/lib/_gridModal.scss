@@ -1,0 +1,45 @@
+@import '../lib/palette';
+
+.modalView {
+  position: absolute;
+  display: grid;
+  min-width: 320px;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5vh 89vh 6vh;
+  grid-template-areas: "modal-back-steps" "modal-content" "modal-terms-and-conditions";
+  background: map-get(map-get($palette, lightTheme), background);
+  color: map-get(map-get($palette, lightTheme), content);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  &_header {
+    grid-area: modal-back-steps;
+  }
+  &_content {
+    grid-area: modal-content;
+  }
+  &_termsAndConditions {
+    grid-area: modal-terms-and-conditions;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .modalView {
+    grid-template-rows: 6vh 87vh 7vh;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .modalView {
+    grid-template-rows: 5vh 89vh 6vh;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .modalView {
+    grid-template-rows: 7vh 85vh 8vh;
+  }
+}

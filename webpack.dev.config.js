@@ -16,12 +16,21 @@ module.exports = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
+    historyApiFallback: true,
     open: true,
     port: 9000,
     hot: true,
   },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        enforce: 'pre',
+        use: {
+          loader: 'eslint-loader',
+        },
+      },
       {
         test: /\.js$/,
         use: 'babel-loader',
@@ -59,19 +68,19 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
     }),
-    new WebpackPwaManifestPlugin({
-      name: 'Louis Monstruon',
-      short_name: 'LM',
-      description: 'set a description',
-      background_color: '#F2F6F5',
-      theme_color: '#5BDBC3',
-      icons: [
-        {
-          src: path.resolve('src/assets/images/logo_1.png'),
-          sizes: [96, 128, 192, 256, 384, 512],
-        },
-      ],
-    }),
-    new WorkboxWebpackPlugin.GenerateSW(),
+    // new WebpackPwaManifestPlugin({
+    //   name: 'Louis Monstruon',
+    //   short_name: 'LM',
+    //   description: 'set a description',
+    //   background_color: '#F2F6F5',
+    //   theme_color: '#5BDBC3',
+    //   icons: [
+    //     {
+    //       src: path.resolve('src/assets/images/logo_1.png'),
+    //       sizes: [96, 128, 192, 256, 384, 512],
+    //     },
+    //   ],
+    // }),
+    // new WorkboxWebpackPlugin.GenerateSW(),
   ],
 };
