@@ -1,0 +1,22 @@
+@import '../lib/fonts';
+@import '../lib/palette';
+
+.UserGroupedButtons {
+  width: 100%;
+  display:flex;
+  &__item {
+    font-family: 'Quicksand', sans-serif;
+    width: 50%;
+    height: 45px;
+    box-shadow: 2px 0px 2px #00000029;
+    border-radius: 5px 5px 0px 0px;
+    opacity: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    &:active,  &:hover {
+      background:map-get(map-get($palette,primary),blue) 0% 0% no-repeat padding-box;
+      color: white;
+    }
+  }
+}

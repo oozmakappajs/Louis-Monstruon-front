@@ -1,0 +1,14 @@
+.MainCarousel {
+  width: 100%;
+  overflow: scroll;
+  position: relative;
+  &__container {
+    white-space: nowrap;
+  }
+  &-item {
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+  }
+}

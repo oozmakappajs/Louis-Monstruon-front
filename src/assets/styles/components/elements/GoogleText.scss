@@ -1,0 +1,20 @@
+@import '../../lib/fonts';
+
+.GoogleText {
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 5px;
+  &--blue {
+    color: #4285F4;;
+  }
+  &--red {
+    color:#EA4335;
+  }
+  &--yellow {
+    color: #FBBC05;
+  }
+
+  &--green {
+    color:#34A853;;
+  }
+}

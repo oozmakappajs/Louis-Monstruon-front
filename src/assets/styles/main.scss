@@ -1,23 +1,13 @@
-@import './lib/palette';
-
-body {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-color: map-get(map-get($palette, darkTheme), background);
-  color: map-get(map-get($palette, primary), purple);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1em;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
 @import './lib/gridWrapper';
 @import './lib/gridContent';
 @import './lib/gridModal';
+@import './lib/palette';
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
 
 .auth_logo {
   width: 100%;

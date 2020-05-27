@@ -1,9 +1,12 @@
 $palette: (
     primary: (
-      blue: #5BDBC3,
-      purple:#594592,
+      blue: #5BDBC3
+    ),
+    secondary: (
+      purple:#594592
     ),
     lightTheme: (
+      white: #FFFFFF,
       background: #F2F6F5,
       content:#2B2B28,
       lighter: #48525C
@@ -19,10 +22,15 @@ $palette: (
       coal:#333333,
       silver: #CCCCCC,
       black: #000000,
+      light: #C1C1C1,
+      lighter:#F1F1F1,
     ),
     alert: (
       failure:#A50907,
       warning: #F9C805,
       success: #2DB428,
-    )
+    ),
+    buttons: (
+      blue: #005EA6,
+    ),
 );

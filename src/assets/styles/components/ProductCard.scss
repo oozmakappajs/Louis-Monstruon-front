@@ -1,0 +1,42 @@
+@import '../lib/palette';
+@import '../lib/fonts';
+
+.productCard {
+  font-family: 'Quicksand', sans-serif;
+  height: 500px;
+  width: calc(100% - 20px); 
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0px 0px 4px #00000029;
+  opacity: 1;
+  &__img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    &-container {
+      height: 387px;
+      width: 100%;
+    }
+  }
+  &__title {
+    font-size: 18px;
+  }
+  &__details {
+    padding:16px;
+    height: 78px;
+    border-top: 1px solid #F7F7F7;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: calc(100% - 24px);
+    &--price {
+      font-size: 28px;
+    }
+    &--state {
+      font-size: 20px;
+    }
+  }
+
+}

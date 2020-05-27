@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
+// import Layout from './components/Layout';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Product from './pages/Product';
@@ -17,6 +17,7 @@ import NotFound from './pages/NotFound';
 const App = () => {
   return (
     <BrowserRouter>
+      {/* <Layout> */}
       <Switch>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
@@ -31,6 +32,7 @@ const App = () => {
         <Route exact path="/:category/:product/:id" component={Product} />
         <Route component={NotFound} />
       </Switch>
+      {/* </Layout> */}
     </BrowserRouter>
   );
 };
