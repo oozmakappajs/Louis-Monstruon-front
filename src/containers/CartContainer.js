@@ -1,13 +1,10 @@
 import React from 'react';
 import '../assets/styles/containers/CartContainer.scss';
 import Button from '../components/elements/Button';
-import CartCard from '../components/CartCard';
 
 const CartContainer = () => {
   return (
     <div className="CartContainer">
-      <CartCard />
-      <CartCard />
       <div className="CartContainer__info">
         <div className="CartContainer__info-description">
           <div className="CartContainer__info-description">
@@ -25,7 +22,7 @@ const CartContainer = () => {
             </div>
           </div>
         </div>
-        <Button type="success" />
+        <Button name="success">Pagar</Button>
       </div>
     </div>
   );
