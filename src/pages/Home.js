@@ -10,7 +10,7 @@ import '../assets/styles/pages/home.scss';
 const Home = () => {
   return (
     <>
-      <Header type="logo" />
+      <Header type="logo"> LOUIS MONSTRUON</Header>
       <main className="content">
         <section className="featured">
           <MainCarousel />

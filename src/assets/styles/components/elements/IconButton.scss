@@ -14,13 +14,14 @@
   svg {
     font-size: 12px;
   }
-  &--emptyfav {
+  &--emptyfav, &--fav {
     background: map-get(map-get($palette,lightTheme),white);
     color: map-get(map-get($palette,darkTheme), background);
-  }
-  &--fav {
-    background: map-get(map-get($palette,lightTheme),white);
-    color: map-get(map-get($palette,secondary),purple);
+    width: 24px;
+    height: 24px;
+    svg {
+      font-size: 16px;
+    }
   }
   &--cart {
     background: map-get(map-get($palette,secondary),purple);

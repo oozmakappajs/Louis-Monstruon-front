@@ -10,7 +10,7 @@ const Header = (props) => (
       props.type === 'logo' && (
         <header className="header">
           <Link className="header__brand" to="/">
-            LOUIS MONSTRUON
+            {props.children}
           </Link>
         </header>
       )
@@ -19,7 +19,7 @@ const Header = (props) => (
       props.type === 'page' && (
         <header className="header">
           <p className="header__page-name" to="/">
-            Categorias
+            {props.children}
           </p>
         </header>
       )
@@ -44,12 +44,12 @@ const Header = (props) => (
     {
       props.type === 'leftIcons' && (
         <header className="header">
-          <div className="header__container">
-            <Link className="header__icon" to="/">
+          <div className="header__container header__container-arrow">
+            <Link className="header__icon header__icon-arrow" to="/">
               <ArrowBackIos className="header__icon--arrow" />
             </Link>
             <p className="header__page-name header__page-name--arrow" to="/">
-              Categorias
+              {props.children}
             </p>
           </div>
         </header>
