@@ -1,14 +1,47 @@
 .login,
 .goToRegister {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.login {
+  width: 100%;
+  height: calc(100% - 88px);
+  &__form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &-inputs {
+      width: 100%;
+    }
+    button {
+      width: calc(100% - 70px);
+      margin: 10px 35px;
+    }
+  }
+  &__separator {
+    width: calc(100% - 70px);
+    margin: 0 35px; 
+    border: 1px solid #CCCCCC;
+    margin: 10px 35px;
+  }
+}
+.goToRegister {
+  button {
+    width: calc(100% - 70px);
+    margin: 10px 35px;
+  }
+}
+
+
 
 // @media screen and (min-width: 500px) { 
 //   .login {
-    
 //   }
 
-//   .goToRegister {
-    
+//   .nextStep {
 //   }
 // }

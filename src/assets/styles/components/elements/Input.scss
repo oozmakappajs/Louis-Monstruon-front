@@ -11,7 +11,6 @@
   margin-bottom:10px;
  &__input {
   font-family: 'Quicksand', sans-serif;
-  border-bottom: 2px solid;
   width: 100%;
   font-size: 16px;
   background: transparent;
@@ -26,5 +25,12 @@
       text-align: center;
       opacity: 1 !important;
     }
+  }
+  &__line {
+    width: 100%;
+    border-radius: 5px;
+    height: 5px;
+    border: 1px solid;
+    background: map-get(map-get($palette, lightTheme), white);
   }
 }
