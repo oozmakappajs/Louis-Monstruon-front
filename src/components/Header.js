@@ -32,7 +32,7 @@ const Header = (props) => (
               <ArrowBackIos className="header__icon--arrow" />
             </Link>
             <p className="header__page-name" to="/">
-              Categorias
+              {props.children}
             </p>
             <Link className="header__icon header__icon--list" to="/">
               <FilterList />
