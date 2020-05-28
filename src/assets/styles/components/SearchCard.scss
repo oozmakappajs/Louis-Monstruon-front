@@ -2,7 +2,7 @@
 @import '../lib/fonts';
 
 .SearchCard {
-    width: calc(100%/2 - 20px);
+    width: calc(100% / 2 - 20px);
     height: 180px;
     margin: 5px 10px;
     background: map-get(map-get($palette,lightTheme),white) 0% 0% no-repeat padding-box;
