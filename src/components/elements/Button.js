@@ -1,7 +1,10 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
-import '../../assets/styles/components/elements/Button.scss';
+import { Link } from 'react-router-dom';
+
 import GoogleText from './GoogleText';
+
+import '../../assets/styles/components/elements/Button.scss';
 
 const Button = (props) => {
   return (
@@ -15,9 +18,9 @@ const Button = (props) => {
       }
       {
         props.name === 'purpleBase' && (
-          <button type={props.buttonType} className="Button Button--base-purple">
+          <Link to={props.url} type={props.buttonType} className="Button Button--base-purple">
             {props.children}
-          </button>
+          </Link>
         )
       }
       {

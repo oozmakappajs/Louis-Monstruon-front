@@ -1,22 +1,28 @@
-@import '../../lib/fonts';
 @import  '../../lib/palette';
 
 .InputComponent {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   width: calc(100% - 70px);
   margin: 0 35px;
   margin-bottom:10px;
- &__input {
-  font-family: 'Quicksand', sans-serif;
-  border-bottom: 2px solid;
-  width: 100%;
-  font-size: 16px;
-  background: transparent;
-  padding: 10px 0;
-  opacity: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__input {
+    width: 100%;
+    padding: 10px 0 3px;
+    background: transparent;
+    font-family: 'Quicksand Regular';
+    font-size: 16px;
+    text-align: center;
+    opacity: 1;
+    &--border {
+      width: calc(100% - 2px);
+      height: 3px;
+      background: map-get(map-get($palette, lightTheme), white);
+      border: 1px solid map-get(map-get($palette, lightTheme), content);
+      border-radius: 5px;
+    }
     &:focus {
       outline: none;
     }
