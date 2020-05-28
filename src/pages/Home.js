@@ -1,19 +1,20 @@
 import React from 'react';
+
 import MainCarousel from '../containers/Carousel/MainCarousel';
 import SmallCarousel from '../containers/Carousel/SmallCarousel';
-import '../assets/styles/main.scss';
+
 import '../assets/styles/pages/home.scss';
 
-const Home = () => {
+const Home = (props) => {
   return (
     <>
       <MainCarousel />
-      <p>Mujer</p>
-      <SmallCarousel />
-      <p>Hombre</p>
-      <SmallCarousel />
-      <p>Niño</p>
-      <SmallCarousel />
+      <section className="categories">
+        <SmallCarousel sectionName="Mujer" />
+        <SmallCarousel sectionName="Hombre" />
+        <SmallCarousel sectionName="Niño" />
+        <SmallCarousel sectionName="Accesorios" />
+      </section>
     </>
   );
 };

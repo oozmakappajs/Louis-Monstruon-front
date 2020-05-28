@@ -1,14 +1,17 @@
 .MainCarousel {
-  width: 100%;
-  overflow: scroll;
-  position: relative;
-  &__container {
-    white-space: nowrap;
-  }
+  white-space: nowrap;
   &-item {
-    margin-right: 10px;
+    width: calc(100% - 40px);
     display: inline-block;
     cursor: pointer;
     position: relative;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .MainCarousel {
+    &-item {
+      width: calc(50% - 40px);
+    }
   }
 }

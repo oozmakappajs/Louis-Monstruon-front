@@ -1,5 +1,4 @@
 @import '../../lib/palette';
-@import '../../lib/fonts';
 
 .smallCard {
   height: auto;
@@ -21,7 +20,7 @@
     background: map-get(map-get($palette,greyColors),nickel);
   }
   &__title {
-   font-family: 'Quicksand', sans-serif;
+   font-family: 'Quicksand Regular';
    font-size: 12px;
    text-align: center;
   }
