@@ -43,27 +43,7 @@
       align-items: center;
       justify-content: space-between;
       &--btn {
-<<<<<<< HEAD:src/assets/styles/containers/ProductContainer.scss
         width: calc(100% - 50px);
-=======
-        width: calc(100% - 60px);
-        button {
-          margin: 0;
-          width: 100%;
-        }
-      }
-      &--icon {
-        width: 40px;
-        height: 40px;
-        font-size: 14px;
-        button {
-          width: 100%;
-          height: 100%;
-        }
-        svg {
-          font-size: 20px;
-        }
->>>>>>> 9df0e17554d5353a783b26849be9efa53e8acadf:src/assets/styles/components/ProductActions.scss
       }
     }
   }
