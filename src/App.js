@@ -17,7 +17,6 @@ import NotFound from './pages/NotFound';
 const App = () => {
   return (
     <BrowserRouter>
-      {/* <Layout> */}
       <Switch>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
@@ -32,7 +31,6 @@ const App = () => {
         <Route exact path="/:category/:product/:id" component={Product} />
         <Route component={NotFound} />
       </Switch>
-      {/* </Layout> */}
     </BrowserRouter>
   );
 };

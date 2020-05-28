@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ArrowBackIos, FilterList, Search } from '@material-ui/icons';
+import { ArrowBackIos, FilterList, Search, SettingsOutlined } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/Header.scss';
 
@@ -51,6 +51,20 @@ const Header = (props) => (
             <p className="header__page-name header__page-name--arrow" to="/">
               {props.children}
             </p>
+          </div>
+        </header>
+      )
+    }
+    {
+      props.type === 'rightIcon' && (
+        <header className="header">
+          <div className="header__container header__container-arrow">
+            <p className="header__page-name header__page-name--arrow" to="/">
+              {props.children}
+            </p>
+            <Link className="header__icon header__icon-settings" to="/">
+              <SettingsOutlined />
+            </Link>
           </div>
         </header>
       )

@@ -58,6 +58,14 @@
     &--arrow {
       margin-left: 6px;
     }
+    &-settings {
+      position: absolute;
+      right: 4px;
+      background: map-get(map-get($palette,darkTheme),content);
+      svg {
+        font-size: 20px;
+      }
+    }
     &--list {
       background: map-get(map-get($palette,darkTheme),content) 0% 0% no-repeat padding-box;
       &:hover {
