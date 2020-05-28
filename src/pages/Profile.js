@@ -9,6 +9,7 @@ import '../assets/styles/pages/profile.scss';
 const Profile = () => {
   const [ActiveLeft, useIsActiveLeft] = useState(true);
   const [ActiverRight, useIsActiveRight] = useState(false);
+
   return (
     <>
       <Header type="rightIcon">Usuario</Header>
