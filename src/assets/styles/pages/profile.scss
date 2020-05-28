@@ -1,10 +1,16 @@
+@import '../lib/palette';
+
 .profile_header {
   grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  background: map-get(map-get($palette,greyColors), snow);
+  box-shadow: 0 1px 2px #00000029;
 }
 
 .profile_content {
   grid-area: 2 / 1 / 4 / 2;
-  overflow: scroll;
+  overflow-y: auto;
+  padding-bottom: 20px;
 }
 
 @media screen and (min-width: 500px) { 
@@ -14,5 +20,21 @@
 
   .profile_content {
     grid-area: 2 / 1 / 4 / 3;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .profile_content {
+    &::-webkit-scrollbar {
+      width: 8px;
+      border-radius: 8px;
+      background: map-get(map-get($palette, greyColors), moon);
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 8px;
+      border-radius: 8px;
+      background: map-get(map-get($palette, lightTheme), content);
+      cursor: pointer;
+    }
   }
 }
