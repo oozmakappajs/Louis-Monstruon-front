@@ -1,12 +1,11 @@
 import React from 'react';
-
 import InputComponent from '../components/elements/InputComponent';
 import Button from '../components/elements/Button';
 import Logo from '../components/elements/Logo';
 
 import '../assets/styles/pages/login.scss';
 
-const Login = (props) => {
+const Login = () => {
   return (
     <main className="modalView_content login__modal">
       <section className="login">

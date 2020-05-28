@@ -1,0 +1,11 @@
+@import '../../lib/palette.scss';
+@import '../../lib/fonts';
+
+.Subtitle {
+  width: 100%;
+  p {
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 10px;
+  }
+}

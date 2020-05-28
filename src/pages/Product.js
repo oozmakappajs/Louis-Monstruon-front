@@ -4,7 +4,7 @@ import ProductContainer from '../containers/ProductContainer';
 
 import '../assets/styles/pages/product.scss';
 
-const Product = (props) => {
+const Product = () => {
   return (
     <ProductContainer />
   );

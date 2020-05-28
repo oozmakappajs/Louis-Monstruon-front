@@ -1,6 +1,21 @@
+@import '../lib/palette';
+@import '../lib/fonts';
+
 .notFound {
   grid-area: 1 / 1 / 4 / 2;
   overflow: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: radial-gradient(circle, rgba(91,219,195,0.2147233893557423) 0%, rgba(89,69,146,0.0802696078431373) 100%);
+  font-size: 24px;
+  padding: 10px;
+  font-family: 'Quicksand', sans-serif;
+  color: map-get(map-get($palette,secondary),purple);
+  h1 {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 500px) { 

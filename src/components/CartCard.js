@@ -1,14 +1,13 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
+import '../assets/styles/components/CartCard.scss';
+import product from '../assets/images/products/dino2.jpg';
 import QuantityCounter from './elements/QuantityCounter';
 import IconButton from './elements/IconButton';
-import product from '../assets/images/products/dino2.jpg';
-
-import '../assets/styles/components/CartCard.scss';
 
 const CartCard = () => {
   return (
-    <div className="CartCard">
+    <Link to="/:category/:product/:id" className="CartCard">
       <div className="CartCard__img-container">
         <img
           src={product}
@@ -24,7 +23,7 @@ const CartCard = () => {
       <div className="CartCard__delete">
         <IconButton type="delete" />
       </div>
-    </div>
+    </Link>
   );
 };
 

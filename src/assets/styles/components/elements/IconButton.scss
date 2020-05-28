@@ -17,7 +17,7 @@
   &:hover {
     cursor: pointer;
   }
-  &--emptyfav {
+  &--emptyfav, &--fav {
     background: map-get(map-get($palette,lightTheme),white);
     color: map-get(map-get($palette,darkTheme), background); 
   }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import product from '../assets/images/products/dino2.jpg';
 
 import '../assets/styles/components/ProductCard.scss';

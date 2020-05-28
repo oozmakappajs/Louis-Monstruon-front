@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ArrowBackIos, FilterList, Search, Settings } from '@material-ui/icons';
+import { ArrowBackIos, FilterList, Search, SettingsOutlined } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
@@ -72,7 +72,7 @@ const Header = (props) => {
                 {props.title}
               </p>
               <button type="button" className="header__icon" onClick={() => { handleGo(); }}>
-                <Settings />
+                <SettingsOutlined />
               </button>
             </div>
           </header>

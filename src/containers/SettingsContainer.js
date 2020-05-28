@@ -7,7 +7,7 @@ import SwitchButton from '../components/elements/SwitchButton';
 
 import '../assets/styles/containers/Settings.scss';
 
-const Settings = () => {
+const SettingsContainer = () => {
   return (
     <section className="settings Settings">
       <ul className="Settings__menu">
@@ -33,5 +33,5 @@ const Settings = () => {
   );
 };
 
-export default Settings;
+export default SettingsContainer;
 

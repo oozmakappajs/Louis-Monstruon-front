@@ -1,5 +1,4 @@
 import React from 'react';
-
 import CartCard from '../components/CartCard';
 import Button from '../components/elements/Button';
 

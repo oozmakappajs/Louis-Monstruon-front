@@ -1,0 +1,13 @@
+@import '../lib/palette';
+@import '../lib/fonts';
+
+.ProductDescription {
+  font-family: 'Quicksand', sans-serif;
+  width: calc(100% - 20px); 
+  margin: 10px;
+  &__text {
+    font-size: 18px;
+    padding: 10px;
+    text-align: justify;
+  }
+}

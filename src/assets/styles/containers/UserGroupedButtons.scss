@@ -31,6 +31,10 @@
       color: white;
       cursor: pointer;
     }
+    &--noActive {
+      background: transparent;
+      color: black;
+    }
   }
 }
 

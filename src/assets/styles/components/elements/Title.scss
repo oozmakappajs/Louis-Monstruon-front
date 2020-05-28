@@ -1,0 +1,11 @@
+@import '../../lib/palette.scss';
+@import '../../lib/fonts';
+
+.Title {
+  width: 100%;
+  p {
+    font-size: 22px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 25px;
+  }
+}

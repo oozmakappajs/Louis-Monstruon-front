@@ -1,10 +1,9 @@
 import React from 'react';
-
 import ProductCard from '../components/ProductCard';
 
 import '../assets/styles/pages/products.scss';
 
-const Products = (props) => {
+const Products = () => {
   return (
     <section className="products">
       <ProductCard />
@@ -15,3 +14,4 @@ const Products = (props) => {
 };
 
 export default Products;
+
