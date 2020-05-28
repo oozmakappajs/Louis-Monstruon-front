@@ -1,32 +1,30 @@
 import React from 'react';
 
-import logo from '../assets/images/logo_2.png';
+import InputComponent from '../components/elements/InputComponent';
+import Button from '../components/elements/Button';
+import Logo from '../components/elements/Logo';
+
 import '../assets/styles/pages/login.scss';
 
 const Login = (props) => {
   return (
-    <div className="modalView">
-      <header className="modalView_header">
-        <h2>Only button back</h2>
-      </header>
-      <main className="modalView_content">
-        <section className="login">
-          <img src={logo} alt="Logo" className="auth_logo" />
-          <form>
-            <input type="text" placeholder="Correo" />
-            <input type="text" placeholder="Contraseña" />
-            <button type="submit">Iniciar sesion</button>
-          </form>
-        </section>
-        <section className="goToRegister">
-          <button type="button">Registrate</button>
-          <button type="button">Iniciar sesion con Google</button>
-        </section>
-      </main>
-      <footer className="modalView_termsAndConditions">
-        <h2>Terminos y condiciones</h2>
-      </footer>
-    </div>
+    <main className="modalView_content login__modal">
+      <section className="login">
+        <Logo />
+        <form className="login__form">
+          <div className="login__form-inputs">
+            <InputComponent title="Email" />
+            <InputComponent title="Contraseña" />
+          </div>
+          <Button name="blueBase" buttonType="submit">Iniciar sesion</Button>
+        </form>
+      </section>
+      <section className="goToRegister">
+        <div className="login__separator" />
+        <Button url="/register" name="purpleBase" buttonType="button">Registrate</Button>
+        <Button name="google" buttonType="button">Registrate con </Button>
+      </section>
+    </main>
   );
 };
 
