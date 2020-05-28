@@ -32,6 +32,10 @@
       "dest": "/$1.svg"
     },
     {
+      "src": "(.*).ttf",
+      "dest": "/$1.ttf"
+    },
+    {
       "src": "/.*",
       "dest": "/index.html"
     }
