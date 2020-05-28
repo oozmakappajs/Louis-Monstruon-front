@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/containers/UserCard.scss';
 import { AttachMoney } from '@material-ui/icons';
 import user from '../assets/images/products/dino4.jpg';
@@ -6,7 +7,7 @@ import IconButton from '../components/elements/IconButton';
 
 const UserCard = (props) => {
   return (
-    <div className="UserCard">
+    <Link to="/:category/:product/:id" className="UserCard">
       <div className="UserCard__img-container">
         <img
           src={user}
@@ -30,7 +31,7 @@ const UserCard = (props) => {
           )
         }
       </div>
-    </div>
+    </Link>
   );
 };
 

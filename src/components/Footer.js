@@ -16,16 +16,16 @@ const Footer = (props) => (
           <Link className="Footer__icon" to="/">
             <HomeOutlined />
           </Link>
-          <Link className="Footer__icon" to="/">
+          <Link className="Footer__icon" to="/notifications">
             <NotificationsOutlined />
           </Link>
-          <Link className="Footer__icon" to="/">
+          <Link className="Footer__icon" to="/cart">
             <LocalGroceryStoreOutlined />
           </Link>
-          <Link className="Footer__icon" to="/">
+          <Link className="Footer__icon" to="/search">
             <SearchOutlined />
           </Link>
-          <Link className="Footer__icon" to="/">
+          <Link className="Footer__icon" to="/profile/:username">
             <PersonOutlined />
           </Link>
         </footer>

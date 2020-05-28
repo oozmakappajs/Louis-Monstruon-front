@@ -34,7 +34,7 @@ const Header = (props) => (
             <p className="header__page-name" to="/">
               {props.children}
             </p>
-            <Link className="header__icon header__icon--list" to="/">
+            <Link className="header__icon header__icon--list" to="/settings">
               <FilterList />
             </Link>
           </div>
@@ -62,7 +62,7 @@ const Header = (props) => (
             <p className="header__page-name header__page-name--arrow" to="/">
               {props.children}
             </p>
-            <Link className="header__icon header__icon-settings" to="/">
+            <Link className="header__icon header__icon-settings" to="/settings">
               <SettingsOutlined />
             </Link>
           </div>
@@ -87,7 +87,7 @@ const Header = (props) => (
             <input type="text" placeholder="Buscar" className="header__search--bar" />
             <Search />
           </div>
-          <Link className="header__icon header__icon--list header__search--icon" to="/">
+          <Link className="header__icon header__icon--list header__search--icon" to="/settings">
             <FilterList />
           </Link>
         </header>

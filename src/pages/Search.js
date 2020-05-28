@@ -15,6 +15,8 @@ const Search = (props) => {
           <SearchCard />
           <SearchCard />
           <SearchCard />
+          <SearchCard />
+          <SearchCard />
         </section>
       </main>
       <Footer icons />

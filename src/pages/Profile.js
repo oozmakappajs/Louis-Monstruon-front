@@ -10,6 +10,9 @@ const Profile = () => {
   const [ActiveLeft, useIsActiveLeft] = useState(true);
   const [ActiverRight, useIsActiveRight] = useState(false);
 
+  console.log(useIsActiveLeft);
+  console.log(useIsActiveRight);
+
   return (
     <>
       <Header type="rightIcon">Usuario</Header>
