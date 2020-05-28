@@ -84,7 +84,7 @@ const Payment = (props) => {
         </section>
 
       </main>
-      <Footer />
+      <Footer>terms and Conditions</Footer>
     </div>
   );
 };

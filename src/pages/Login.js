@@ -27,7 +27,7 @@ const Login = () => {
           <Button name="google" buttonType="button">Registrate con </Button>
         </section>
       </main>
-      <Footer />
+      <Footer>terms and Conditions</Footer>
     </div>
   );
 };

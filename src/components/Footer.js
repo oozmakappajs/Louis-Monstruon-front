@@ -32,7 +32,7 @@ const Footer = (props) => (
       ) : (
         <footer className="Footer Footer__transparent">
           <Link className="Footer__terms" to="/">
-            terms and Conditions
+            {props.children}
           </Link>
         </footer>
       )
