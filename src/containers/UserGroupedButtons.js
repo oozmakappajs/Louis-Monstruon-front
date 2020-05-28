@@ -1,15 +1,18 @@
 import React from 'react';
+
 import '../assets/styles/containers/UserGroupedButtons.scss';
 
-const UserGroupedButtons = () => {
+const UserGroupedButtons = (props) => {
+  const { active, handleTabActive } = props;
+
   return (
     <div className="UserGroupedButtons">
-      <div className="UserGroupedButtons__item">
+      <button type="button" className={`UserGroupedButtons__item ${!active && 'UserGroupedButtons__item-active'}`} onClick={handleTabActive}>
         Favoritos
-      </div>
-      <div className="UserGroupedButtons__item">
+      </button>
+      <button type="button" className={`UserGroupedButtons__item ${active && 'UserGroupedButtons__item-active'}`} onClick={handleTabActive}>
         historial de compra
-      </div>
+      </button>
     </div>
   );
 };

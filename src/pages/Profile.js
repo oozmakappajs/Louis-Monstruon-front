@@ -1,37 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import UserProfile from '../containers/UserProfile';
+import UserGroupedButtons from '../containers/UserGroupedButtons';
+import UserCard from '../containers/UserCard';
 
 import '../assets/styles/pages/profile.scss';
 
 const Profile = (props) => {
+  const [active, setActive] = useState(false);
+
+  const handleTabActive = () => {
+    setActive(!active);
+  };
+
   return (
     <>
-      <header className="header">
-        <h2>Header</h2>
-      </header>
-      <main className="content">
-        <section className="profile_header">
-          <div>
-            <p>Header Profile</p>
-          </div>
-        </section>
-        <section className="profile_content">
-          <div>
-            <p>favorites | history purchase</p>
-          </div>
-          <div>
-            <p>favorites | history purchase</p>
-          </div>
-          <div>
-            <p>favorites | history purchase</p>
-          </div>
-          <div>
-            <p>favorites | history purchase</p>
-          </div>
-        </section>
-      </main>
-      <nav className="menu_navigation">
-        <h2>Menu de Navegación</h2>
-      </nav>
+      <section className="profile_header">
+        <UserProfile />
+        <UserGroupedButtons handleTabActive={handleTabActive} active={active} />
+      </section>
+      <section className="profile_content">
+        {
+          !active && (
+            <>
+              <UserCard icon />
+              <UserCard icon />
+              <UserCard icon />
+              <UserCard icon />
+            </>
+          )
+        }
+        {
+          active && (
+            <>
+              <UserCard />
+              <UserCard />
+              <UserCard />
+              <UserCard />
+            </>
+          )
+        }
+      </section>
     </>
   );
 };

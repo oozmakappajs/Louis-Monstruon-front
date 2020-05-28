@@ -1,8 +1,10 @@
 import React from 'react';
-import '../assets/styles/containers/UserCard.scss';
 import { AttachMoney } from '@material-ui/icons';
-import user from '../assets/images/products/dino4.jpg';
+
 import IconButton from '../components/elements/IconButton';
+import user from '../assets/images/products/dino4.jpg';
+
+import '../assets/styles/containers/UserCard.scss';
 
 const UserCard = (props) => {
   return (
@@ -16,18 +18,26 @@ const UserCard = (props) => {
       </div>
       <div className="UserCard__details">
         <p className="UserCard__title">Nombre de producto</p>
-        <p className="UserCard__price">precio</p>
         {
           props.icon ? (
-            <div className="UserCard__icon">
-              <IconButton type="fav" isFav />
-            </div>
-          ) : (
-            <div className="UserCard__icon UserCard--price">
-              <AttachMoney />
-              <span>precio</span>
-            </div>
-          )
+            <>
+              <div className="UserCard__icon">
+                <p className="UserCard__price">precio</p>
+                <IconButton type="fav" isFav />
+              </div>
+            </>
+          ) :
+            (
+              <>
+                <div className="UserCard__icon UserCard--price">
+                  <p className="UserCard__date">dd/mm/yyyy</p>
+                  <div>
+                    <AttachMoney />
+                    <span>precio</span>
+                  </div>
+                </div>
+              </>
+            )
         }
       </div>
     </div>

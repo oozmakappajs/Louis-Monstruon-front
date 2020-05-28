@@ -1,7 +1,8 @@
 import React from 'react';
-import '../assets/styles/containers/UserProfile.scss';
 
 import user from '../assets/images/sue.jpg';
+
+import '../assets/styles/containers/UserProfile.scss';
 
 const UserProfile = () => {
   return (
