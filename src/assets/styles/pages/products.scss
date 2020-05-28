@@ -1,6 +1,9 @@
 .products {
   grid-area: 1 / 1 / 4 / 2;
-  overflow: scroll;
+  display: flex;
+  height: 100%;
+  overflow-y: auto;
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 500px) { 

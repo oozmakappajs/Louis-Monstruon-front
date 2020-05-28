@@ -1,10 +1,13 @@
 import React from 'react';
-import '../assets/styles/components/ProductCard.scss';
+import { Link } from 'react-router-dom';
+
 import product from '../assets/images/products/dino2.jpg';
+
+import '../assets/styles/components/ProductCard.scss';
 
 const ProductCard = () => {
   return (
-    <div className="productCard">
+    <Link className="productCard" to="/man/pants/213413ed13">
       <div className="productCard__img-container">
         <img
           src={product}
@@ -19,7 +22,7 @@ const ProductCard = () => {
           <p className="productCard__info--state">Nuevo</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
