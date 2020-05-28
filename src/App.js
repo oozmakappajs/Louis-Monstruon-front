@@ -27,7 +27,7 @@ const App = () => {
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/profile/:username" component={Profile} />
         <Route exact path="/settings" component={Settings} />
-        <Route exact path="/payment" component={Payment} />
+        <Route exact path="/payment" component={() => <Payment finish />} />
         <Route exact path="/:category/:product" component={Products} />
         <Route exact path="/:category/:product/:id" component={Product} />
         <Route component={NotFound} />
@@ -38,3 +38,4 @@ const App = () => {
 };
 
 export default App;
+
