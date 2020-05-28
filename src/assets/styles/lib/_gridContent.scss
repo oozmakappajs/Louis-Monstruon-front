@@ -2,10 +2,12 @@
   grid-area: content;
   display: grid;
   width: 100%;
-  min-height: 300px;
-  height: 100%;
-  grid-template-columns: 1fr;
+  max-width: 100%;
+  min-width: 260px;
+  height:100%;
+  grid-template-columns: 100%;
   grid-template-rows: 35% 32.5% 32.5%;
+  overflow-y: auto;
 }
 
 @media screen and (min-width: 375px) {
@@ -16,6 +18,6 @@
 
 @media screen and (min-width: 500px) {
   .content {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
   }
 }

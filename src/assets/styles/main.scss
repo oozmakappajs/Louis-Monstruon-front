@@ -1,20 +1,16 @@
+@import './lib/palette';
+@import './lib/fonts';
 @import './lib/gridWrapper';
 @import './lib/gridContent';
 @import './lib/gridModal';
-@import './lib/palette';
 
-* { 
-    margin: 0; 
-    padding: 0; 
-    border: 0; 
-}
-
-.auth_logo {
-  width: 100%;
-  height: 150px;
-  object-fit: contain;
-}
-
-h2 {
+* {
   margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
 }
