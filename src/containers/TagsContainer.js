@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Tag from '../components/elements/Tag';
+
 import '../assets/styles/containers/TagsContainer.scss';
 
 const TagsContainer = (props) => {
