@@ -1,8 +1,10 @@
 import React from 'react';
-import '../assets/styles/components/CartCard.scss';
-import product from '../assets/images/products/dino2.jpg';
+
 import QuantityCounter from './elements/QuantityCounter';
 import IconButton from './elements/IconButton';
+import product from '../assets/images/products/dino2.jpg';
+
+import '../assets/styles/components/CartCard.scss';
 
 const CartCard = () => {
   return (
