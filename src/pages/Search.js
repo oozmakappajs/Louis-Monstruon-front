@@ -1,44 +1,23 @@
 import React from 'react';
-
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import SearchCard from '../components/SearchCard';
 import '../assets/styles/pages/search.scss';
 
 const Search = (props) => {
   return (
     <>
-      <header className="header">
-        <h2>Header</h2>
-      </header>
+      <Header type="search" />
       <main className="content">
         <section className="results">
-          <div>
-            <p>search result</p>
-          </div>
-          <div>
-            <p>search result</p>
-          </div>
-          <div>
-            <p>search result</p>
-          </div>
-          <div>
-            <p>search result</p>
-          </div>
-          <div>
-            <p>search result</p>
-          </div>
-          <div>
-            <p>search result</p>
-          </div>
-          <div>
-            <p>search result</p>
-          </div>
-          <div>
-            <p>search result</p>
-          </div>
+          <SearchCard />
+          <SearchCard />
+          <SearchCard />
+          <SearchCard />
+          <SearchCard />
         </section>
       </main>
-      <nav className="menu_navigation">
-        <h2>Menu de Navegación</h2>
-      </nav>
+      <Footer icons />
     </>
   );
 };

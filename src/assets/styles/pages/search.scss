@@ -1,6 +1,10 @@
 .results {
   grid-area: 1 / 1 / 4 / 2;
   overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  // width: calc(100% - 32px);
+  // margin: 0 16px;
 }
 
 @media screen and (min-width: 500px) { 
