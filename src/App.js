@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-// import Layout from './components/Layout';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Product from './pages/Product';
@@ -17,7 +16,6 @@ import NotFound from './pages/NotFound';
 const App = () => {
   return (
     <BrowserRouter>
-      {/* <Layout> */}
       <Switch>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
@@ -27,14 +25,14 @@ const App = () => {
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/profile/:username" component={Profile} />
         <Route exact path="/settings" component={Settings} />
-        <Route exact path="/payment" component={Payment} />
+        <Route exact path="/payment" component={() => <Payment finish />} />
         <Route exact path="/:category/:product" component={Products} />
         <Route exact path="/:category/:product/:id" component={Product} />
         <Route component={NotFound} />
       </Switch>
-      {/* </Layout> */}
     </BrowserRouter>
   );
 };
 
 export default App;
+

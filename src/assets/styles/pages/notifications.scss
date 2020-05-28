@@ -1,6 +1,14 @@
 .notifications {
   grid-area: 1 / 1 / 4 / 2;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+  &__cards-container {
+    height: calc(100% - 80px);
+    overflow: scroll;
+  }
 }
 
 @media screen and (min-width: 500px) {

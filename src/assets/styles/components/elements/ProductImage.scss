@@ -1,0 +1,13 @@
+.ProductImage {
+  width: calc(100% - 20px); 
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0px 0px 6px #00000029;
+  opacity: 1;
+  background: #F2F6F5;
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}

@@ -1,15 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../assets/styles/containers/UserGroupedButtons.scss';
 
-const UserGroupedButtons = () => {
+const UserGroupedButtons = (props) => {
+  const [ActiveLeft, useIsActiveLeft] = useState(props.left);
+  const [ActiverRight, useIsActiveRight] = useState(props.right);
+
+  const handleColorChangeRight = (state) => {
+    if (state) {
+      useIsActiveLeft(false);
+      useIsActiveRight(state);
+    }
+  };
+  const handleColorChangeLeft = (state) => {
+    if (state) {
+      useIsActiveLeft(state);
+      useIsActiveRight(false);
+    }
+  };
+
   return (
     <div className="UserGroupedButtons">
-      <div className="UserGroupedButtons__item">
+      <button
+        type="button"
+        onClick={() => handleColorChangeLeft(true)}
+        className={
+          `UserGroupedButtons__item ${ActiveLeft && 'UserGroupedButtons__item--active'}`
+        }
+      >
         Favoritos
-      </div>
-      <div className="UserGroupedButtons__item">
+      </button>
+      <button
+        type="button"
+        onClick={() => handleColorChangeRight(true)}
+        className={`UserGroupedButtons__item ${ActiverRight && 'UserGroupedButtons__item--active'}`}
+      >
         historial de compra
-      </div>
+      </button>
     </div>
   );
 };

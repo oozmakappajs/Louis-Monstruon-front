@@ -1,37 +1,46 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import UserProfile from '../containers/UserProfile';
+import UserGroupedButtons from '../containers/UserGroupedButtons';
+import UserCard from '../containers/UserCard';
 import '../assets/styles/pages/profile.scss';
 
-const Profile = (props) => {
+const Profile = () => {
+  const [ActiveLeft, useIsActiveLeft] = useState(true);
+  const [ActiverRight, useIsActiveRight] = useState(false);
+
+  console.log(useIsActiveLeft);
+  console.log(useIsActiveRight);
+
   return (
     <>
-      <header className="header">
-        <h2>Header</h2>
-      </header>
+      <Header type="rightIcon">Usuario</Header>
       <main className="content">
         <section className="profile_header">
-          <div>
-            <p>Header Profile</p>
-          </div>
+          <UserProfile>Sue Herrera</UserProfile>
+          <UserGroupedButtons left={ActiveLeft} right={ActiverRight} />
         </section>
         <section className="profile_content">
-          <div>
-            <p>favorites | history purchase</p>
-          </div>
-          <div>
-            <p>favorites | history purchase</p>
-          </div>
-          <div>
-            <p>favorites | history purchase</p>
-          </div>
-          <div>
-            <p>favorites | history purchase</p>
-          </div>
+          {
+            ActiveLeft && (
+              <>
+                <UserCard icon />
+                <UserCard icon />
+              </>
+            )
+          }
+          {
+            ActiverRight && (
+              <>
+                <UserCard />
+                <UserCard />
+              </>
+            )
+          }
         </section>
       </main>
-      <nav className="menu_navigation">
-        <h2>Menu de Navegación</h2>
-      </nav>
+      <Footer icons />
     </>
   );
 };

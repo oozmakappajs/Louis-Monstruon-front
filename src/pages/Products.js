@@ -1,94 +1,28 @@
 import React from 'react';
-
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ProductCard from '../components/ProductCard';
+import Modal from '../containers/Modal';
 import '../assets/styles/pages/products.scss';
 
-const Products = (props) => {
+const Products = () => {
   return (
     <>
-      <header className="header">
-        <h2>Header</h2>
-      </header>
+      <Header type="twoIcons">Categoria</Header>
       <main className="content">
         <section className="products">
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
-          <div>
-            <p>product</p>
-          </div>
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
         </section>
       </main>
-      <nav className="menu_navigation">
-        <h2>Menu de Navegación</h2>
-      </nav>
+      <Footer icons />
+      <Modal modal />
     </>
   );
 };
 
 export default Products;
+

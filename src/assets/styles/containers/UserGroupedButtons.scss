@@ -14,9 +14,14 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    &:active,  &:hover {
+    background: transparent;
+    &--active {
       background:map-get(map-get($palette,primary),blue) 0% 0% no-repeat padding-box;
       color: white;
+    }
+    &--noActive {
+      background: transparent;
+      color: black;
     }
   }
 }

@@ -4,15 +4,16 @@
 .CartContainer {
   font-family: 'Quicksand', sans-serif;
   color: map-get(map-get($palette,greyColors), black);
-  height: 100vh;
+  height: 100%;
   &__info {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100%;
     &-description {
       color: map-get(map-get($palette,lightTheme), white);
-      height: auto;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;

@@ -1,12 +1,11 @@
 import React from 'react';
-import '../../assets/styles/components/elements/Title.scss';
+import '../../assets/styles/components/elements/Subtitle.scss';
 
-const Title = (props) => {
+const Subtitle = (props) => {
   return (
-    <div className="Title">
+    <div className="Subtitle">
       <p>
-        {props.children}
-        { props.choose && 'Elige tu metodo de pago'}
+        { props.choose && 'Proceso de Pago'}
         { props.information && 'Escoge la direccion de envio'}
         { props.redirect && 'Redireccion a Stripe o PayPal'}
         { props.finish && 'Fin de la transacción'}
@@ -15,4 +14,4 @@ const Title = (props) => {
   );
 };
 
-export default Title;
+export default Subtitle;

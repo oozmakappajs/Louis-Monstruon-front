@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ArrowBackIos, FilterList, Search } from '@material-ui/icons';
+import { ArrowBackIos, FilterList, Search, SettingsOutlined } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/Header.scss';
 
@@ -10,7 +10,7 @@ const Header = (props) => (
       props.type === 'logo' && (
         <header className="header">
           <Link className="header__brand" to="/">
-            LOUIS MONSTRUON
+            {props.children}
           </Link>
         </header>
       )
@@ -19,7 +19,7 @@ const Header = (props) => (
       props.type === 'page' && (
         <header className="header">
           <p className="header__page-name" to="/">
-            Categorias
+            {props.children}
           </p>
         </header>
       )
@@ -32,9 +32,9 @@ const Header = (props) => (
               <ArrowBackIos className="header__icon--arrow" />
             </Link>
             <p className="header__page-name" to="/">
-              Categorias
+              {props.children}
             </p>
-            <Link className="header__icon header__icon--list" to="/">
+            <Link className="header__icon header__icon--list" to="/settings">
               <FilterList />
             </Link>
           </div>
@@ -44,13 +44,27 @@ const Header = (props) => (
     {
       props.type === 'leftIcons' && (
         <header className="header">
-          <div className="header__container">
-            <Link className="header__icon" to="/">
+          <div className="header__container header__container-arrow">
+            <Link className="header__icon header__icon-arrow" to="/">
               <ArrowBackIos className="header__icon--arrow" />
             </Link>
             <p className="header__page-name header__page-name--arrow" to="/">
-              Categorias
+              {props.children}
             </p>
+          </div>
+        </header>
+      )
+    }
+    {
+      props.type === 'rightIcon' && (
+        <header className="header">
+          <div className="header__container header__container-arrow">
+            <p className="header__page-name header__page-name--arrow" to="/">
+              {props.children}
+            </p>
+            <Link className="header__icon header__icon-settings" to="/settings">
+              <SettingsOutlined />
+            </Link>
           </div>
         </header>
       )
@@ -73,7 +87,7 @@ const Header = (props) => (
             <input type="text" placeholder="Buscar" className="header__search--bar" />
             <Search />
           </div>
-          <Link className="header__icon header__icon--list header__search--icon" to="/">
+          <Link className="header__icon header__icon--list header__search--icon" to="/settings">
             <FilterList />
           </Link>
         </header>

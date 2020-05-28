@@ -1,44 +1,19 @@
 import React from 'react';
-
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import SettingsContainer from '../containers/SettingsContainer';
 import '../assets/styles/pages/settings.scss';
 
 const Settings = (props) => {
   return (
     <>
-      <header className="header">
-        <h2>Header</h2>
-      </header>
+      <Header type="leftIcons">Configuraciones</Header>
       <main className="content">
         <section className="settings">
-          <div>
-            <p>setting option</p>
-          </div>
-          <div>
-            <p>setting option</p>
-          </div>
-          <div>
-            <p>setting option</p>
-          </div>
-          <div>
-            <p>setting option</p>
-          </div>
-          <div>
-            <p>setting option</p>
-          </div>
-          <div>
-            <p>setting option</p>
-          </div>
-          <div>
-            <p>setting option</p>
-          </div>
-          <div>
-            <p>setting option</p>
-          </div>
+          <SettingsContainer />
         </section>
       </main>
-      <nav className="menu_navigation">
-        <h2>Menu de Navegación</h2>
-      </nav>
+      <Footer icons />
     </>
   );
 };

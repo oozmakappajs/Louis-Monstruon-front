@@ -3,6 +3,7 @@
 
 .Settings {
   font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
   color: map-get(map-get($palette,greyColors),black);
   &__menu {
     width: calc(100% - 40px);
@@ -14,6 +15,7 @@
       height: 40px;
       align-items: center;
       justify-content: space-between;
+      margin: 20px 0px;
       &--icon {
         transform: rotate(180deg);
         margin-right: 10px;

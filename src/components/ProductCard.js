@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/components/ProductCard.scss';
 import product from '../assets/images/products/dino2.jpg';
 
 const ProductCard = () => {
   return (
-    <div className="productCard">
+    <Link to="/:category/:product/:id" className="productCard">
       <div className="productCard__img-container">
         <img
           src={product}
@@ -19,7 +20,7 @@ const ProductCard = () => {
           <p className="productCard__info--state">Nuevo</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
