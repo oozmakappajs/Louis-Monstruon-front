@@ -4,7 +4,7 @@ import { ArrowBackIos } from '@material-ui/icons';
 import SwitchButton from '../components/elements/SwitchButton';
 import '../assets/styles/containers/Settings.scss';
 
-const Settings = () => {
+const SettingsContainer = () => {
   return (
     <section className="Settings">
       <ul className="Settings__menu">
@@ -27,5 +27,5 @@ const Settings = () => {
   );
 };
 
-export default Settings;
+export default SettingsContainer;
 

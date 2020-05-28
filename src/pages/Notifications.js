@@ -1,44 +1,46 @@
 import React from 'react';
-
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import CardNotification from '../components/CardNotification';
+import Button from '../components/elements/Button';
 import '../assets/styles/pages/notifications.scss';
 
 const Notifications = (props) => {
   return (
     <>
-      <header className="header">
-        <h2>Header</h2>
-      </header>
+      <Header type="page">Notificaciones</Header>
       <main className="content">
         <section className="notifications">
-          <div>
-            <p>notification</p>
+          <div className="notifications__cards-container">
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
+            <CardNotification />
           </div>
-          <div>
-            <p>notification</p>
-          </div>
-          <div>
-            <p>notification</p>
-          </div>
-          <div>
-            <p>notification</p>
-          </div>
-          <div>
-            <p>notification</p>
-          </div>
-          <div>
-            <p>notification</p>
-          </div>
-          <div>
-            <p>notification</p>
-          </div>
-          <div>
-            <p>notification</p>
-          </div>
+          <Button className="notifications__btn" name="error" buttonType="button">Borrar todo</Button>
         </section>
       </main>
-      <nav className="menu_navigation">
-        <h2>Menu de Navegación</h2>
-      </nav>
+      <Footer icons />
     </>
   );
 };
