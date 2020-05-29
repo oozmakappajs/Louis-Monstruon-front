@@ -80,7 +80,7 @@ const Header = (props) => {
       }
       {
         props.type === 'back' && (
-          <header className={`header ${props.theme} modalView_header header--transparent`}>
+          <header className={`header ${props.theme} modalView_header`}>
             <div className="header__container">
               <button type="button" className="header__icon" onClick={() => { handleGo('back'); }}>
                 <ArrowBackIos className="header__icon--arrow" />

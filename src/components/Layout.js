@@ -56,7 +56,7 @@ const Layout = (props) => {
 
   useEffect(() => {
     const app = document.getElementById('app');
-    console.log(app);
+
     if (theme === 'dark') {
       app.classList.remove('light');
       app.classList.add('dark');
@@ -69,7 +69,7 @@ const Layout = (props) => {
   return (
     <>
       {
-        (pathname !== '/register' || pathname !== '/login') &&
+        (pathname !== '/register' && pathname !== '/login') &&
         <Header theme={theme} type={`${headerType}`} title={`${headerTitle}`} history={history} />
       }
       <main className={`content ${contentStyle}`}>
@@ -84,7 +84,7 @@ const Layout = (props) => {
         }
       </main>
       {
-        (pathname !== '/register' || pathname !== '/login' || pathname !== '/payment') &&
+        (pathname !== '/register' && pathname !== '/login' && pathname !== '/payment') &&
         <Footer theme={theme} icons />
       }
     </>

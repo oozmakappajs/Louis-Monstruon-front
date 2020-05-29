@@ -32,7 +32,7 @@ const Footer = (props) => (
         </footer>
       ) :
         (
-          <footer className={`"Footer ${props.theme} Footer__transparent modalView_termsAndConditions"`}>
+          <footer className={`Footer ${props.theme} modalView_termsAndConditions`}>
             <Link className="Footer__terms" to="/">
               terms and Conditions
             </Link>

@@ -30,10 +30,6 @@
       color: map-get(map-get($palette,greyColors), silver);
     }
   }
-  &--transparent {
-    background: transparent;
-    box-shadow: none;
-  }
   &__brand {
     color:  map-get(map-get($palette,primary),blue);
     text-decoration: none;
