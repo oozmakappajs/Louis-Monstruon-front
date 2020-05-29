@@ -13,7 +13,7 @@ const Footer = (props) => (
   <>
     {
       props.icons ? (
-        <footer className="Footer">
+        <footer className={`Footer ${props.theme}`}>
           <NavLink exact className="Footer__icon" to="/" activeClassName="Footer__icon-active">
             <HomeOutlined />
           </NavLink>
@@ -32,7 +32,7 @@ const Footer = (props) => (
         </footer>
       ) :
         (
-          <footer className="Footer Footer__transparent modalView_termsAndConditions">
+          <footer className={`"Footer ${props.theme} Footer__transparent modalView_termsAndConditions"`}>
             <Link className="Footer__terms" to="/">
               terms and Conditions
             </Link>

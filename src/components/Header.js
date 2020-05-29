@@ -17,7 +17,7 @@ const Header = (props) => {
     <>
       {
         props.type === 'logo' && (
-          <header className="header">
+          <header className={`header ${props.theme}`}>
             <Link className="header__brand" to="/">
               LOUIS MONSTRUON
             </Link>
@@ -26,7 +26,7 @@ const Header = (props) => {
       }
       {
         props.type === 'page' && (
-          <header className="header">
+          <header className={`header ${props.theme}`}>
             <p className="header__page-name" to="/">
               {props.title}
             </p>
@@ -35,7 +35,7 @@ const Header = (props) => {
       }
       {
         props.type === 'twoIcons' && (
-          <header className="header">
+          <header className={`header ${props.theme}`}>
             <div className="header__container">
               <button type="button" className="header__icon" onClick={() => { handleGo('back'); }}>
                 <ArrowBackIos className="header__icon--arrow" />
@@ -52,12 +52,12 @@ const Header = (props) => {
       }
       {
         props.type === 'leftIcons' && (
-          <header className="header">
+          <header className={`header ${props.theme}`}>
             <div className="header__container">
               <button type="button" className="header__icon" onClick={() => { handleGo('back'); }}>
                 <ArrowBackIos className="header__icon--arrow" />
               </button>
-              <p className="header__page-name header__page-name--arrow" to="/">
+              <p className="header__page-name header__page-name--arrow pr" to="/">
                 {props.title}
               </p>
             </div>
@@ -66,9 +66,9 @@ const Header = (props) => {
       }
       {
         props.type === 'rightIcons' && (
-          <header className="header">
+          <header className={`header ${props.theme}`}>
             <div className="header__container">
-              <p className="header__page-name header__page-name--arrow" to="/">
+              <p className="header__page-name header__page-name--arrow pl" to="/">
                 {props.title}
               </p>
               <button type="button" className="header__icon" onClick={() => { handleGo(); }}>
@@ -80,7 +80,7 @@ const Header = (props) => {
       }
       {
         props.type === 'back' && (
-          <header className="header header--transparent modalView_header">
+          <header className={`header ${props.theme} modalView_header header--transparent`}>
             <div className="header__container">
               <button type="button" className="header__icon" onClick={() => { handleGo('back'); }}>
                 <ArrowBackIos className="header__icon--arrow" />
@@ -91,7 +91,7 @@ const Header = (props) => {
       }
       {
         props.type === 'search' && (
-          <header className="header header__search">
+          <header className={`header header__search ${props.theme}`}>
             <div className="header__search--bar-container">
               <input type="text" placeholder="Buscar" className="header__search--bar" />
               <Search />
