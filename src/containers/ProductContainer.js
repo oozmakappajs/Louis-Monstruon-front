@@ -5,8 +5,7 @@ import IconButton from '../components/elements/IconButton';
 import QuantityCounter from '../components/elements/QuantityCounter';
 import PageSlider from './PageSlider';
 import product from '../assets/images/products/dino2.jpg';
-
-import '../assets/styles/containers/ProductContainer.scss';
+import '../assets/styles/components/ProductActions.scss';
 
 const ProductContainer = (props) => {
   return (

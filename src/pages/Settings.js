@@ -1,10 +1,10 @@
 import React from 'react';
-import SettingsActions from '../containers/Settings';
+import SettingsContainer from '../containers/SettingsContainer';
 import '../assets/styles/pages/settings.scss';
 
 const Settings = (props) => {
   return (
-    <SettingsActions />
+    <SettingsContainer />
   );
 };
 
