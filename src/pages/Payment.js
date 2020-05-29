@@ -1,24 +1,25 @@
 import React from 'react';
 import { CheckCircleOutline } from '@material-ui/icons';
-
 import Title from '../components/elements/Title';
 import Subtitle from '../components/elements/Subtitle';
 import PageSlider from '../components/PageSlider';
 import Button from '../components/elements/Button';
 import UserDetails from '../components/UserDetails';
+import StripePayment from '../stripe';
 
 import '../assets/styles/pages/payment.scss';
 
 const Payment = (props) => {
   return (
     <main className="modalView_content paymentSteps">
-
       <section className="paymentSteps_header">
         <Title className="paymentSteps_header-title">Proceso de Pago</Title>
         <PageSlider />
         <Subtitle choose className="paymentSteps_header-text" />
       </section>
-
+      <section>
+        <StripePayment />
+      </section>
       <section className="paymentSteps_content">
         {
           props.choose && (
