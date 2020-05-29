@@ -19,7 +19,7 @@ const NotFound = (props) => {
           💔😥
         </span>
       </p>
-      <Button name="blueBase" action={goToProducts}>Ver más productos</Button>
+      <Button name="base-blue" action={goToProducts}>Ver más productos</Button>
     </section>
   );
 };

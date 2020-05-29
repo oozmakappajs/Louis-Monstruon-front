@@ -39,8 +39,8 @@ const Login = (props) => {
         <section className="login login_auth">
           <Logo />
           <h1>Ya has iniciado sesión no es necesarion que lo hagas de nuevo</h1>
-          <Button name="blueBase" buttonType="button" action={() => { goTo('/'); }}>Ver productos</Button>
-          <Button name="purpleBase" buttonType="button" action={() => { goTo('/profile/tuentyfaiv'); }}>Ir a mi perfil</Button>
+          <Button name="base-blue" buttonType="button" action={() => { goTo('/'); }}>Ver productos</Button>
+          <Button name="base-purple" buttonType="button" action={() => { goTo('/profile/tuentyfaiv'); }}>Ir a mi perfil</Button>
         </section>
       </main>
     );
@@ -55,13 +55,13 @@ const Login = (props) => {
             <InputComponent type="email" title="Email" name="email" action={handleInput} required={true} />
             <InputComponent type="password" title="Contraseña" name="password" action={handleInput} required={true} />
           </div>
-          <Button name="blueBase" buttonType="submit">Iniciar sesion</Button>
+          <Button name="base-blue" buttonType="submit">Iniciar sesion</Button>
         </form>
       </section>
       <section className="goToRegister">
         <div className="login__separator" />
-        <Button name="purpleBase" buttonType="button" action={() => { goTo('/register'); }}>Registrate</Button>
-        <Button name="google" buttonType="button">Registrate con </Button>
+        <Button name="base-purple" buttonType="button" action={() => { goTo('/register'); }}>Registrate</Button>
+        <Button name="image" buttonType="button">Registrate con </Button>
       </section>
     </main>
   );

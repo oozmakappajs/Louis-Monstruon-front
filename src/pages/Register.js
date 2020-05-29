@@ -20,8 +20,8 @@ const Register = (props) => {
         <section className="login login_auth">
           <Logo />
           <h1>Ya has iniciado sesión no es necesarion que te registres</h1>
-          <Button name="blueBase" buttonType="button" action={() => { goTo('/'); }}>Ver productos</Button>
-          <Button name="purpleBase" buttonType="button" action={() => { goTo('/profile/tuentyfaiv'); }}>Ir a mi perfil</Button>
+          <Button name="base-blue" buttonType="button" action={() => { goTo('/'); }}>Ver productos</Button>
+          <Button name="base-purple" buttonType="button" action={() => { goTo('/profile/tuentyfaiv'); }}>Ir a mi perfil</Button>
         </section>
       </main>
     );
@@ -42,7 +42,7 @@ const Register = (props) => {
       <section className="nextStep">
         <Button name="success" buttonType="button">Siguiente</Button>
         <div className="register__separator" />
-        <Button name="google" buttonType="button">Registrate con </Button>
+        <Button name="image" buttonType="button">Registrate con </Button>
       </section>
     </main>
   );

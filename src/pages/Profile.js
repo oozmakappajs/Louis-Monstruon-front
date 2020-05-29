@@ -27,11 +27,11 @@ const Profile = (props) => {
           <h1 className="profile_title-noAuth">Necesitas Iniciar sesion para acceder a tu perfil</h1>
         </section>
         <section className="profile_content profile_content-noAuth">
-          <Button name="blueBase" buttonType="button" action={() => { goTo('/login'); }}>Iniciar sesión</Button>
+          <Button name="base-blue" buttonType="button" action={() => { goTo('/login'); }}>Iniciar sesión</Button>
           <p>
             ¿Notienes una cuenta?
             {' '}
-            <Button name="purpleBase" buttonType="button" action={() => { goTo('/register'); }}>Registrate</Button>
+            <Button name="base-purple" buttonType="button" action={() => { goTo('/register'); }}>Registrate</Button>
           </p>
         </section>
       </>
