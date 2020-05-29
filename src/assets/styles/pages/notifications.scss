@@ -5,11 +5,26 @@
   padding: 10px 0 20px;
   height: calc(100% - (8vh + 50px));
   overflow-y: auto;
+  &.light {
+    & .CartNotification {
+      background: map-get(map-get($palette, greyColors), lighter);
+    }
+    & .notifications_deleteAll {
+      background: map-get(map-get($palette, lightTheme), white);
+    }
+  }
+  &.dark {
+    & .CartNotification {
+      background: map-get(map-get($palette, darkTheme), lighter);
+    }
+    & .notifications_deleteAll {
+      background: map-get(map-get($palette, darkTheme), background);
+    }
+  }
   &_deleteAll {
     position: fixed;
     height: 40px;
     padding: 15px 20px;
-    background: map-get(map-get($palette, lightTheme), white);
     box-shadow: 0px -1px 2px #00000029;
     left: 0;
     right: 0;

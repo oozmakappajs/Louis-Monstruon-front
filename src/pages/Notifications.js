@@ -7,7 +7,7 @@ import Button from '../components/elements/Button';
 import '../assets/styles/pages/notifications.scss';
 
 const Notifications = (props) => {
-  const [{ notifications, settings: { notificationPermisions }, dispatch }] = getGlobalState();
+  const [{ notifications, settings: { theme, notificationPermisions }, dispatch }] = getGlobalState();
 
   console.log(notifications);
   console.log(notificationPermisions);
@@ -25,7 +25,7 @@ const Notifications = (props) => {
   }
 
   return (
-    <section className="notifications">
+    <section className={`notifications ${theme}`}>
       <CartNotification />
       <CartNotification />
       <CartNotification />

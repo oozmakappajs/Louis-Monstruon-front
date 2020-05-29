@@ -18,7 +18,7 @@
     height: 6vh;
     &.light,
     &.dark {
-      box-shadow: none;
+      border: none;
       background: transparent;
     }
   }
@@ -29,7 +29,7 @@
     grid-area: modal-terms-and-conditions;
     &.light,
     &.dark {
-      box-shadow: none;
+      border: none;
       background: transparent;
     }
     &.light {

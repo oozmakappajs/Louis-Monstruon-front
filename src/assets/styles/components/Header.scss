@@ -3,13 +3,14 @@
 .header {
   grid-area: header;
   width: 100%;
-  height: 8vh;
+  height: calc(8vh - 1px);
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: absolute;
   &.light {
-    box-shadow: 0 1px 3px map-get(map-get($palette, greyColors), silver);
+    background: map-get(map-get($palette,lightTheme),white);
+    border-bottom: 1px solid map-get(map-get($palette, greyColors), silver);
     & .header__icon {
       background: map-get(map-get($palette,darkTheme), content);
       color: map-get(map-get($palette,lightTheme), content);
@@ -20,7 +21,7 @@
     }
   } 
   &.dark {
-    box-shadow: 0 1px 3px map-get(map-get($palette, greyColors), coal);
+    border-bottom: 1px solid map-get(map-get($palette, greyColors), coal);
     & .header__icon {
       background: map-get(map-get($palette,darkTheme), lighter);
       color: map-get(map-get($palette,greyColors), lighter);
@@ -126,19 +127,19 @@
 
 @media screen and (min-width: 375px) {
   .header {
-    height: 10vh;
+    height: calc(10vh - 1px);
   }
 }
 
 @media screen and (min-width: 425px) {
   .header {
-    height: 9vh;
+    height: calc(9vh - 1px);
   }
 }
 
 @media screen and (min-width: 768px) {
   .header {
     width: 50%;
-    height: 10vh;
+    height: calc(10vh - 1px);
   }
 }
