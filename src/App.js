@@ -15,6 +15,7 @@ import NotFound from './pages/NotFound';
 import Layout from './components/Layout';
 
 const App = () => {
+
   return (
     <BrowserRouter>
       <Layout>

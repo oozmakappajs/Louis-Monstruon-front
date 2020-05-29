@@ -101,24 +101,15 @@
   }
 }
 
-input:checked + .slider {
-  background-color: map-get(map-get($palette,lightTheme), white);
-}
-
-input:checked + .slider__theme::before {
+.slider_checked + .slider__theme::before {
   background-image: url(../../../icons/moon.svg);
 }
 
-input:checked + .slider__off::before {
+.slider_checked + .slider__off::before {
   content: "Off";
 }
 
-input:focus + .slider {
-  background-color: white;
-  box-shadow: 0px 0px 4px #00000029;
-}
-
-input:checked + .slider::before {
+.slider_checked + .slider::before {
   -webkit-transform: translateX(33px);
   -ms-transform: translateX(33px);
   transform: translateX(33px);

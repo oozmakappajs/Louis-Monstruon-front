@@ -9,12 +9,12 @@ const IconButton = (props) => {
       {
         props.type === 'cart' && (
           !props.isBuying ? (
-            <button type="button" className="IconButton IconButton--cart">
+            <button type="button" className="IconButton IconButton--cart" onClick={props.action}>
               <LocalGroceryStoreOutlined />
             </button>
           ) :
             (
-              <button type="button" className="IconButton IconButton--cart">
+              <button type="button" className="IconButton IconButton--cart" onClick={props.action}>
                 <AddShoppingCart />
               </button>
             )
@@ -23,12 +23,12 @@ const IconButton = (props) => {
       {
         props.type === 'fav' && (
           props.isFav ? (
-            <button type="button" className="IconButton IconButton--fav">
+            <button type="button" className="IconButton IconButton--fav" onClick={props.action}>
               <Favorite />
             </button>
           ) :
             (
-              <button type="button" className="IconButton IconButton--emptyfav">
+              <button type="button" className="IconButton IconButton--emptyfav" onClick={props.action}>
                 <FavoriteBorder />
               </button>
             )
@@ -36,7 +36,7 @@ const IconButton = (props) => {
       }
       {
         props.type === 'delete' && (
-          <button type="button" className="IconButton IconButton--delete">
+          <button type="button" className="IconButton IconButton--delete" onClick={props.action}>
             <DeleteOutlined />
           </button>
         )
