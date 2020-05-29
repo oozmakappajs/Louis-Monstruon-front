@@ -9,6 +9,14 @@ import product from '../assets/images/products/dino2.jpg';
 import '../assets/styles/containers/ProductContainer.scss';
 
 const ProductContainer = (props) => {
+  const { addToCart, goToPayment, like } = props;
+
+  const item = {
+    id: '2a34a',
+    name: 'Producto 2',
+    count: 1,
+  };
+
   return (
     <section className="product ProductContainer">
       <div className="product_galery">
@@ -21,14 +29,14 @@ const ProductContainer = (props) => {
             <p className="ProductContainer__info-price-text">Precio</p>
             <QuantityCounter />
           </div>
-          <IconButton type="fav" className="ProductContainer__info-price--heart" />
+          <IconButton type="fav" action={like} className="ProductContainer__info-price--heart" />
         </div>
         <div className="ProductContainer__info-buttons">
           <div className="ProductContainer__info-buttons--btn">
-            <Button name="success">Comprar ahora</Button>
+            <Button name="success" action={goToPayment}>Comprar ahora</Button>
           </div>
           <div className="ProductContainer__info-buttons--icon">
-            <IconButton type="cart" isBuying />
+            <IconButton type="cart" action={() => { addToCart(item); }} isBuying />
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import GoogleText from './GoogleText';
 
@@ -11,21 +10,21 @@ const Button = (props) => {
     <>
       {
         props.name === 'blueBase' && (
-          <button type={props.buttonType} className="Button Button--base-blue">
+          <button type={props.buttonType} className="Button Button--base-blue" onClick={props.action}>
             {props.children}
           </button>
         )
       }
       {
         props.name === 'purpleBase' && (
-          <Link to={props.url} type={props.buttonType} className="Button Button--base-purple">
+          <button type={props.buttonType} className="Button Button--base-purple" onClick={props.action}>
             {props.children}
-          </Link>
+          </button>
         )
       }
       {
         props.name === 'google' && (
-          <button type={props.buttonType} className="Button Button--image">
+          <button type={props.buttonType} className="Button Button--image" onClick={props.action}>
             {props.children}
             <GoogleText />
           </button>
@@ -33,28 +32,28 @@ const Button = (props) => {
       }
       {
         props.name === 'success' && (
-          <button type={props.buttonType} className="Button Button--success">
+          <button type={props.buttonType} className="Button Button--success" onClick={props.action}>
             {props.children}
           </button>
         )
       }
       {
         props.name === 'error' && (
-          <button type={props.buttonType} className="Button Button--error">
+          <button type={props.buttonType} className="Button Button--error" onClick={props.action}>
             {props.children}
           </button>
         )
       }
       {
         props.name === 'blue' && (
-          <button type={props.buttonType} className="Button Button--blue">
+          <button type={props.buttonType} className="Button Button--blue" onClick={props.action}>
             {props.children}
           </button>
         )
       }
       {
         props.name === 'gradient' && (
-          <button type={props.buttonType} className="Button Button--gradient">
+          <button type={props.buttonType} className="Button Button--gradient" onClick={props.action}>
             {props.children}
           </button>
         )

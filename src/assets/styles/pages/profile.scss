@@ -1,40 +1,90 @@
 @import '../lib/palette';
 
-.profile_header {
-  grid-area: 1 / 1 / 2 / 2;
-  position: relative;
-  background: map-get(map-get($palette,greyColors), snow);
-  box-shadow: 0 1px 2px #00000029;
-}
-
-.profile_content {
-  grid-area: 2 / 1 / 4 / 2;
-  overflow-y: auto;
-  padding-bottom: 20px;
+.profile {
+  &_header {
+    grid-area: 1 / 1 / 2 / 2;
+    position: relative;
+    background: map-get(map-get($palette,greyColors), snow);
+    box-shadow: 0 1px 2px #00000029;
+  }
+  &_content {
+    grid-area: 2 / 1 / 4 / 2;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    &-noAuth {
+      width: 90%;
+      margin: auto 5%;
+      font-family: 'Quicksand Regular';
+      font-size: 18px;
+      text-align: center;
+      button {
+        margin: 20px 0;
+      }
+    }
+  }
+  &_title-noAuth {
+    margin: 50px 10%;
+    font-family: 'Quicksand Bold';
+    font-size: 24px;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 500px) { 
-  .profile_header {
-    grid-area: 1 / 1 / 2 / 3;
-  }
-
-  .profile_content {
-    grid-area: 2 / 1 / 4 / 3;
+  .profile {
+    &_header {
+      grid-area: 1 / 1 / 2 / 3;
+    }
+    &_content {
+      grid-area: 2 / 1 / 4 / 3;
+      &-noAuth {
+        width: 70%;
+        margin: auto 15%;
+        font-family: 'Quicksand Regular';
+        font-size: 18px;
+        text-align: center;
+        button {
+          margin: 20px 0;
+        }
+      }
+    }
+    &_title-noAuth {
+      margin: 50px 15%;
+      font-family: 'Quicksand Bold';
+      font-size: 24px;
+    }
   }
 }
 
 @media screen and (min-width: 769px) {
-  .profile_content {
-    &::-webkit-scrollbar {
-      width: 8px;
-      border-radius: 8px;
-      background: map-get(map-get($palette, greyColors), moon);
+  .profile {
+    &_content {
+      &-noAuth {
+        width: 50%;
+        margin: auto 25%;
+        font-family: 'Quicksand Regular';
+        font-size: 18px;
+        text-align: center;
+        button {
+          margin: 20px 0;
+        }
+      }
+      &::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 8px;
+        background: map-get(map-get($palette, greyColors), moon);
+      }
+      &::-webkit-scrollbar-thumb {
+        width: 8px;
+        border-radius: 8px;
+        background: map-get(map-get($palette, lightTheme), content);
+        cursor: pointer;
+      }
     }
-    &::-webkit-scrollbar-thumb {
-      width: 8px;
-      border-radius: 8px;
-      background: map-get(map-get($palette, lightTheme), content);
-      cursor: pointer;
+    &_title-noAuth {
+      margin: 50px 25%;
+      font-family: 'Quicksand Bold';
+      font-size: 24px;
     }
   }
 }

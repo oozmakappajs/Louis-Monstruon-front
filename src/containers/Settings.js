@@ -7,17 +7,30 @@ import SwitchButton from '../components/elements/SwitchButton';
 
 import '../assets/styles/containers/Settings.scss';
 
-const Settings = () => {
+const Settings = (props) => {
+  const { isAuth, settings, changeSetting, goToLogin, push } = props;
+
+  const themeSelected = settings.theme === 'light' ? 'dark' : 'light';
+
   return (
     <section className="settings Settings">
       <ul className="Settings__menu">
         <li className="Settings__menu-item">
           <p>Tema</p>
-          <SwitchButton theme />
+          <SwitchButton
+            selected={settings.theme}
+            action={() => changeSetting('CHANGE_THEME', themeSelected)}
+            element="checked-theme"
+            theme
+          />
         </li>
         <li className="Settings__menu-item">
           <p>Push notifications</p>
-          <SwitchButton />
+          <SwitchButton
+            selected={settings.notificationPermisions}
+            action={() => changeSetting('TOGGLE_NOTIFICATIONS')}
+            element="checked-notifications"
+          />
         </li>
         <li className="Settings__menu-item">
           <p>Cuenta</p>
@@ -26,7 +39,11 @@ const Settings = () => {
           </div>
         </li>
         <li className="Settings__menu-item">
-          <Button name="error">Cerrar sesión</Button>
+          {
+            isAuth ?
+              <Button name="error" action={() => { changeSetting('REMOVE_AUTHORIZATION'); push('/'); }}>Cerrar sesión</Button> :
+              <Button name="success" action={goToLogin}>Iniciar sesión</Button>
+          }
         </li>
       </ul>
     </section>
