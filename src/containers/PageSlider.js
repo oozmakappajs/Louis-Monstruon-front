@@ -5,7 +5,7 @@ import '../assets/styles/components/PageSlider.scss';
 const PageSlider = (props) => {
   return (
     <div className="PageSlider">
-      <span className="PageSlider__item" />
+      <span className="PageSlider__item PageSlider__item-active" />
       <span className="PageSlider__item" />
       <span className="PageSlider__item" />
       <span className="PageSlider__item" />

@@ -6,7 +6,7 @@ import ProductContainer from '../containers/ProductContainer';
 import '../assets/styles/pages/product.scss';
 
 const Product = (props) => {
-  const [{ isAuth }, dispatch] = getGlobalState();
+  const [{ isAuth, settings: { theme } }, dispatch] = getGlobalState();
 
   const handleLike = () => {
     if (!isAuth) {
@@ -27,6 +27,7 @@ const Product = (props) => {
       addToCart={handleAddToCart}
       goToPayment={goToPayment}
       like={handleLike}
+      theme={theme}
     />
   );
 };

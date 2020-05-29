@@ -18,6 +18,7 @@
   }
   &__number {
     font-size: 18px;
-    font-family: 'Quicksand Regular';
+    font-family: 'Quicksand Bold';
+    color: map-get(map-get($palette,greyColors),black);
   }
 }

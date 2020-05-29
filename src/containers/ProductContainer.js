@@ -9,7 +9,7 @@ import product from '../assets/images/products/dino2.jpg';
 import '../assets/styles/components/ProductActions.scss';
 
 const ProductContainer = (props) => {
-  const { addToCart, goToPayment, like } = props;
+  const { addToCart, goToPayment, like, theme } = props;
 
   const item = {
     id: '2a34a',
@@ -18,7 +18,7 @@ const ProductContainer = (props) => {
   };
 
   return (
-    <section className="product ProductContainer">
+    <section className={`product ${theme} ProductContainer`}>
       <div className="product_galery">
         <img className="ProductContainer__img" src={product} alt="product" />
         <PageSlider />

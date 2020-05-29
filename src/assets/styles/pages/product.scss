@@ -5,6 +5,50 @@
   overflow-y: auto;
   width: calc(100% - 20px);
   height: calc(100% - 20px);
+  &.light {
+    & .ProductContainer {
+      &__img {
+        background: map-get(map-get($palette,lightTheme), white);
+      }
+      &__text {
+        border-top: 1px solid map-get(map-get($palette,greyColors),silver);
+      }
+    }
+    & .IconButton--cart {
+      background: map-get(map-get($palette,secondary),purple);
+    }
+    & .PageSlider__item {
+      background: map-get(map-get($palette,lightTheme), white);
+      &-active {
+        background: map-get(map-get($palette,greyColors), coal);
+      }
+      &:hover, &:active {
+        background: map-get(map-get($palette,greyColors), coal);
+      }
+    }
+  }
+  &.dark {
+    & .ProductContainer{
+      &__img {
+        background: map-get(map-get($palette,darkTheme), lighter);
+      }
+      &__text {
+        border-top: 1px solid map-get(map-get($palette,darkTheme), lighter);
+      }
+    }
+    & .IconButton--cart {
+      background: map-get(map-get($palette,primary),blue);
+    }
+    & .PageSlider__item {
+      background: map-get(map-get($palette,greyColors), moon);
+      &-active {
+        background: map-get(map-get($palette,greyColors), lighter);
+      }
+      &:hover, &:active {
+        background: map-get(map-get($palette,greyColors), lighter);
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 500px) {
