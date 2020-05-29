@@ -1,10 +1,8 @@
 @import '../lib/palette';
-@import '../lib/fonts';
 
 .CartContainer {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand Regular';
   color: map-get(map-get($palette,greyColors), black);
-  height: 100%;
   &__info {
     display: flex;
     justify-content: center;
@@ -25,17 +23,19 @@
       width: calc(100% - 60px);
       justify-content: space-between;
       align-items: center;
-      margin: 0 30px;
+      margin: 0 15px;
+      padding: 0 15px;
       border-bottom: solid 1px #C1C1C1;
       color: black;
       min-height: 30px;
       &--total {
-        font-weight: 900;
-        margin-bottom: 16px;
+        font-family: 'Quicksand Bold';
+        border-bottom: none;
       }
     }
-  }
-  button {
-    width: calc(100% - 40px);
+    button {
+      width: calc(100% - 30px);
+      margin: 10px 0;
+    }
   }
 }

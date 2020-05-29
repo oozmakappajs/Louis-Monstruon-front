@@ -1,11 +1,22 @@
+@import '../lib/palette';
+
 .featured {
   grid-area: 1 / 1 / 2 / 2;
+  width: calc(100% - 24px);
+  padding: 12px;
   overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .categories {
   grid-area: 2 / 1 / 4 / 2;
-  overflow: scroll;
+  width: calc(100% - 20px);
+  padding: 10px;
+  &-title {
+    margin-top: 10px;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+  }
 }
 
 @media screen and (min-width: 500px) { 
@@ -15,5 +26,33 @@
 
   .categories {
     grid-area: 2 / 1 / 4 / 3;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .featured {
+    overflow-x: hidden;
+    &:hover {
+      overflow-x: scroll;
+    }
+    &::-webkit-scrollbar {
+      height: 8px;
+      border-radius: 8px;
+      background: map-get(map-get($palette, greyColors), moon);
+    }
+    &::-webkit-scrollbar-thumb {
+      height: 8px;
+      border-radius: 8px;
+      background: map-get(map-get($palette, lightTheme), content);
+    }
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    &-section {
+      width: calc(50% - 20px);
+      margin: 0 10px;
+    }
   }
 }

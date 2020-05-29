@@ -7,10 +7,10 @@
   &__img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     &-container {
-      width: 150px;
-      height: 172px;
+      width: 135px;
+      height: 115px;
     }
   } 
 }

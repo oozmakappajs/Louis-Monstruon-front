@@ -1,6 +1,6 @@
 .settings {
   grid-area: 1 / 1 / 4 / 2;
-  overflow: scroll;
+  overflow-y: auto;
 }
 
 @media screen and (min-width: 500px) { 

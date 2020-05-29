@@ -1,16 +1,23 @@
 import React from 'react';
-import '../../assets/styles/containers/Carousel/Card.scss';
+import { Link } from 'react-router-dom';
+
 import product from '../../assets/images/products/dino2.jpg';
 
-const Card = () => {
+import '../../assets/styles/containers/Carousel/Card.scss';
+
+const Card = (props) => {
   return (
-    <div className="Card">
-      <img
-        src={product}
-        alt="carousel-img"
-        className="Card__img"
-      />
-    </div>
+    <article className="MainCarousel-item">
+      <Link to="/man/pants/213413ed13">
+        <div className="Card">
+          <img
+            src={product}
+            alt="carousel-img"
+            className="Card__img"
+          />
+        </div>
+      </Link>
+    </article>
   );
 };
 

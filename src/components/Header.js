@@ -2,102 +2,113 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ArrowBackIos, FilterList, Search, SettingsOutlined } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
-import '../assets/styles/components/Header.scss';
 
-const Header = (props) => (
-  <>
-    {
-      props.type === 'logo' && (
-        <header className="header">
-          <Link className="header__brand" to="/">
-            {props.children}
-          </Link>
-        </header>
-      )
+const Header = (props) => {
+
+  const handleGo = (type) => {
+    if (type === 'back') {
+      props.history.goBack();
+    } else {
+      props.history.push('/settings');
     }
-    {
-      props.type === 'page' && (
-        <header className="header">
-          <p className="header__page-name" to="/">
-            {props.children}
-          </p>
-        </header>
-      )
-    }
-    {
-      props.type === 'twoIcons' && (
-        <header className="header">
-          <div className="header__container">
-            <Link className="header__icon" to="/">
-              <ArrowBackIos className="header__icon--arrow" />
+  };
+
+  return (
+    <>
+      {
+        props.type === 'logo' && (
+          <header className="header">
+            <Link className="header__brand" to="/">
+              LOUIS MONSTRUON
             </Link>
+          </header>
+        )
+      }
+      {
+        props.type === 'page' && (
+          <header className="header">
             <p className="header__page-name" to="/">
-              {props.children}
+              {props.title}
             </p>
-            <Link className="header__icon header__icon--list" to="/settings">
+          </header>
+        )
+      }
+      {
+        props.type === 'twoIcons' && (
+          <header className="header">
+            <div className="header__container">
+              <button type="button" className="header__icon" onClick={() => { handleGo('back'); }}>
+                <ArrowBackIos className="header__icon--arrow" />
+              </button>
+              <p className="header__page-name" to="/">
+                Categorias
+              </p>
+              <Link className="header__icon header__icon--list" to="/">
+                <FilterList />
+              </Link>
+            </div>
+          </header>
+        )
+      }
+      {
+        props.type === 'leftIcons' && (
+          <header className="header">
+            <div className="header__container">
+              <button type="button" className="header__icon" onClick={() => { handleGo('back'); }}>
+                <ArrowBackIos className="header__icon--arrow" />
+              </button>
+              <p className="header__page-name header__page-name--arrow" to="/">
+                {props.title}
+              </p>
+            </div>
+          </header>
+        )
+      }
+      {
+        props.type === 'rightIcons' && (
+          <header className="header">
+            <div className="header__container">
+              <p className="header__page-name header__page-name--arrow" to="/">
+                {props.title}
+              </p>
+              <button type="button" className="header__icon" onClick={() => { handleGo(); }}>
+                <SettingsOutlined />
+              </button>
+            </div>
+          </header>
+        )
+      }
+      {
+        props.type === 'back' && (
+          <header className="header header--transparent modalView_header">
+            <div className="header__container">
+              <button type="button" className="header__icon" onClick={() => { handleGo('back'); }}>
+                <ArrowBackIos className="header__icon--arrow" />
+              </button>
+            </div>
+          </header>
+        )
+      }
+      {
+        props.type === 'search' && (
+          <header className="header header__search">
+            <div className="header__search--bar-container">
+              <input type="text" placeholder="Buscar" className="header__search--bar" />
+              <Search />
+            </div>
+            <Link className="header__icon header__icon--list header__search--icon" to="/">
               <FilterList />
             </Link>
-          </div>
-        </header>
-      )
-    }
-    {
-      props.type === 'leftIcons' && (
-        <header className="header">
-          <div className="header__container header__container-arrow">
-            <Link className="header__icon header__icon-arrow" to="/">
-              <ArrowBackIos className="header__icon--arrow" />
-            </Link>
-            <p className="header__page-name header__page-name--arrow" to="/">
-              {props.children}
-            </p>
-          </div>
-        </header>
-      )
-    }
-    {
-      props.type === 'rightIcon' && (
-        <header className="header">
-          <div className="header__container header__container-arrow">
-            <p className="header__page-name header__page-name--arrow" to="/">
-              {props.children}
-            </p>
-            <Link className="header__icon header__icon-settings" to="/settings">
-              <SettingsOutlined />
-            </Link>
-          </div>
-        </header>
-      )
-    }
-    {
-      props.type === 'back' && (
-        <header className="header header--transparent ">
-          <div className="header__container">
-            <Link className="header__icon" to="/">
-              <ArrowBackIos className="header__icon--arrow" />
-            </Link>
-          </div>
-        </header>
-      )
-    }
-    {
-      props.type === 'search' && (
-        <header className="header header__search">
-          <div className="header__search--bar-container">
-            <input type="text" placeholder="Buscar" className="header__search--bar" />
-            <Search />
-          </div>
-          <Link className="header__icon header__icon--list header__search--icon" to="/settings">
-            <FilterList />
-          </Link>
-        </header>
-      )
-    }
-  </>
-);
+          </header>
+        )
+      }
+    </>
+  );
+};
 
 Header.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };
 
 export default Header;

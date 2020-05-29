@@ -13,7 +13,6 @@ const SearchCard = () => {
           className="SearchCard__img"
         />
       </div>
-
       <div className="SearchCard__details">
         <p className="SearchCard__title">Nombre</p>
         <p className="SearchCard__price">precio</p>

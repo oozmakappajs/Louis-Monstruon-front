@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .register {
   height: 80%;
   width: 100%;
@@ -23,7 +24,6 @@
     }
   }
   &__modal {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -40,15 +40,4 @@
     width: calc(100% - 70px);
     margin: 10px 35px;
   }
-  height: 20%;
 }
-
-
-
-// @media screen and (min-width: 500px) { 
-//   .register {
-//   }
-
-//   .nextStep {
-//   }
-// }

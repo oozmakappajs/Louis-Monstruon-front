@@ -24,6 +24,18 @@
       "dest": "/$1.png"
     },
     {
+      "src": "(.*).jpg",
+      "dest": "/$1.jpg"
+    },
+    {
+      "src": "(.*).svg",
+      "dest": "/$1.svg"
+    },
+    {
+      "src": "(.*).ttf",
+      "dest": "/$1.ttf"
+    },
+    {
       "src": "/.*",
       "dest": "/index.html"
     }

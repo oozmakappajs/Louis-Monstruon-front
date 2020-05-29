@@ -1,24 +1,19 @@
-@import '../lib/palette.scss';
-
 .Footer {
-  width: 100%;
-  height: 44px;
+  grid-area: menu-navigation;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
-  bottom: 0;
   border-top: 1px solid map-get(map-get($palette, greyColors), silver);
   background: map-get(map-get($palette, lightTheme), white);
   &__icon {
     color: map-get(map-get($palette,greyColors),black);
-    width: 32px;
+    width: 45px;
     height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    &:hover, &:active {
+    &:hover, &:active, &-active {
       background: map-get(map-get($palette,primary),blue) 0% 0% no-repeat padding-box;
       color: map-get(map-get($palette,lightTheme),white);
       opacity: 1;
@@ -27,11 +22,19 @@
   &__terms {
     color: map-get(map-get($palette,greyColors),black);
     font-size: 14px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand Regular';
     text-decoration: none;
   } 
   &__transparent {
     background: transparent;
     border: none;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .Footer {
+    border-top: none;
+    border-bottom: 1px solid map-get(map-get($palette, greyColors), silver);
   }
 }

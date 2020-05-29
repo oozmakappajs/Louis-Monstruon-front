@@ -1,4 +1,3 @@
-@import '../../lib/fonts';
 @import  '../../lib/palette';
 
 .Tag {
@@ -8,7 +7,7 @@
   border-radius: 5px;
   opacity: 1;
   font-size: 12px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand Regular';
   display: flex;
   justify-content: center;
   align-items: center;

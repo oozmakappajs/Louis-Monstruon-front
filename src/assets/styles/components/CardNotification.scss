@@ -1,12 +1,11 @@
-@import '../lib/fonts';
 @import '../lib/palette';
 
 .CartNotification {
-  font-family: 'Quicksand', sans-serif;
-  width: calc(100% - 40px);
+  font-family: 'Quicksand Regular';
+  width: calc(100% - 20px);
   box-shadow: 0px 0px 2px #00000029;
   border-radius: 5px;
-  margin: 10px 20px;
+  margin: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,12 +15,25 @@
     margin-right: 8px;
   }
   &__text {
+    width: 80%;
     margin-left: 8px;
+    color: map-get(map-get($palette, lightTheme), content);
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__title {
     font-size: 16px;
   }
   &__sinopsis {
     font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .CartNotification {
+    width: calc(100% - 30px);
+    margin: 15px;
   }
 }

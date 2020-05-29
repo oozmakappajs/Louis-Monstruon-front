@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../assets/styles/components/ProductCard.scss';
 import product from '../assets/images/products/dino2.jpg';
+
+import '../assets/styles/components/ProductCard.scss';
 
 const ProductCard = () => {
   return (
-    <Link to="/:category/:product/:id" className="productCard">
+    <Link className="productCard" to="/man/pants/213413ed13">
       <div className="productCard__img-container">
         <img
           src={product}

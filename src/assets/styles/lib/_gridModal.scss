@@ -17,6 +17,7 @@
   bottom: 0;
   &_header {
     grid-area: modal-back-steps;
+    height: 6vh;
   }
   &_content {
     grid-area: modal-content;
@@ -35,11 +36,41 @@
 @media screen and (min-width: 425px) {
   .modalView {
     grid-template-rows: 5vh 89vh 6vh;
+    &_content {
+      width: 80%;
+      padding: 0 10%;
+    }
   }
 }
 
 @media screen and (min-width: 600px) {
   .modalView {
+    width: 100%;
     grid-template-rows: 7vh 85vh 8vh;
+    &_header {
+      height: 7vh;
+    }
+    &_content {
+      width: 70%;
+      padding: 0 15%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modalView {
+    &_content {
+      width: 60%;
+      padding: 0 20%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modalView {
+    &_content {
+      width: 50%;
+      padding: 0 25%;
+    }
   }
 }

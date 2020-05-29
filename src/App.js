@@ -12,24 +12,27 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Payment from './pages/Payment';
 import NotFound from './pages/NotFound';
+import Layout from './components/Layout';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/notifications" component={Notifications} />
-        <Route exact path="/search" component={Search} />
-        <Route exact path="/cart" component={Cart} />
-        <Route exact path="/profile/:username" component={Profile} />
-        <Route exact path="/settings" component={Settings} />
-        <Route exact path="/payment" component={() => <Payment finish />} />
-        <Route exact path="/:category/:product" component={Products} />
-        <Route exact path="/:category/:product/:id" component={Product} />
-        <Route component={NotFound} />
-      </Switch>
+      <Layout>
+        <Switch>
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/notifications" component={Notifications} />
+          <Route exact path="/search" component={Search} />
+          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/profile/:username" component={Profile} />
+          <Route exact path="/settings" component={Settings} />
+          <Route exact path="/payment" component={Payment} />
+          <Route exact path="/:category/:product" component={Products} />
+          <Route exact path="/:category/:product/:id" component={Product} />
+          <Route component={NotFound} />
+        </Switch>
+      </Layout>
     </BrowserRouter>
   );
 };

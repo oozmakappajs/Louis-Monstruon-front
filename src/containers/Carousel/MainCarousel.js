@@ -1,28 +1,18 @@
 import React from 'react';
-import '../../assets/styles/containers/Carousel/MainCarousel.scss';
+
 import Card from './Card';
+
+import '../../assets/styles/containers/Carousel/MainCarousel.scss';
 
 const MainCarousel = () => {
   return (
-    <div className="MainCarousel">
-      <div className="MainCarousel__container">
-        <div className="MainCarousel-item">
-          <Card />
-        </div>
-        <div className="MainCarousel-item">
-          <Card />
-        </div>
-        <div className="MainCarousel-item">
-          <Card />
-        </div>
-        <div className="MainCarousel-item">
-          <Card />
-        </div>
-        <div className="MainCarousel-item">
-          <Card />
-        </div>
-      </div>
-    </div>
+    <section className="featured MainCarousel">
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </section>
   );
 };
 

@@ -1,17 +1,24 @@
 import React from 'react';
-import '../../assets/styles/containers/Carousel/SmallCard.scss';
+import { Link } from 'react-router-dom';
+
 import product from '../../assets/images/products/dino2.jpg';
 
-const SmallCard = () => {
+import '../../assets/styles/containers/Carousel/SmallCard.scss';
+
+const SmallCard = (props) => {
   return (
-    <div className="smallCard">
-      <img
-        src={product}
-        alt="carousel-small-img"
-        className="smallCard__img"
-      />
-      <p className="smallCard__title">Tipo de prenda</p>
-    </div>
+    <article className="SmallCarousel-item">
+      <Link to="/man/pants">
+        <div className="smallCard">
+          <img
+            src={product}
+            alt="carousel-small-img"
+            className="smallCard__img"
+          />
+          <p className="smallCard__title">Tipo de prenda</p>
+        </div>
+      </Link>
+    </article>
   );
 };
 

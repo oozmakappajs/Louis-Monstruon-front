@@ -1,41 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { HomeOutlined,
+import { Link, NavLink } from 'react-router-dom';
+import {
+  HomeOutlined,
   LocalGroceryStoreOutlined,
   NotificationsOutlined,
   PersonOutlined,
-  SearchOutlined } from '@material-ui/icons';
-import '../assets/styles/components/Footer.scss';
+  SearchOutlined,
+} from '@material-ui/icons';
 
 const Footer = (props) => (
   <>
     {
       props.icons ? (
         <footer className="Footer">
-          <Link className="Footer__icon" to="/">
+          <NavLink exact className="Footer__icon" to="/" activeClassName="Footer__icon-active">
             <HomeOutlined />
-          </Link>
-          <Link className="Footer__icon" to="/notifications">
+          </NavLink>
+          <NavLink exact className="Footer__icon" to="/notifications" activeClassName="Footer__icon-active">
             <NotificationsOutlined />
-          </Link>
-          <Link className="Footer__icon" to="/cart">
-            <LocalGroceryStoreOutlined />
-          </Link>
-          <Link className="Footer__icon" to="/search">
+          </NavLink>
+          <NavLink exact className="Footer__icon" to="/search" activeClassName="Footer__icon-active">
             <SearchOutlined />
-          </Link>
-          <Link className="Footer__icon" to="/profile/:username">
+          </NavLink>
+          <NavLink exact className="Footer__icon" to="/cart" activeClassName="Footer__icon-active">
+            <LocalGroceryStoreOutlined />
+          </NavLink>
+          <NavLink exact className="Footer__icon" to="/profile/tuentyfaiv" activeClassName="Footer__icon-active">
             <PersonOutlined />
-          </Link>
+          </NavLink>
         </footer>
-      ) : (
-        <footer className="Footer Footer__transparent">
-          <Link className="Footer__terms" to="/">
-            {props.children}
-          </Link>
-        </footer>
-      )
+      ) :
+        (
+          <footer className="Footer Footer__transparent modalView_termsAndConditions">
+            <Link className="Footer__terms" to="/">
+              terms and Conditions
+            </Link>
+          </footer>
+        )
     }
   </>
 );

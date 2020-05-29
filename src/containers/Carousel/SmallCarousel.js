@@ -1,32 +1,26 @@
 import React from 'react';
-import '../../assets/styles/containers/Carousel/SmallCarousel.scss';
+
 import SmallCard from './SmallCard';
 
-const SmallCarousel = () => {
+import '../../assets/styles/containers/Carousel/SmallCarousel.scss';
+
+const SmallCarousel = (props) => {
   return (
-    <div className="SmallCarousel">
-      <div className="SmallCarousel__container">
-        <div className="SmallCarousel-item">
-          <SmallCard />
-        </div>
-        <div className="SmallCarousel-item">
-          <SmallCard />
-        </div>
-        <div className="SmallCarousel-item">
-          <SmallCard />
-        </div>
-        <div className="SmallCarousel-item">
-          <SmallCard />
-        </div>
-        <div className="SmallCarousel-item">
-          <SmallCard />
-        </div>
-        <div className="SmallCarousel-item">
-          <SmallCard />
-        </div>
-        <div className="SmallCarousel-item">
-          <SmallCard />
-        </div>
+    <div className="categories-section">
+      <h3 className="categories-title">{props.sectionName}</h3>
+      <div className="SmallCarousel">
+        <SmallCard />
+        <SmallCard />
+        <SmallCard />
+        <SmallCard />
+        <SmallCard />
+        <SmallCard />
+        <SmallCard />
+        <SmallCard />
+        <SmallCard />
+        <SmallCard />
+        <SmallCard />
+        <SmallCard />
       </div>
     </div>
   );
