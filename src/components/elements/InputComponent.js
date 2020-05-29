@@ -4,7 +4,7 @@ import '../../assets/styles/components/elements/Input.scss';
 
 const InputComponent = (props) => (
   <div className="InputComponent">
-    <input type="text" placeholder={props.title} className="InputComponent__input" />
+    <input type={props.type} placeholder={props.title} name={props.name} className="InputComponent__input" onChange={props.action} required={props.required} />
     <div className="InputComponent__input--border" />
   </div>
 );
