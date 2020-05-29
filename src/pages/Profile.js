@@ -5,7 +5,7 @@ import UserCard from '../containers/UserCard';
 
 import '../assets/styles/pages/profile.scss';
 
-const Profile = (props) => {
+const Profile = () => {
   const [active, setActive] = useState(false);
 
   const handleTabActive = () => {
