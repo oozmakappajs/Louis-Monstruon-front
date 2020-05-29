@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
+// import axios from 'axios';
 import { loadStripe } from '@stripe/stripe-js';
 import {
   Elements,
@@ -19,10 +20,29 @@ const CheckoutForm = () => {
       card: elements.getElement(CardElement),
     });
     if (!error) {
-      console.log(paymentMethod);
+      const { id } = paymentMethod;
+      // trying with axios
+      // try {
+      //   const { data } = await axios.post('/api/charge', { id, amount: 1099 });
+      //   console.log(data);
+      //   success();
+      // } catch (error) {
+      //   console.log(error);
+      // }
+      try {
+        const response = await fetch('/Api/charge', {
+          method: 'post',
+          id,
+          amount: 15000,
+        });
+        const data = await response.json();
+        consolelog(data);
+
+      } catch (error) {
+        console.log('Hey here the error:', error);
+      }
     }
   };
-
   return (
     <form onSubmit={handleSubmit}>
       <h2>Product name</h2>
