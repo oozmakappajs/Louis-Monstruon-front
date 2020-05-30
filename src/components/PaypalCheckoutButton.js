@@ -5,7 +5,6 @@ import paypal from 'paypal-checkout';
 const PayplaCheckoutButton = ({ order }) => {
   const paypalConf = {
     currency: 'MXN',
-    // cambiar cuando pase a producción
     env: 'sandbox',
     client: {
       sandbox: 'AbIoq_r-mjiJO5SlvJdfYokwyu4J3ebPrEzQQbdpxGrgVOlBatrYeWbX5v4jqICvxTy6IPO9Iw5zCJXC',
@@ -19,12 +18,9 @@ const PayplaCheckoutButton = ({ order }) => {
       tagline: 'true',
     },
   };
-  // implementa transacciones e invoca funcion con autorize para poder ejecutar el proceso de pago
-  // instancia que devolveré en return
   const PaypalButton = paypal.Button.driver('react', { React, ReactDOM });
 
   const payment = (data, actions) => {
-  // info de las transacciones que queremos procesar.
     const payment = {
       transactions: [
         {
@@ -43,7 +39,6 @@ const PayplaCheckoutButton = ({ order }) => {
     };
     return actions.payment.create({ payment });
   };
-    // Encargada de hacer el proceso de pago con paypal
   const onAuthorize = (data, actions) => {
     return actions.payment.execute()
       .then((response) => {
@@ -65,7 +60,6 @@ const PayplaCheckoutButton = ({ order }) => {
   };
 
   return (
-    //Configura entonrno dodne trabajará
     <PaypalButton
       env={paypalConf.env}
       client={paypalConf.client}
