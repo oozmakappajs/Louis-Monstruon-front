@@ -1,10 +1,22 @@
+@import "../lib/palette";
+
 .results {
   grid-area: 1 / 1 / 4 / 2;
-  overflow: scroll;
+  overflow-y: auto;
   display: flex;
+  width: calc(100% - 10px);
+  padding: 10px 5px 20px;
   flex-wrap: wrap;
-  // width: calc(100% - 32px);
-  // margin: 0 16px;
+  &.light {
+    & .SearchCard {
+      background: map-get(map-get($palette,lightTheme),white);
+    }
+  }
+  &.dark {
+    & .SearchCard {
+      background: map-get(map-get($palette,darkTheme),lighter);
+    }
+  }
 }
 
 @media screen and (min-width: 500px) { 
