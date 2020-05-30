@@ -31,6 +31,10 @@
 
 @media screen and (min-width: 769px) {
   .featured {
+    overflow-x: hidden;
+    &:hover {
+      overflow-x: auto;
+    }
     &::-webkit-scrollbar {
       height: 8px;
       border-radius: 8px;

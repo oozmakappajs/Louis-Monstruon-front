@@ -38,3 +38,23 @@
   transform: scale(1.5);
   opacity: 1;
 }
+
+@media screen and (min-width: 769px) {
+  .SmallCarousel {
+    overflow-x: hidden;
+    &:hover {
+      overflow-x: auto;
+    }
+    &::-webkit-scrollbar {
+      height: 8px;
+      border-radius: 8px;
+      background: map-get(map-get($palette, greyColors), moon);
+    }
+    &::-webkit-scrollbar-thumb {
+      height: 8px;
+      border-radius: 8px;
+      background: map-get(map-get($palette, lightTheme), content);
+      cursor: pointer;
+    }
+  }
+}

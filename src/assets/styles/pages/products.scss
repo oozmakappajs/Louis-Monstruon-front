@@ -23,3 +23,19 @@
     grid-area: 1 / 1 / 4 / 3;
   }
 }
+
+@media screen and (min-width: 769px) {
+  .products {
+    &::-webkit-scrollbar {
+      width: 8px;
+      border-radius: 8px;
+      background: map-get(map-get($palette, greyColors), moon);
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 8px;
+      border-radius: 8px;
+      background: map-get(map-get($palette, lightTheme), content);
+      cursor: pointer;
+    }
+  }
+}
