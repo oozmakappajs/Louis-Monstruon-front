@@ -2,21 +2,23 @@
 
 .CartContainer {
   font-family: 'Quicksand Regular';
-  color: map-get(map-get($palette,greyColors), black);
   &__info {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100%;
+    &.light {
+      background: map-get(map-get($palette, lightTheme), white);
+    }
     &-description {
-      color: map-get(map-get($palette,lightTheme), white);
-      height: 100%;
       display: flex;
+      width: 100%;
+      height: 100%;
+      color: inherit;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      width: 100%;
     }
     &-item {
       display: flex;
@@ -25,17 +27,14 @@
       align-items: center;
       margin: 0 15px;
       padding: 0 15px;
-      border-bottom: solid 1px #C1C1C1;
-      color: black;
       min-height: 30px;
       &--total {
         font-family: 'Quicksand Bold';
-        border-bottom: none;
       }
     }
     button {
       width: calc(100% - 30px);
-      margin: 10px 0;
+      margin-bottom: 10px;
     }
   }
 }

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../assets/styles/components/SearchCard.scss';
+
 import product from '../assets/images/products/dino2.jpg';
+
+import '../assets/styles/components/SearchCard.scss';
 
 const SearchCard = () => {
   return (

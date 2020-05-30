@@ -7,12 +7,29 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid map-get(map-get($palette, greyColors), silver);
-  background: map-get(map-get($palette, lightTheme), white);
   position: absolute;
-  &--transparent {
-    background: transparent;
-    border: none;
+  &.light {
+    background: map-get(map-get($palette,lightTheme),white);
+    border-bottom: 1px solid map-get(map-get($palette, greyColors), silver);
+    & .header__icon {
+      background: map-get(map-get($palette,darkTheme), content);
+      color: map-get(map-get($palette,lightTheme), content);
+    }
+    & .header__search--bar {
+      background: map-get(map-get($palette,darkTheme), content);
+      color: map-get(map-get($palette,greyColors), nickel);
+    }
+  } 
+  &.dark {
+    border-bottom: 1px solid map-get(map-get($palette, greyColors), coal);
+    & .header__icon {
+      background: map-get(map-get($palette,darkTheme), lighter);
+      color: map-get(map-get($palette,greyColors), lighter);
+    }
+    & .header__search--bar {
+      background: map-get(map-get($palette,darkTheme), lighter);
+      color: map-get(map-get($palette,greyColors), silver);
+    }
   }
   &__brand {
     color:  map-get(map-get($palette,primary),blue);
@@ -23,10 +40,16 @@
     font-size: 17px;
     font-family: 'Quicksand Regular';
     &--arrow {
-      width: 100%;
+      width: calc(100% - 56px);
       text-align: center;
       vertical-align: middle;
       line-height: 30px;
+      &.pl {
+        padding-left: 28px;
+      }
+      &.pr {
+        padding-right: 28px;
+      }
     }
   }
   &__container {
@@ -40,9 +63,7 @@
     }
   }
   &__icon {
-    color: map-get(map-get($palette,greyColors),black);
-    background: map-get(map-get($palette,greyColors),silver);
-    border-radius: 50%;
+    border-radius: 28px;
     width: 28px;
     height: 28px;
     display: flex;
@@ -67,7 +88,6 @@
       }
     }
     &--list {
-      background: map-get(map-get($palette,darkTheme),content) 0% 0% no-repeat padding-box;
       &:hover {
         border-radius: 50%;
         background: map-get(map-get($palette,greyColors),black);
@@ -81,11 +101,11 @@
       width: calc(100% - 16px);
       height: 32px;
       border-radius: 20px;
-      background: map-get(map-get($palette,darkTheme),content) 0% 0% no-repeat padding-box;
-      border-radius: 19px;
       padding: 0 8px;
-        &:focus {
-          outline: none;
+      font-size: 14px;
+      font-weight: 700;
+      &:focus {
+        outline: none;
       }
       &-container {
         width: calc(100% - 60px);

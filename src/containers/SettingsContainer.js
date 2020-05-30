@@ -13,7 +13,7 @@ const SettingsContainer = (props) => {
   const themeSelected = settings.theme === 'light' ? 'dark' : 'light';
 
   return (
-    <section className="settings Settings">
+    <section className={`settings ${settings.theme}`}>
       <ul className="Settings__menu">
         <li className="Settings__menu-item">
           <p>Tema</p>

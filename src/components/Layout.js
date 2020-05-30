@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
+import { getGlobalState } from '../Context';
 
 import Header from './Header';
 import Footer from './Footer';
@@ -7,6 +8,7 @@ import Footer from './Footer';
 import '../assets/styles/main.scss';
 
 const Layout = (props) => {
+  const [{ settings: { theme } }] = getGlobalState();
   const { location: { pathname }, children, history } = props;
 
   const userPath = pathname.match(/^\/profile\/.*/) ? pathname.match(/^\/profile\/.*/)[0] : '/profile';
@@ -52,26 +54,38 @@ const Layout = (props) => {
       break;
   }
 
+  useEffect(() => {
+    const app = document.getElementById('app');
+
+    if (theme === 'dark') {
+      app.classList.remove('light');
+      app.classList.add('dark');
+    } else {
+      app.classList.remove('dark');
+      app.classList.add('light');
+    }
+  }, [theme]);
+
   return (
     <>
       {
-        (pathname !== '/register' || pathname !== '/login') &&
-        <Header type={`${headerType}`} title={`${headerTitle}`} history={history} />
+        (pathname !== '/register' && pathname !== '/login') &&
+        <Header theme={theme} type={`${headerType}`} title={`${headerTitle}`} history={history} />
       }
       <main className={`content ${contentStyle}`}>
         {
           (pathname === '/register' || pathname === '/login') &&
-          <Header type={`${headerType}`} title={`${headerTitle}`} history={history} />
+          <Header theme={theme} type={`${headerType}`} title={`${headerTitle}`} history={history} />
         }
         {children}
         {
           (pathname === '/register' || pathname === '/login' || pathname === '/payment') &&
-          <Footer />
+          <Footer theme={theme} />
         }
       </main>
       {
-        (pathname !== '/register' || pathname !== '/login' || pathname !== '/payment') &&
-        <Footer icons />
+        (pathname !== '/register' && pathname !== '/login' && pathname !== '/payment') &&
+        <Footer theme={theme} icons />
       }
     </>
   );

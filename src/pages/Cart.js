@@ -6,14 +6,23 @@ import CartContainer from '../containers/CartContainer';
 import '../assets/styles/pages/cart.scss';
 
 const Cart = (props) => {
-  const [{ cart }, dispatch] = getGlobalState();
+  const [{ cart, settings: { theme } }, dispatch] = getGlobalState();
 
   const handleRemoveToCart = (payload) => {
     return dispatch({ type: 'REMOVE_TO_CART' }, payload);
   };
 
+  const goToPayment = () => {
+    props.history.push('/payment');
+  };
+
   return (
-    <CartContainer cartItems={cart} removeToCart={handleRemoveToCart} />
+    <CartContainer
+      theme={theme}
+      cartItems={cart}
+      removeToCart={handleRemoveToCart}
+      goToPayment={goToPayment}
+    />
   );
 };
 

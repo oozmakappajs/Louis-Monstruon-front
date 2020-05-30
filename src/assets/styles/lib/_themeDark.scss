@@ -1,0 +1,4 @@
+.dark {
+  background: map-get(map-get($palette, darkTheme), background);
+  color: map-get(map-get($palette, darkTheme), content);
+}

@@ -1,0 +1,4 @@
+.light {
+  background: map-get(map-get($palette, lightTheme), background);
+  color: map-get(map-get($palette, lightTheme), content);
+}

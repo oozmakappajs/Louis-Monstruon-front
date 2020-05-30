@@ -7,8 +7,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: 8vh 84vh 8vh;
   grid-template-areas: "header" "content" "menu-navigation";
-  background: map-get(map-get($palette, lightTheme), background);
-  color: map-get(map-get($palette, lightTheme), content);
 }
 
 @import '../components/Header.scss';

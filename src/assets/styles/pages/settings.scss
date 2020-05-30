@@ -1,6 +1,41 @@
+@import "../lib/palette";
+
 .settings {
   grid-area: 1 / 1 / 4 / 2;
   overflow-y: auto;
+  font-family: 'Quicksand Regular';
+  &.light {
+    & .Settings__menu {
+      &-item {
+        border-bottom: 1px solid map-get(map-get($palette,greyColors),silver);
+        &:last-child {
+          border-bottom: none;
+        }
+        & .slider {
+          background-color: map-get(map-get($palette,lightTheme), white);
+          &::before {
+            background-color: map-get(map-get($palette,primary),blue);
+          }
+        }
+      }
+    }
+  }
+  &.dark {
+    & .Settings__menu {
+      &-item {
+        border-bottom: 1px solid map-get(map-get($palette,darkTheme),lighter);
+        &:last-child {
+          border-bottom: none;
+        }
+        & .slider {
+          background-color: map-get(map-get($palette,darkTheme), lighter);
+          &::before {
+            background-color: map-get(map-get($palette,secondary),purple);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 500px) { 

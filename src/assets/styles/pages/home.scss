@@ -4,7 +4,7 @@
   grid-area: 1 / 1 / 2 / 2;
   width: calc(100% - 24px);
   padding: 12px;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
 }
 
@@ -33,7 +33,7 @@
   .featured {
     overflow-x: hidden;
     &:hover {
-      overflow-x: scroll;
+      overflow-x: auto;
     }
     &::-webkit-scrollbar {
       height: 8px;

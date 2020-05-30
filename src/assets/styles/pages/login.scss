@@ -1,3 +1,5 @@
+@import "../lib/palette";
+
 .login,
 .goToRegister {
   display: flex;
@@ -38,11 +40,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    &.light {
+      & .InputComponent__input {
+        color: map-get(map-get($palette,greyColors),black);
+        &::placeholder {
+          color: map-get(map-get($palette,lightTheme),content);
+        }
+      }
+      & .login__separator {
+        border: 1px solid map-get(map-get($palette,greyColors),silver);
+      }
+    }
+    &.dark {
+      & .InputComponent__input {
+        color: map-get(map-get($palette,darkTheme),content);
+        &::placeholder {
+          color: map-get(map-get($palette,darkTheme),content);
+        }
+      }
+      & .login__separator {
+        border: 1px solid map-get(map-get($palette,darkTheme),lighter);
+      }
+    }
   }
   &__separator {
     width: calc(100% - 70px);
     margin: 0 35px; 
-    border: 1px solid #CCCCCC;
     margin: 10px 35px;
   }
 }
