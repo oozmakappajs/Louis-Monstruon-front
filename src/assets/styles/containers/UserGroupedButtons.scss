@@ -12,7 +12,6 @@
     display:flex;
     width: 50%;
     height: 100%;
-    background: map-get(map-get($palette,greyColors), snow);
     font-family: 'Quicksand Regular';
     font-size: 16px;
     justify-content: center;
@@ -22,18 +21,10 @@
     &-active {
       box-shadow: 2px 0px 2px #00000029;
       border-radius: 5px 5px 0px 0px;
-      background:map-get(map-get($palette,primary),blue) 0% 0% no-repeat padding-box;
-      color: white;
     }
     &:active,  &:hover {
       border-radius: 5px 5px 0px 0px;
-      background:map-get(map-get($palette,primary),blue) 0% 0% no-repeat padding-box;
-      color: white;
       cursor: pointer;
-    }
-    &--noActive {
-      background: transparent;
-      color: black;
     }
   }
 }

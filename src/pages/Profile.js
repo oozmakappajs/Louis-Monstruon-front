@@ -9,7 +9,7 @@ import Button from '../components/elements/Button';
 import '../assets/styles/pages/profile.scss';
 
 const Profile = (props) => {
-  const [{ isAuth, user }] = getGlobalState();
+  const [{ isAuth, user, settings: { theme } }] = getGlobalState();
   const [active, setActive] = useState(false);
 
   const handleTabActive = () => {
@@ -23,7 +23,7 @@ const Profile = (props) => {
   if (!isAuth) {
     return (
       <>
-        <section className="profile_header">
+        <section className={`profile_header ${theme}`}>
           <h1 className="profile_title-noAuth">Necesitas Iniciar sesion para acceder a tu perfil</h1>
         </section>
         <section className="profile_content profile_content-noAuth">
@@ -40,11 +40,11 @@ const Profile = (props) => {
 
   return (
     <>
-      <section className="profile_header">
-        <UserProfile user={user} />
+      <section className={`profile_header ${theme}`}>
+        <UserProfile user={user}>Nombre</UserProfile>
         <UserGroupedButtons handleTabActive={handleTabActive} active={active} />
       </section>
-      <section className="profile_content">
+      <section className={`profile_content ${theme}`}>
         {
           !active && (
             <>
