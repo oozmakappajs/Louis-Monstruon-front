@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CheckCircleOutline } from '@material-ui/icons';
 import Title from '../components/elements/Title';
 import Subtitle from '../components/elements/Subtitle';
@@ -9,9 +9,15 @@ import '../assets/styles/pages/payment.scss';
 import Modal from '../containers/Modal';
 
 const Payment = (props) => {
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(!open);
+  };
+
   return (
     <>
-      <Modal modal />
+      <Modal handleOpen={handleOpen} open={open} />
       <main className="modalView_content paymentSteps">
         <section className="paymentSteps_header">
           <Title className="paymentSteps_header-title">Proceso de Pago</Title>
@@ -23,7 +29,13 @@ const Payment = (props) => {
             props.choose && (
               <>
                 <Button name="blue" buttonType="button">PayPal</Button>
-                <Button name="gradient" buttonType="button">Stripe</Button>
+                <Button
+                  name="gradient"
+                  buttonType="button"
+                  action={handleOpen}
+                >
+                  Stripe
+                </Button>
               </>
             )
           }

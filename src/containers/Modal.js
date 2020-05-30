@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Clear } from '@material-ui/icons';
 import '../assets/styles/containers/Modal.scss';
 import TagsContainer from './TagsContainer';
 import StripePayment from '../stripe';
 
-
 const Modal = (props) => {
-  const [open, useModal] = useState(props.modal);
+  const { open, handleOpen } = props;
   return (
     <>
       {
         open && (
           <div className="Modal">
-            <button type="button" className="Modal__icon" onClick={() => useModal(false)}>
+            <button type="button" className="Modal__icon" onClick={handleOpen}>
               <Clear />
             </button>
             {
