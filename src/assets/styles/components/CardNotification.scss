@@ -10,14 +10,13 @@
   justify-content: space-between;
   align-items: center;
   min-height: 50px;
-  background: map-get(map-get($palette, greyColors), lighter);
   &__icon {
     margin-right: 8px;
   }
   &__text {
     width: 80%;
     margin-left: 8px;
-    color: map-get(map-get($palette, lightTheme), content);
+    color: inherit;
     text-decoration: none;
     &:hover {
       cursor: pointer;

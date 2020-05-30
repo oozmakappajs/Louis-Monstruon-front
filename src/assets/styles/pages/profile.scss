@@ -4,8 +4,39 @@
   &_header {
     grid-area: 1 / 1 / 2 / 2;
     position: relative;
-    background: map-get(map-get($palette,greyColors), snow);
     box-shadow: 0 1px 2px #00000029;
+    &.light {
+      background: map-get(map-get($palette,greyColors), snow);
+      & .UserGroupedButtons__item {
+        background: map-get(map-get($palette,greyColors), snow);
+        color: map-get(map-get($palette, lightTheme), content);
+        &-active {
+          background:map-get(map-get($palette,primary),blue);
+          color: map-get(map-get($palette,lightTheme), white);
+        }
+        &:active,  &:hover {
+          border-radius: 5px 5px 0px 0px;
+          background:map-get(map-get($palette,primary),blue);
+          color: map-get(map-get($palette,lightTheme), white);
+        }
+      }
+    }
+    &.dark {
+      background: map-get(map-get($palette,darkTheme), black);
+      & .UserGroupedButtons__item {
+        background: map-get(map-get($palette,darkTheme), black);
+        color: map-get(map-get($palette, greyColors), silver);
+        &-active {
+          background:map-get(map-get($palette,secondary),purple);
+          color: map-get(map-get($palette,lightTheme), white);
+        }
+        &:active,  &:hover {
+          border-radius: 5px 5px 0px 0px;
+          background:map-get(map-get($palette,secondary),purple);
+          color: map-get(map-get($palette,lightTheme), white);
+        }
+      }
+    }
   }
   &_content {
     grid-area: 2 / 1 / 4 / 2;
@@ -19,6 +50,16 @@
       text-align: center;
       button {
         margin: 20px 0;
+      }
+    }
+    &.light {
+      & .UserCard {
+        background: map-get(map-get($palette,greyColors), lighter);
+      }
+    }
+    &.dark {
+      & .UserCard {
+        background: map-get(map-get($palette,darkTheme), lighter);
       }
     }
   }

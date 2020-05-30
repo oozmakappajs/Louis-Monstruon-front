@@ -8,7 +8,7 @@ import Logo from '../components/elements/Logo';
 import '../assets/styles/pages/register.scss';
 
 const Register = (props) => {
-  const [{ isAuth }] = getGlobalState();
+  const [{ isAuth, settings: { theme } }] = getGlobalState();
 
   const goTo = (url) => {
     props.history.push(url);
@@ -16,19 +16,19 @@ const Register = (props) => {
 
   if (isAuth) {
     return (
-      <main className="modalView_content login__modal">
-        <section className="login login_auth">
+      <main className={`modalView_content ${theme} register__modal`}>
+        <section className="register register_auth">
           <Logo />
           <h1>Ya has iniciado sesión no es necesarion que te registres</h1>
-          <Button name="blueBase" buttonType="button" action={() => { goTo('/'); }}>Ver productos</Button>
-          <Button name="purpleBase" buttonType="button" action={() => { goTo('/profile/tuentyfaiv'); }}>Ir a mi perfil</Button>
+          <Button name="base-blue" buttonType="button" action={() => { goTo('/'); }}>Ver productos</Button>
+          <Button name="base-purple" buttonType="button" action={() => { goTo('/profile/tuentyfaiv'); }}>Ir a mi perfil</Button>
         </section>
       </main>
     );
   }
 
   return (
-    <main className="modalView_content register__modal">
+    <main className={`modalView_content ${theme} register__modal`}>
       <section className="register">
         <Logo />
         <form className="register__form">
@@ -42,7 +42,7 @@ const Register = (props) => {
       <section className="nextStep">
         <Button name="success" buttonType="button">Siguiente</Button>
         <div className="register__separator" />
-        <Button name="google" buttonType="button">Registrate con </Button>
+        <Button name="image" buttonType="button">Registrate con </Button>
       </section>
     </main>
   );

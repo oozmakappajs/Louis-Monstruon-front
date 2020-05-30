@@ -1,13 +1,16 @@
 import React from 'react';
+
 import CartCard from '../components/CartCard';
 import Button from '../components/elements/Button';
 
 import '../assets/styles/containers/CartContainer.scss';
 
-const CartContainer = () => {
+const CartContainer = (props) => {
+  const { theme, goToPayment } = props;
+
   return (
     <>
-      <div className="cart">
+      <div className={`cart ${theme}`}>
         <CartCard />
         <CartCard />
         <CartCard />
@@ -19,7 +22,7 @@ const CartContainer = () => {
         <CartCard />
         <CartCard />
       </div>
-      <div className="total_amount CartContainer__info">
+      <div className={`total_amount ${theme} CartContainer__info`}>
         <div className="CartContainer__info-description">
           <div className="CartContainer__info-item">
             <p>Subtotal</p>
@@ -34,7 +37,7 @@ const CartContainer = () => {
             <p>$ 99.00</p>
           </div>
         </div>
-        <Button name="success">Pagar</Button>
+        <Button name="success" action={goToPayment}>Pagar</Button>
       </div>
     </>
   );

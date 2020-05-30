@@ -18,7 +18,6 @@
   display: flex;
   position: absolute;
   padding-left: 5px;
-  background-color: map-get(map-get($palette,lightTheme), white);
   color: grey;
   font-size: 10px;
   border-radius: 34px;
@@ -39,7 +38,6 @@
     width: 28px;
     left: 2px;
     bottom: 2px;
-    background-color: map-get(map-get($palette,primary),blue);
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%;

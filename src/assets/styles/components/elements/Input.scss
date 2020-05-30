@@ -27,17 +27,9 @@
       outline: none;
     }
     &::placeholder {
-      color: black;
       font-size: 16px;
       text-align: center;
       opacity: 1 !important;
     }
-  }
-  &__line {
-    width: 100%;
-    border-radius: 5px;
-    height: 5px;
-    border: 1px solid;
-    background: map-get(map-get($palette, lightTheme), white);
   }
 }

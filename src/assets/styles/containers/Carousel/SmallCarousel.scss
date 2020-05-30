@@ -1,9 +1,19 @@
 @import '../../lib/palette';
 
 .SmallCarousel {
-  overflow-x: scroll;
+  overflow-x: auto;
   white-space: nowrap;
   padding: 30px 0px;
+  &.light {
+    & .SmallCarousel-item {
+      background: map-get(map-get($palette,lightTheme),white);
+    }
+  }
+  &.dark {
+    & .SmallCarousel-item {
+      background: map-get(map-get($palette, darkTheme), lighter);
+    }
+  }
   &-item {
     margin-right: 10px;
     display: inline-block;
@@ -11,8 +21,9 @@
     transition: 450ms all;
     transform-origin: center left;
     position: relative;
+    border-radius: 5px;
     a {
-      color: map-get(map-get($palette, lightTheme), content);
+      color: inherit;
       text-decoration: none;
     }
     &:hover ~ & {
@@ -32,7 +43,7 @@
   .SmallCarousel {
     overflow-x: hidden;
     &:hover {
-      overflow-x: scroll;
+      overflow-x: auto;
     }
     &::-webkit-scrollbar {
       height: 8px;

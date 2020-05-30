@@ -3,7 +3,7 @@ import '../assets/styles/components/UserDetails.scss';
 import { AddCircleOutline } from '@material-ui/icons';
 
 const UserDetails = (props) => (
-  <div>
+  <>
     {
       props.full ? (
         <div className="UserDetails">
@@ -26,16 +26,17 @@ const UserDetails = (props) => (
             <p>Agregar instrucciones de entrega</p>
           </button>
         </div>
-      ) : (
-        <div className="UserDetails UserDetails__empty">
-          <button type="button" className="UserDetails__empty--btn">
-            <AddCircleOutline />
-          </button>
-          <p>Agregue una nueva dirección</p>
-        </div>
-      )
+      ) :
+        (
+          <div className="UserDetails UserDetails__empty">
+            <button type="button" className="UserDetails__empty--btn">
+              <AddCircleOutline />
+            </button>
+            <p>Agregue una nueva dirección</p>
+          </div>
+        )
     }
-  </div>
+  </>
 );
 
 export default UserDetails;

@@ -13,7 +13,7 @@
     margin: 8px 5px;
     box-shadow: 0px 0px 6px #00000029;
     &:hover, &:active {
-      background: map-get(map-get($palette,darkTheme),background) 0% 0% no-repeat padding-box;
+      cursor: pointer;
       opacity: 1;
     }
   }

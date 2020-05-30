@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../assets/styles/components/CartCard.scss';
+
 import product from '../assets/images/products/dino2.jpg';
 import QuantityCounter from './elements/QuantityCounter';
 import IconButton from './elements/IconButton';
+
+import '../assets/styles/components/CartCard.scss';
 
 const CartCard = () => {
   return (

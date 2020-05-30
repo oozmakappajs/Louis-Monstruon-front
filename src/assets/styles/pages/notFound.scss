@@ -2,23 +2,63 @@
 
 .notFound {
   grid-area: 1 / 1 / 4 / 2;
-  overflow: scroll;
+  overflow: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: radial-gradient(circle, rgba(91,219,195,0.2147233893557423) 0%, rgba(89,69,146,0.0802696078431373) 100%);
   font-size: 24px;
   padding: 10px;
-  font-family: 'Quicksand', sans-serif;
-  color: map-get(map-get($palette,secondary),purple);
+  font-family: 'Quicksand Regular';
   h1 {
     text-align: center;
+  }
+  h1,
+  h3,
+  button {
+    margin: 20px 0;
+  }
+  &.light,
+  &.dark {
+    background: radial-gradient(circle, rgba(91,219,195,0.2147233893557423) 0%, rgba(89,69,146,0.0802696078431373) 100%);
+  }
+  &.light {
+    color: map-get(map-get($palette,secondary),purple);
+  }
+  &.dark {
+    color: map-get(map-get($palette,primary),blue);
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .notFound {
+    button {
+      width: 70%;
+      margin: 20px 15%;
+    }
   }
 }
 
 @media screen and (min-width: 500px) { 
   .notFound {
     grid-area: 1 / 1 / 4 / 3;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .notFound {
+    button {
+      width: 60%;
+      margin: 20px 20%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .notFound {
+    button {
+      width: 50%;
+      margin: 20px 25%;
+    }
   }
 }

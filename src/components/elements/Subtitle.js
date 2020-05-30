@@ -5,10 +5,10 @@ const Subtitle = (props) => {
   return (
     <div className="Subtitle">
       <p>
-        { props.choose && 'Proceso de Pago'}
-        { props.information && 'Escoge la direccion de envio'}
-        { props.redirect && 'Redireccion a Stripe o PayPal'}
-        { props.finish && 'Fin de la transacción'}
+        {props.step === 0 && 'Escoge el metodo de pago'}
+        {props.step === 1 && 'Escoge la direccion de envio'}
+        {props.step === 2 && 'Redireccion a Stripe o PayPal'}
+        {props.step === 3 && 'Fin de la transacción'}
       </p>
     </div>
   );
