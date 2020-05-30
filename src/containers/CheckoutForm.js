@@ -1,15 +1,23 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import React, { useState } from 'react';
 import {
   CardElement,
   useStripe,
   useElements,
 } from '@stripe/react-stripe-js';
 import CARD_ELEMENT_OPTIONS from './CheckoutFormStyles';
+import '../assets/styles/containers/CheckoutForm.scss';
+import productImg from '../assets/images/products/dino2.jpg';
+import stripeImg from '../assets/images/stripe.png';
 
 const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
+
+  const [product] = useState({
+    name: 'Dino Jacket',
+    price: 10.99,
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,22 +41,31 @@ const CheckoutForm = () => {
       }
     }
   };
-
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="form-row">
-        <h2>Product name</h2>
-        <h2>$10.99</h2>
-        <label htmlFor="card-element">
-          Credit or debit card
-        </label>
-        <CardElement
-          id="card-element"
-          options={CARD_ELEMENT_OPTIONS}
-        />
-      </div>
-      <button type="submit" disabled={!stripe}>Submit Payment</button>
-    </form>
+    <section className="CheckoutForm__modal-container">
+      <form onSubmit={handleSubmit} className="CheckoutForm">
+        <div className="CheckoutForm__form">
+          <div className="CheckoutForm__img--logo">
+            <img src={stripeImg} alt="logo" />
+          </div>
+          <div className="CheckoutForm__product-info">
+            <h2>{product.name}</h2>
+            <p>{product.price}</p>
+            <div className="CheckoutForm__img">
+              <img src={productImg} alt="product" />
+            </div>
+          </div>
+          <label htmlFor="card-element">
+            Credit or debit card
+          </label>
+          <CardElement
+            id="card-element"
+            options={CARD_ELEMENT_OPTIONS}
+          />
+        </div>
+        <button type="submit" disabled={!stripe} className="CheckoutForm__button">Submit Payment</button>
+      </form>
+    </section>
   );
 };
 

@@ -2,21 +2,23 @@
 
 .paymentSteps {
   display: flex;
-  width: calc(100% - 75px);
-  margin: 0 35px;
   flex-direction: column;
   justify-content: space-between;
   &_header {
+    width: calc(100% - 70px);
+    margin: 0 35px;
     p {
       padding: 0;
     }
-    
   }
   &__separator {
-    width: 100%;
+    width: calc(100% - 70px);
+    margin: 0 35px;
     border: 1px solid #CCCCCC;
   }
   &_content {
+    width: calc(100% - 70px);
+    margin: 0 35px;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
     &-icon {
@@ -36,12 +38,14 @@
       }
     }
     button {
-     margin: 20px;
+     margin: 20px 0;
     }
   }
   &_actions {
+    width: calc(100% - 70px);
+    margin: 0 35px;
     button {
-      margin: 20px;
+      margin: 20px 0 !important;
      }
   }
 }

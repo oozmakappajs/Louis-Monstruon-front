@@ -1,6 +1,7 @@
 $palette: (
     primary: (
-      blue: #5BDBC3
+      blue: #5BDBC3,
+      gradient : radial-gradient(circle, rgba(91,219,195,0.2147233893557423) 0%, rgba(89,69,146,0.0802696078431373) 100%),
     ),
     secondary: (
       purple:#594592
@@ -32,5 +33,6 @@ $palette: (
     ),
     buttons: (
       blue: #005EA6,
+      gradient: transparent linear-gradient(90deg, #5533FF 0%, #0BD6FC 100%),
     ),
 );
