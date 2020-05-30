@@ -7,7 +7,7 @@ import Logo from '../components/elements/Logo';
 import '../assets/styles/pages/login.scss';
 
 const Login = (props) => {
-  const [{ isAuth }, dispatch] = getGlobalState();
+  const [{ isAuth, settings: { theme } }, dispatch] = getGlobalState();
   const [form, setForm] = useState({});
 
   const goTo = (url) => {
@@ -35,7 +35,7 @@ const Login = (props) => {
 
   if (isAuth) {
     return (
-      <main className="modalView_content login__modal">
+      <main className={`modalView_content ${theme} login__modal`}>
         <section className="login login_auth">
           <Logo />
           <h1>Ya has iniciado sesión no es necesarion que lo hagas de nuevo</h1>
@@ -47,7 +47,7 @@ const Login = (props) => {
   }
 
   return (
-    <main className="modalView_content login__modal">
+    <main className={`modalView_content ${theme} login__modal`}>
       <section className="login">
         <Logo />
         <form className="login__form" onSubmit={handleSubmit}>
