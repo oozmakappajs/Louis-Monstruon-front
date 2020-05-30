@@ -4,7 +4,7 @@
   grid-area: 1 / 1 / 2 / 2;
   width: calc(100% - 24px);
   padding: 12px;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
 }
 
@@ -30,23 +30,6 @@
 }
 
 @media screen and (min-width: 769px) {
-  .featured {
-    overflow-x: hidden;
-    &:hover {
-      overflow-x: scroll;
-    }
-    &::-webkit-scrollbar {
-      height: 8px;
-      border-radius: 8px;
-      background: map-get(map-get($palette, greyColors), moon);
-    }
-    &::-webkit-scrollbar-thumb {
-      height: 8px;
-      border-radius: 8px;
-      background: map-get(map-get($palette, lightTheme), content);
-    }
-  }
-
   .categories {
     display: flex;
     flex-wrap: wrap;

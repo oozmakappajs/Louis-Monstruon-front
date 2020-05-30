@@ -65,16 +65,5 @@
     &_deleteAll {
       bottom: 0;
     }
-    &::-webkit-scrollbar {
-      width: 8px;
-      border-radius: 8px;
-      background: map-get(map-get($palette, greyColors), moon);
-    }
-    &::-webkit-scrollbar-thumb {
-      width: 8px;
-      border-radius: 8px;
-      background: map-get(map-get($palette, lightTheme), content);
-      cursor: pointer;
-    }
   }
 }
