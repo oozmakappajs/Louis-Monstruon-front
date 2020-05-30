@@ -12,8 +12,17 @@ const Cart = (props) => {
     return dispatch({ type: 'REMOVE_TO_CART' }, payload);
   };
 
+  const goToPayment = () => {
+    props.history.push('/payment');
+  };
+
   return (
-    <CartContainer theme={theme} cartItems={cart} removeToCart={handleRemoveToCart} />
+    <CartContainer
+      theme={theme}
+      cartItems={cart}
+      removeToCart={handleRemoveToCart}
+      goToPayment={goToPayment}
+    />
   );
 };
 

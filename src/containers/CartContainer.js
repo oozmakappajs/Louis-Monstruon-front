@@ -6,7 +6,7 @@ import Button from '../components/elements/Button';
 import '../assets/styles/containers/CartContainer.scss';
 
 const CartContainer = (props) => {
-  const { theme } = props;
+  const { theme, goToPayment } = props;
 
   return (
     <>
@@ -37,7 +37,7 @@ const CartContainer = (props) => {
             <p>$ 99.00</p>
           </div>
         </div>
-        <Button name="success">Pagar</Button>
+        <Button name="success" action={goToPayment}>Pagar</Button>
       </div>
     </>
   );

@@ -19,7 +19,7 @@ const Product = (props) => {
   };
 
   const goToPayment = () => {
-    props.history.push(`/payment?items=${item.id}`);
+    props.history.push('/payment');
   };
 
   return (
