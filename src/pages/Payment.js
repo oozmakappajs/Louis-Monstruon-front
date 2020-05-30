@@ -8,6 +8,7 @@ import Button from '../components/elements/Button';
 import UserDetails from '../components/UserDetails';
 import '../assets/styles/pages/payment.scss';
 import StripePayment from '../stripe';
+import PayplaCheckoutButton from '../components/PaypalCheckoutButton';
 
 const Payment = (props) => {
   const [{ settings: { theme } }] = getGlobalState();
@@ -21,6 +22,27 @@ const Payment = (props) => {
   const handlePayWithStripe = () => {
     setStep(step + 1);
     usePayWithStripe(true);
+  };
+
+  const order = {
+    custumer: '12345678',
+    total: '550.00',
+    items: [
+      {
+        sku: '112',
+        name: 'Dino jacket',
+        price: '300.00',
+        quantity: 1,
+        currency: 'MXN',
+      },
+      {
+        sku: '2',
+        name: 'Dino pants',
+        price: '250.00',
+        quantity: 1,
+        currency: 'MXN',
+      },
+    ],
   };
 
   return (
@@ -55,7 +77,7 @@ const Payment = (props) => {
           step === 2 && (
             <div className="paymentSteps_content-text">
               {
-                payWithStripe ? <StripePayment /> : <h1>PAYPAL</h1>
+                payWithStripe ? <StripePayment /> : <PayplaCheckoutButton order={order} />
               }
             </div>
           )
