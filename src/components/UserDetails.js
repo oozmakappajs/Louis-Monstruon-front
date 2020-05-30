@@ -8,7 +8,7 @@ const UserDetails = (props) => (
       props.full ? (
         <div className="UserDetails">
           <div className="UserDetails__user">
-            <div className="UserDetails__circle" />
+            <input className="UserDetails__input" type="radio" id="" name="" value="" />
             <span className="UserDetails__name">Nombre del usuario</span>
           </div>
           <p>Calle/Avenida</p>

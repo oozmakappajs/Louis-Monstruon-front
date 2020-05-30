@@ -12,9 +12,15 @@ import StripePayment from '../stripe';
 const Payment = (props) => {
   const [{ settings: { theme } }] = getGlobalState();
   const [step, setStep] = useState(0);
+  const [payWithStripe, usePayWithStripe] = useState('');
 
   const handleStep = () => {
     setStep(step + 1);
+  };
+
+  const handlePayWithStripe = () => {
+    setStep(step + 1);
+    usePayWithStripe(true);
   };
 
   return (
@@ -30,7 +36,7 @@ const Payment = (props) => {
           step === 0 && (
             <>
               <Button name="blue" buttonType="button" action={handleStep}>PayPal</Button>
-              <Button name="gradient" buttonType="button" action={handleStep}>Stripe</Button>
+              <Button name="gradient" buttonType="button" action={handlePayWithStripe}>Stripe</Button>
             </>
           )
         }
@@ -48,7 +54,9 @@ const Payment = (props) => {
         {
           step === 2 && (
             <div className="paymentSteps_content-text">
-              <StripePayment />
+              {
+                payWithStripe ? <StripePayment /> : <h1>PAYPAL</h1>
+              }
             </div>
           )
         }
