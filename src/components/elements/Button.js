@@ -1,5 +1,6 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import GoogleText from './GoogleText';
 
@@ -15,6 +16,13 @@ const Button = (props) => {
       }
     </button>
   );
+};
+
+Button.propTypes = {
+  name: PropTypes.string.isRequired,
+  buttonType: PropTypes.string,
+  action: PropTypes.func,
+  children: PropTypes.node.isRequired,
 };
 
 export default Button;

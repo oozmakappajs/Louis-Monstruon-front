@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../assets/styles/components/elements/Title.scss';
+import PropTypes from 'prop-types';
 
 const Title = (props) => {
   return (
@@ -13,6 +14,10 @@ const Title = (props) => {
       </h1>
     </div>
   );
+};
+
+Title.propTypes = {
+  children: PropTypes.node,
 };
 
 export default Title;

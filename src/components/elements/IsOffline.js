@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const IsOffline = (props) => {
   const [online, setOnline] = useState(navigator ? navigator.onLine : true);
@@ -32,6 +33,10 @@ const IsOffline = (props) => {
       {props.children}
     </span>
   );
+};
+
+IsOffline.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default IsOffline;

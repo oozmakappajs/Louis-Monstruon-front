@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import PropTypes from 'prop-types';
 
 import favicon from '../../assets/images/pwa_icon.png';
 
@@ -14,6 +15,12 @@ const SEO = (props) => {
       <title>{title}</title>
     </Helmet>
   );
+};
+
+SEO.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  kw: PropTypes.string.isRequired,
 };
 
 export default SEO;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { AddShoppingCart, LocalGroceryStoreOutlined, Favorite, FavoriteBorder, DeleteOutlined } from '@material-ui/icons';
+import PropTypes from 'prop-types';
 
 import '../../assets/styles/components/elements/IconButton.scss';
 
@@ -43,6 +44,13 @@ const IconButton = (props) => {
       }
     </>
   );
+};
+
+IconButton.propTypes = {
+  type: PropTypes.string.isRequired,
+  action: PropTypes.func,
+  isBuying: PropTypes.bool,
+  isFav: PropTypes.bool,
 };
 
 export default IconButton;
