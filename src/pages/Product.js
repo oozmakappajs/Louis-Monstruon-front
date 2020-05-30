@@ -1,6 +1,7 @@
 import React from 'react';
 import { getGlobalState } from '../Context';
 
+import SEO from '../components/elements/SEO';
 import ProductContainer from '../containers/ProductContainer';
 
 import '../assets/styles/pages/product.scss';
@@ -23,12 +24,19 @@ const Product = (props) => {
   };
 
   return (
-    <ProductContainer
-      addToCart={handleAddToCart}
-      goToPayment={goToPayment}
-      like={handleLike}
-      theme={theme}
-    />
+    <>
+      <SEO
+        title="Product | Louis Monstruon"
+        description="Description Product"
+        kw="Stripe, Clothes, Store"
+      />
+      <ProductContainer
+        addToCart={handleAddToCart}
+        goToPayment={goToPayment}
+        like={handleLike}
+        theme={theme}
+      />
+    </>
   );
 };
 

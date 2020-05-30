@@ -2,6 +2,8 @@ import React from 'react';
 import SettingsContainer from '../containers/SettingsContainer';
 import { getGlobalState } from '../Context';
 
+import SEO from '../components/elements/SEO';
+
 import '../assets/styles/pages/settings.scss';
 
 const Settings = (props) => {
@@ -16,13 +18,20 @@ const Settings = (props) => {
   };
 
   return (
-    <SettingsContainer
-      isAuth={isAuth}
-      settings={settings}
-      changeSetting={handleChangeSetting}
-      goToLogin={goToLogin}
-      push={props.history.push}
-    />
+    <>
+      <SEO
+        title="Settings | Louis Monstruon"
+        description="Description Settings"
+        kw="Stripe, Clothes, Store"
+      />
+      <SettingsContainer
+        isAuth={isAuth}
+        settings={settings}
+        changeSetting={handleChangeSetting}
+        goToLogin={goToLogin}
+        push={props.history.push}
+      />
+    </>
   );
 };
 

@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { getGlobalState } from '../Context';
+import SEO from '../components/elements/SEO';
 
 import MainCarousel from '../containers/Carousel/MainCarousel';
 import SmallCarousel from '../containers/Carousel/SmallCarousel';
+
 import '../assets/styles/pages/home.scss';
 
 const Home = (props) => {
@@ -29,6 +31,11 @@ const Home = (props) => {
 
   return (
     <>
+      <SEO
+        title="Louis Monstruon"
+        description="Description Home"
+        kw="Stripe, Clothes, Store"
+      />
       <MainCarousel featured={featured} />
       <section className="categories">
         {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { getGlobalState } from '../Context';
 
+import SEO from '../components/elements/SEO';
 import CartNotification from '../components/CardNotification';
 import Button from '../components/elements/Button';
 
@@ -18,34 +19,48 @@ const Notifications = (props) => {
 
   if (!notificationPermisions) {
     return (
-      <section className="notifications">
-        <h1 className="notifications_withoutPermisions">Request Notifications Permision Modal</h1>
-      </section>
+      <>
+        <SEO
+          title="Notifications | Louis Monstruon"
+          description="Description Notifications"
+          kw="Stripe, Clothes, Store"
+        />
+        <section className="notifications">
+          <h1 className="notifications_withoutPermisions">Request Notifications Permision Modal</h1>
+        </section>
+      </>
     );
   }
 
   return (
-    <section className={`notifications ${theme}`}>
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <CartNotification />
-      <div className="notifications_deleteAll">
-        <Button name="error" action={handleDeleteNotifications}>Borrar Todo</Button>
-      </div>
-    </section>
+    <>
+      <SEO
+        title="Notifications | Louis Monstruon"
+        description="Description Notifications"
+        kw="Stripe, Clothes, Store"
+      />
+      <section className={`notifications ${theme}`}>
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <CartNotification />
+        <div className="notifications_deleteAll">
+          <Button name="error" action={handleDeleteNotifications}>Borrar Todo</Button>
+        </div>
+      </section>
+    </>
   );
 };
 

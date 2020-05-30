@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { getGlobalState } from '../Context';
 
+import SEO from '../components/elements/SEO';
 import UserProfile from '../containers/UserProfile';
 import UserGroupedButtons from '../containers/UserGroupedButtons';
 import UserCard from '../containers/UserCard';
@@ -23,6 +24,11 @@ const Profile = (props) => {
   if (!isAuth) {
     return (
       <>
+        <SEO
+          title="Profile | Louis Monstruon"
+          description="Description Profile"
+          kw="Stripe, Clothes, Store"
+        />
         <section className={`profile_header ${theme}`}>
           <h1 className="profile_title-noAuth">Necesitas Iniciar sesion para acceder a tu perfil</h1>
         </section>
@@ -40,6 +46,11 @@ const Profile = (props) => {
 
   return (
     <>
+      <SEO
+        title="Profile | Louis Monstruon"
+        description="Description Profile"
+        kw="Stripe, Clothes, Store"
+      />
       <section className={`profile_header ${theme}`}>
         <UserProfile user={user}>Nombre</UserProfile>
         <UserGroupedButtons handleTabActive={handleTabActive} active={active} />
