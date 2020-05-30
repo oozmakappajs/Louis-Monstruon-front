@@ -7,34 +7,55 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
+  position: relative;
   &.light {
     background: map-get(map-get($palette,lightTheme),white);
     border-bottom: 1px solid map-get(map-get($palette, greyColors), silver);
-    & .header__icon {
-      background: map-get(map-get($palette,darkTheme), content);
-      color: map-get(map-get($palette,lightTheme), content);
-    }
-    & .header__search--bar {
-      background: map-get(map-get($palette,darkTheme), content);
-      color: map-get(map-get($palette,greyColors), nickel);
+    & .header {
+      &__icon {
+        background: map-get(map-get($palette,darkTheme), content);
+        color: map-get(map-get($palette,lightTheme), content);
+      }
+      &__search--bar {
+        background: map-get(map-get($palette,darkTheme), content);
+        color: map-get(map-get($palette,greyColors), nickel);
+      }
+      &__brand {
+        color:  map-get(map-get($palette,secondary),purple);
+      }
     }
   } 
   &.dark {
     border-bottom: 1px solid map-get(map-get($palette, greyColors), coal);
-    & .header__icon {
-      background: map-get(map-get($palette,darkTheme), lighter);
-      color: map-get(map-get($palette,greyColors), lighter);
-    }
-    & .header__search--bar {
-      background: map-get(map-get($palette,darkTheme), lighter);
-      color: map-get(map-get($palette,greyColors), silver);
+    & .header {
+      &__icon {
+        background: map-get(map-get($palette,darkTheme), lighter);
+        color: map-get(map-get($palette,greyColors), lighter);
+      }
+      &__search--bar {
+        background: map-get(map-get($palette,darkTheme), lighter);
+        color: map-get(map-get($palette,greyColors), silver);
+      }
+      &__brand {
+        color:  map-get(map-get($palette,primary),blue);
+      }
     }
   }
   &__brand {
-    color:  map-get(map-get($palette,primary),blue);
     text-decoration: none;
     font-family: 'Permanent Marker';
+  }
+  &__offline {
+    position: absolute;
+    width: 100vw;
+    height: 20px;
+    padding: 5px 0;
+    font-family: 'Quicksand Regular';
+    font-size: 16px;
+    text-align: center;
+    top: 8vh;
+    font-size: 16px;
+    z-index: 9999;
   }
   &__page-name {
     font-size: 17px;
@@ -128,12 +149,18 @@
 @media screen and (min-width: 375px) {
   .header {
     height: calc(10vh - 1px);
+    &__offline {
+      top: 10vh;
+    }
   }
 }
 
 @media screen and (min-width: 425px) {
   .header {
     height: calc(9vh - 1px);
+    &__offline {
+      top: 9vh;
+    }
   }
 }
 
@@ -141,5 +168,8 @@
   .header {
     width: 50%;
     height: calc(10vh - 1px);
+    &__offline {
+      top: 10vh;
+    }
   }
 }

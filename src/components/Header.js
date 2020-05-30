@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { ArrowBackIos, FilterList, Search, SettingsOutlined } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 
+import IsOffline from './elements/IsOffline';
+
 const Header = (props) => {
 
   const handleGo = (type) => {
@@ -15,6 +17,7 @@ const Header = (props) => {
 
   return (
     <>
+      <IsOffline>Estas navegando sin conexion | Offline</IsOffline>
       {
         props.type === 'logo' && (
           <header className={`header ${props.theme}`}>

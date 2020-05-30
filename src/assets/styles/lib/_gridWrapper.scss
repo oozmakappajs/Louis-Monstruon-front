@@ -7,6 +7,18 @@
   grid-template-columns: 1fr;
   grid-template-rows: 8vh 84vh 8vh;
   grid-template-areas: "header" "content" "menu-navigation";
+  &.light {
+    & .header__offline {
+      background: map-get(map-get($palette, secondary), purple);
+      color: map-get(map-get($palette, lightTheme), white);
+    }
+  }
+  &.dark {
+    & .header__offline {
+      background: map-get(map-get($palette, primary), blue);
+      color: map-get(map-get($palette, lightTheme), white);
+    }
+  }
 }
 
 @import '../components/Header.scss';
