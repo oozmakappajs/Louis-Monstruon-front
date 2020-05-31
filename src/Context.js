@@ -6,12 +6,19 @@ export const Context = createContext();
 export const Provider = ({ reducer, children }) => {
   let isAuth;
   let user;
+  let productsCart;
   let theme;
 
   if (window.localStorage.getItem('theme')) {
     theme = window.localStorage.getItem('theme');
   } else {
     theme = 'light';
+  }
+
+  if (window.localStorage.getItem('cart')) {
+    productsCart = JSON.parse(window.localStorage.getItem('cart'));
+  } else {
+    productsCart = [];
   }
 
   if (window.sessionStorage.getItem('token') && window.sessionStorage.getItem('user')) {
@@ -25,7 +32,10 @@ export const Provider = ({ reducer, children }) => {
   const initialState = {
     isAuth,
     user,
-    cart: [],
+    cart: {
+      products: productsCart,
+      amount: 0,
+    },
     notifications: [],
     settings: {
       theme,
@@ -33,6 +43,7 @@ export const Provider = ({ reducer, children }) => {
     },
     categories: [],
     featured: [],
+    productAct: {},
   };
 
   return (

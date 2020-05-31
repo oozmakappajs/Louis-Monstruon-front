@@ -86,6 +86,7 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^4.3.1",
     "stripe": "^8.56.0",
+    "sweetalert": "^2.1.2",
     "webpack": "^4.43.0"
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { getGlobalState } from '../Context';
 
 import getData from '../hooks/getData';
@@ -8,9 +8,8 @@ import ProductContainer from '../containers/ProductContainer';
 import '../assets/styles/pages/product.scss';
 
 const Product = (props) => {
-  const [{ isAuth, settings: { theme } }, dispatch] = getGlobalState();
-  const { match: { params: { id } } } = props;
-  const [product, setProduct] = useState({});
+  const [{ isAuth, settings: { theme }, productAct }, dispatch] = getGlobalState();
+  const { match: { params: { id } }, location: { pathname } } = props;
 
   const productSlug = id.split('-', 1);
   const productId = productSlug[0];
@@ -18,7 +17,7 @@ const Product = (props) => {
   useEffect(() => {
     (async () => {
       const getProduct = await getData(`api/v1/products/${productId}`);
-      setProduct(getProduct);
+      dispatch({ type: 'SET_PRODUCT_ACT', payload: getProduct });
     })();
   }, []);
 
@@ -32,25 +31,31 @@ const Product = (props) => {
     return dispatch({ type: 'ADD_TO_CART', payload });
   };
 
-  const goToPayment = () => {
+  const goToPayment = (product) => {
+    const iva = product.price * 0.16;
+    const total = iva + product.price;
+
+    dispatch({ type: 'SET_AMOUNT_OF_CART', payload: parseFloat(total).toFixed(2) });
+    handleAddToCart(product);
     props.history.push('/payment');
   };
 
   return (
     <>
       <SEO
-        title={`${product.name} | Louis Monstruon`}
-        description={`${product.long_desc}`}
+        title={`${productAct.name} | Louis Monstruon`}
+        description={`${productAct.long_desc}`}
         kw="Stripe, Clothes, Store"
       />
       {
-        product !== (null || undefined) && (
+        productAct !== (null || undefined) && (
           <ProductContainer
             addToCart={handleAddToCart}
             goToPayment={goToPayment}
             like={handleLike}
             theme={theme}
-            product={product}
+            product={productAct}
+            url={pathname}
           />
         )
       }
