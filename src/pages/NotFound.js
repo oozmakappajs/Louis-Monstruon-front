@@ -21,7 +21,7 @@ const NotFound = (props) => {
         kw="Stripe, Clothes, Store"
       />
       <section className={`notFound ${theme}`}>
-        <h1>Upps,Page Not Found</h1>
+        <h1>Upps 3212,we have a 3312 ,Page Not Found</h1>
         <h3>
           404
           {' '}

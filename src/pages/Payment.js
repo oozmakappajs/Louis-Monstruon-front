@@ -1,22 +1,49 @@
 import React, { useState } from 'react';
 import { CheckCircleOutline } from '@material-ui/icons';
 import { getGlobalState } from '../Context';
-
 import SEO from '../components/elements/SEO';
 import Title from '../components/elements/Title';
 import Subtitle from '../components/elements/Subtitle';
 import PageSlider from '../components/PageSlider';
 import Button from '../components/elements/Button';
 import UserDetails from '../components/UserDetails';
-
 import '../assets/styles/pages/payment.scss';
+import StripePayment from '../stripe';
+import PayplaCheckoutButton from '../components/PaypalCheckoutButton';
 
 const Payment = (props) => {
   const [{ settings: { theme } }] = getGlobalState();
   const [step, setStep] = useState(0);
+  const [payWithStripe, usePayWithStripe] = useState('');
 
   const handleStep = () => {
     setStep(step + 1);
+  };
+
+  const handlePayWithStripe = () => {
+    setStep(step + 1);
+    usePayWithStripe(true);
+  };
+
+  const order = {
+    custumer: '12345678',
+    total: '550.00',
+    items: [
+      {
+        sku: '112',
+        name: 'Dino jacket',
+        price: '300.00',
+        quantity: 1,
+        currency: 'MXN',
+      },
+      {
+        sku: '2',
+        name: 'Dino pants',
+        price: '250.00',
+        quantity: 1,
+        currency: 'MXN',
+      },
+    ],
   };
 
   return (
@@ -27,19 +54,17 @@ const Payment = (props) => {
         kw="Stripe, Clothes, Store"
       />
       <main className="modalView_content paymentSteps">
-
         <section className={`paymentSteps_header ${theme}`}>
           <Title className="paymentSteps_header-title">Proceso de Pago</Title>
           <PageSlider />
           <Subtitle step={step} className="paymentSteps_header-text" />
         </section>
-
         <section className={`paymentSteps_content ${theme}`}>
           {
             step === 0 && (
               <>
                 <Button name="blue" buttonType="button" action={handleStep}>PayPal</Button>
-                <Button name="gradient" buttonType="button" action={handleStep}>Stripe</Button>
+                <Button name="gradient" buttonType="button" action={handlePayWithStripe}>Stripe</Button>
               </>
             )
           }
@@ -57,7 +82,9 @@ const Payment = (props) => {
           {
             step === 2 && (
               <div className="paymentSteps_content-text">
-                <p>LLenado de información para pagar</p>
+                {
+                  payWithStripe ? <StripePayment /> : <PayplaCheckoutButton order={order} />
+                }
               </div>
             )
           }
@@ -98,7 +125,6 @@ const Payment = (props) => {
             )
           }
         </section>
-
       </main>
     </>
   );
