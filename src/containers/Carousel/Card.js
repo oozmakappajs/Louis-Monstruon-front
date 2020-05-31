@@ -12,7 +12,7 @@ const Card = (props) => {
     <article ref={element} className="MainCarousel-item">
       {
         show && (
-          <Link to={props.url}>
+          <Link to={props.url} aria-label="Featured card">
             <div className="Card">
               <img
                 src={props.item.image}
