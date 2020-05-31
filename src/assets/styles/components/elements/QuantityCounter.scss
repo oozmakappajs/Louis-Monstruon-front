@@ -11,6 +11,13 @@
   justify-content: space-between;
   button {
     background: none;
+    outline: 0;
+    &:active {
+      transform: scale(.9);
+    }
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__icons {
     width: 24px;
