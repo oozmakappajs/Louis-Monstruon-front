@@ -21,10 +21,10 @@ const Header = (props) => {
       {
         props.type === 'logo' && (
           <header className={`header ${props.theme}`}>
-            <Link className="header__page-name header__page-name--arrow pl header__brand" to="/">
+            <Link className="header__page-name header__page-name--arrow pl header__brand" to="/" aria-label="Go to Home">
               LOUIS MONSTRUON
             </Link>
-            <button type="button" className="header__icon" onClick={() => { handleGo(); }}>
+            <button type="button" aria-label="Open settings" className="header__icon" onClick={() => { handleGo(); }}>
               <SettingsOutlined />
             </button>
           </header>
@@ -43,13 +43,13 @@ const Header = (props) => {
         props.type === 'twoIcons' && (
           <header className={`header ${props.theme}`}>
             <div className="header__container">
-              <button type="button" className="header__icon" onClick={() => { handleGo('back'); }}>
+              <button type="button" aria-label="Go back" className="header__icon" onClick={() => { handleGo('back'); }}>
                 <ArrowBackIos className="header__icon--arrow" />
               </button>
               <p className="header__page-name" to="/">
                 Categorias
               </p>
-              <Link className="header__icon header__icon--list" to="/">
+              <Link className="header__icon header__icon--list" to="/" aria-label="Open filter modal">
                 <FilterList />
               </Link>
             </div>
@@ -60,7 +60,7 @@ const Header = (props) => {
         props.type === 'leftIcons' && (
           <header className={`header ${props.theme}`}>
             <div className="header__container">
-              <button type="button" className="header__icon" onClick={() => { handleGo('back'); }}>
+              <button type="button" aria-label="Go back" className="header__icon" onClick={() => { handleGo('back'); }}>
                 <ArrowBackIos className="header__icon--arrow" />
               </button>
               <p className="header__page-name header__page-name--arrow pr" to="/">
@@ -77,7 +77,7 @@ const Header = (props) => {
               <p className="header__page-name header__page-name--arrow pl" to="/">
                 {props.title}
               </p>
-              <button type="button" className="header__icon" onClick={() => { handleGo(); }}>
+              <button type="button" aria-label="Open settings" className="header__icon" onClick={() => { handleGo(); }}>
                 <SettingsOutlined />
               </button>
             </div>
@@ -88,7 +88,7 @@ const Header = (props) => {
         props.type === 'back' && (
           <header className={`header ${props.theme} modalView_header`}>
             <div className="header__container">
-              <button type="button" className="header__icon" onClick={() => { handleGo('back'); }}>
+              <button type="button" aria-label="Go back" className="header__icon" onClick={() => { handleGo('back'); }}>
                 <ArrowBackIos className="header__icon--arrow" />
               </button>
             </div>
@@ -102,7 +102,7 @@ const Header = (props) => {
               <input type="text" placeholder="Buscar" className="header__search--bar" />
               <Search />
             </div>
-            <Link className="header__icon header__icon--list header__search--icon" to="/">
+            <Link className="header__icon header__icon--list header__search--icon" to="/" aria-label="Open filter modal">
               <FilterList />
             </Link>
           </header>
