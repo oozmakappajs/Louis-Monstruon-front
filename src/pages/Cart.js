@@ -2,6 +2,7 @@ import React from 'react';
 import { getGlobalState } from '../Context';
 
 import CartContainer from '../containers/CartContainer';
+import SEO from '../components/elements/SEO';
 
 import '../assets/styles/pages/cart.scss';
 
@@ -17,12 +18,19 @@ const Cart = (props) => {
   };
 
   return (
-    <CartContainer
-      theme={theme}
-      cartItems={cart}
-      removeToCart={handleRemoveToCart}
-      goToPayment={goToPayment}
-    />
+    <>
+      <SEO
+        title="Cart | Louis Monstruon"
+        description="Description Cart"
+        kw="Stripe, Clothes, Store"
+      />
+      <CartContainer
+        theme={theme}
+        cartItems={cart}
+        removeToCart={handleRemoveToCart}
+        goToPayment={goToPayment}
+      />
+    </>
   );
 };
 

@@ -79,25 +79,45 @@ module.exports = {
       ios: true,
       icons: [
         {
-          src: path.resolve('src/assets/images/logo_1.png'),
+          src: path.resolve('src/assets/images/pwa_icon.png'),
           sizes: [120, 152, 167, 180, 1024],
           destination: path.join('icons', 'ios'),
           ios: true,
+          purpose: 'any maskable',
         },
         {
-          src: path.resolve('src/assets/images/logo_1.png'),
+          src: path.resolve('src/assets/images/pwa_icon.png'),
           size: 1024,
           destination: path.join('icons', 'ios'),
           ios: 'startup',
+          purpose: 'any maskable',
         },
         {
-          src: path.resolve('src/assets/images/logo_1.png'),
+          src: path.resolve('src/assets/images/pwa_icon.png'),
           sizes: [96, 128, 192, 256, 384, 512],
           destination: path.join('icons', 'android'),
+          purpose: 'any maskable',
         },
       ],
     }),
-    new WorkboxWebpackPlugin.GenerateSW(),
+    new WorkboxWebpackPlugin.GenerateSW({
+      runtimeCaching: [
+        {
+          urlPattern: new RegExp('https://louis-monstruon.now.sh/(assets/icons)'),
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'assetsAndIcons',
+          },
+        },
+        {
+          urlPattern: new RegExp('http://oozmakappa-api.herokuapp.com/api/v1/(categories|products)'),
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'apiCategoriesProducts',
+          },
+        },
+      ],
+    }),
     new webpack.DllReferencePlugin({
       context: path.join(__dirname),
       manifest: require('./dist/modules-manifest.json'),

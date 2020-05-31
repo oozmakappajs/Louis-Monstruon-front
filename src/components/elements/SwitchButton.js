@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect } from 'react';
 import { BrightnessLowOutlined } from '@material-ui/icons';
+import PropTypes from 'prop-types';
 
 import '../../assets/styles/components/elements/SwitchButton.scss';
 
@@ -39,6 +40,12 @@ const SwitchButton = (props) => {
       }
     </>
   );
+};
+
+SwitchButton.propTypes = {
+  selected: PropTypes.any,
+  action: PropTypes.func,
+  element: PropTypes.string,
 };
 
 export default SwitchButton;

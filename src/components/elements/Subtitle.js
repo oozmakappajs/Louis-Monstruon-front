@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import '../../assets/styles/components/elements/Subtitle.scss';
 
 const Subtitle = (props) => {
@@ -12,6 +14,10 @@ const Subtitle = (props) => {
       </p>
     </div>
   );
+};
+
+Subtitle.propTypes = {
+  step: PropTypes.number.isRequired,
 };
 
 export default Subtitle;
