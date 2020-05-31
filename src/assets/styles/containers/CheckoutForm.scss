@@ -1,0 +1,71 @@
+@import '../lib/palette';
+
+.CheckoutForm {
+  font-family: 'Quicksand Bold';
+  background: map-get(map-get($palette, primary), gradient) !important;
+  color: map-get(map-get($palette, secondary), purple);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px #00000029;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  &__form {
+     height: 100%;
+  }
+  &__product-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    p {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color:#aab7c4;
+    }
+  }
+  &__img {
+    width: 80px;
+    height: 80px;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+    &--logo {
+      margin: 0 auto;
+      width: 50px;
+      height: auto;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: unset;
+      }
+    }
+  }
+  &__modal-container {
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+  }
+ &__button {
+    font-family: 'Quicksand Bold';
+    width: calc(100% - 40px);
+    margin: 20px !important;
+    height: 45px;
+    background: transparent;
+    border-radius: 25px;
+    opacity: 1;
+    color:  map-get(map-get($palette, secondary), purple);
+    border: 1px solid map-get(map-get($palette, primary), blue);
+    &:hover {
+      color:map-get(map-get($palette, lightTheme), white);
+      background: map-get(map-get($palette, buttons), gradient);
+    }
+ }
+}

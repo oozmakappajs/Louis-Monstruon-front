@@ -28,13 +28,10 @@
     display: flex;
     align-items: center;
   }
-  &__circle{
-    width: 9px;
-    height: 9px;
-    opacity: 1;
-    border-radius: 50%;
-    border: 3px solid map-get(map-get($palette,greyColors),lighter);
-    margin: 0 5px;
+  &__input {
+   margin: 5px;
+   height: 18px;
+   width: 18px;
   }
   &__name{
     font-size: 16px;
