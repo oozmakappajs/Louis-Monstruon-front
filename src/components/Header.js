@@ -21,9 +21,12 @@ const Header = (props) => {
       {
         props.type === 'logo' && (
           <header className={`header ${props.theme}`}>
-            <Link className="header__brand" to="/">
+            <Link className="header__page-name header__page-name--arrow pl header__brand" to="/">
               LOUIS MONSTRUON
             </Link>
+            <button type="button" className="header__icon" onClick={() => { handleGo(); }}>
+              <SettingsOutlined />
+            </button>
           </header>
         )
       }

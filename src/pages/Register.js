@@ -47,9 +47,9 @@ const Register = (props) => {
           <Logo />
           <form className="register__form">
             <div className="register__form-inputs">
-              <InputComponent title="Nombre" />
-              <InputComponent title="Email" />
-              <InputComponent title="Confirma tu contraseña" />
+              <InputComponent type="text" title="Nombre" name="name" />
+              <InputComponent type="email" title="Email" name="email" />
+              <InputComponent type="date" title="Fecha de nacimiento" name="birthday" />
             </div>
           </form>
         </section>
