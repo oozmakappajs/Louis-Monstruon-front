@@ -7,23 +7,13 @@ import '../../assets/styles/containers/Carousel/SmallCarousel.scss';
 
 const SmallCarousel = (props) => {
   const [{ settings: { theme } }] = getGlobalState();
+  const { category } = props;
 
   return (
     <div className="categories-section">
-      <h3 className="categories-title">{props.sectionName}</h3>
+      <h3 className="categories-title">{category.name}</h3>
       <div className={`SmallCarousel ${theme}`}>
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
+        <SmallCard url={`/${category.name}/${category.id}`} description={category.description} />
       </div>
     </div>
   );

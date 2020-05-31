@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../assets/styles/components/elements/GoogleText.scss';
 
-const GoogleText = () => (
+const GoogleTextComponent = (props) => (
   <p className="GoogleText">
     <span className="GoogleText--blue">G</span>
     <span className="GoogleText--red">o</span>
@@ -11,5 +11,7 @@ const GoogleText = () => (
     <span className="GoogleText--red">e</span>
   </p>
 );
+
+const GoogleText = React.memo(GoogleTextComponent);
 
 export default GoogleText;

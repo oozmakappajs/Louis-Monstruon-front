@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import '../../assets/styles/components/elements/Input.scss';
 
@@ -8,5 +9,13 @@ const InputComponent = (props) => (
     <div className="InputComponent__input--border" />
   </div>
 );
+
+InputComponent.propTypes = {
+  type: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  action: PropTypes.func,
+  required: PropTypes.bool,
+};
 
 export default InputComponent;
