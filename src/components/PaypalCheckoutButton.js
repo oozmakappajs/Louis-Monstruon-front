@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import swal from 'sweetalert';
 import paypal from 'paypal-checkout';
 
 const PayplaCheckoutButton = ({ order }) => {
@@ -12,7 +13,7 @@ const PayplaCheckoutButton = ({ order }) => {
     },
     style: {
       size: 'medium',
-      color: 'silver',
+      color: 'gold',
       shape: 'pill',
       label: 'pay',
       tagline: 'true',
@@ -20,7 +21,7 @@ const PayplaCheckoutButton = ({ order }) => {
   };
   const PaypalButton = paypal.Button.driver('react', { React, ReactDOM });
 
-  const payment = (data, actions) => {
+  const onPayment = (data, actions) => {
     const payment = {
       transactions: [
         {
@@ -43,27 +44,27 @@ const PayplaCheckoutButton = ({ order }) => {
     return actions.payment.execute()
       .then((response) => {
         console.log(response);
-        alert(`Tu pago se proceso correctamente, con el ID ${response.id}`);
+        swal(`Cool! Tu pago se proceso CORRECTAMENTE, con el ID ${response.id}`);
       })
       .catch((error) => {
         console.log(error);
-        alert('Ocurrio un error con proceso de pago :(');
+        swal('3312,TENEMOS UN 3312, Hay un error con proceso de pago :( ');
       });
   };
   const onError = (error) => {
     console.log(error);
-    alert('No se pudo realizar el pago :(');
+    swal('No se pudo realizar el pago :(');
   };
 
   const onCancel = (data, actions) => {
-    alert('Se cancelo proceso');
+    swal('Se cancelo proceso');
   };
 
   return (
     <PaypalButton
       env={paypalConf.env}
       client={paypalConf.client}
-      payment={(data, actions) => payment(data, actions)}
+      payment={(data, actions) => onPayment(data, actions)}
       onAuthorize={(data, actions) => onAuthorize(data, actions)}
       onCancel={(data, actions) => onCancel(data, actions)}
       onError={(error) => onError(error)}
