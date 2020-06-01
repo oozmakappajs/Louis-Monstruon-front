@@ -28,58 +28,54 @@ const Payment = (props) => {
   const { products } = cart;
 
   const passPriceToString = (price) => {
-    const restructurePrice = price * 100;
+    const addIva = price * 0.16;
+    const restructurePrice = (price + addIva) * 100;
     const passToString = `${restructurePrice}.00`;
     return passToString;
   };
-  const [counterId] = useState(0);
 
   const items = products.map((item) => {
     const { price } = item;
     const changingPrice = passPriceToString(price);
     return {
-      sku: `${counterId}`,
+      sku: `${item.id}`,
       name: item.name,
       price: changingPrice,
       quantity: item.quantity,
       currency: 'MXN',
     };
   });
+  console.log('CART', cart);
 
-  console.log('cart:', cart);
-  // console.log('Poduct:', products);
-  // console.log('id:', cart.id);
-  // console.log('amount:', cart.amount);
-  // console.log('eachPoduct:', items);
+  const [idOrder] = useState(0);
 
-  const [order] = useState({
-    custumer: cart.id,
-    total: passPriceToString(cart.amount),
-    items: [items],
+  const [orderState] = useState({
+    custumer: `idOrderNum${idOrder + 1}`,
+    total: passAmoutToString(cart.amount),
+    items,
   });
+  console.log(' the state ORDER', orderState);
 
-  console.log('THE FUCKING ORDER BABE;', order);
-
-  // const order = {
-  //   custumer: '12345678',
-  //   total: '20.00',
-  //   items: [
-  //     {
-  //       sku: '112',
-  //       name: 'Dino jacket',
-  //       price: '10.00',
-  //       quantity: 1,
-  //       currency: 'MXN',
-  //     },
-  //     {
-  //       sku: '2',
-  //       name: 'Dino pants',
-  //       price: '10.00',
-  //       quantity: 1,
-  //       currency: 'MXN',
-  //     },
-  //   ],
-  // };
+  const order = {
+    custumer: '12345678',
+    total: '20.00',
+    items: [
+      {
+        sku: '112',
+        name: 'Dino jacket',
+        price: '10.00',
+        quantity: 1,
+        currency: 'MXN',
+      },
+      {
+        sku: '2',
+        name: 'Dino pants',
+        price: '10.00',
+        quantity: 1,
+        currency: 'MXN',
+      },
+    ],
+  };
 
   return (
     <>

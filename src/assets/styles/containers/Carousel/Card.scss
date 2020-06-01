@@ -5,7 +5,7 @@
   width: calc(100% - 10px); 
   border-radius: 5px;
   margin-left: 10px;
-  background: map-get(map-get($palette,greyColors),light);
+  background: map-get(map-get($palette,primary),gradient);
   box-shadow: 0px 0px 6px #00000029;
   opacity: 1;
   &__img {
