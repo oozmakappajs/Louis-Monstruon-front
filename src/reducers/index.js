@@ -72,6 +72,7 @@ const reducer = (state, action) => {
         },
       };
     case 'SET_AMOUNT_OF_CART':
+      window.localStorage.setItem('amount', Number.parseFloat(action.payload));
       return {
         ...state,
         cart: {

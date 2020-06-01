@@ -7,6 +7,7 @@ export const Provider = ({ reducer, children }) => {
   let isAuth;
   let user;
   let productsCart;
+  let amountCart;
   let theme;
 
   if (window.localStorage.getItem('theme')) {
@@ -19,6 +20,11 @@ export const Provider = ({ reducer, children }) => {
     productsCart = JSON.parse(window.localStorage.getItem('cart'));
   } else {
     productsCart = [];
+  }
+  if (window.localStorage.getItem('amount')) {
+    amountCart = Number.parseFloat(window.localStorage.getItem('amount'));
+  } else {
+    amountCart = [];
   }
 
   if (window.sessionStorage.getItem('token') && window.sessionStorage.getItem('user')) {
@@ -34,7 +40,7 @@ export const Provider = ({ reducer, children }) => {
     user,
     cart: {
       products: productsCart,
-      amount: 0,
+      amount: amountCart,
     },
     notifications: [],
     settings: {
