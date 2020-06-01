@@ -15,6 +15,9 @@ const Payment = (props) => {
   const [{ settings: { theme } }] = getGlobalState();
   const [step, setStep] = useState(0);
   const [payWithStripe, usePayWithStripe] = useState('');
+  const [{ cart }] = getGlobalState();
+
+  console.log(cart);
 
   const handleStep = () => {
     setStep(step + 1);
