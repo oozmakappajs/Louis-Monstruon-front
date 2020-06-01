@@ -45,16 +45,16 @@ const Payment = (props) => {
       currency: 'MXN',
     };
   });
-  console.log('CART', cart);
+  // console.log('CART', cart);
 
-  const [idOrder] = useState(0);
+  // const [idOrder] = useState(0);
 
-  const [orderState] = useState({
-    custumer: `idOrderNum${idOrder + 1}`,
-    total: passAmoutToString(cart.amount),
-    items,
-  });
-  console.log(' the state ORDER', orderState);
+  // const [orderState] = useState({
+  //   custumer: `idOrderNum${idOrder + 1}`,
+  //   total: passPriceToString(cart.amount),
+  //   items,
+  // });
+  // console.log(' the state ORDER', orderState);
 
   const order = {
     custumer: '12345678',
