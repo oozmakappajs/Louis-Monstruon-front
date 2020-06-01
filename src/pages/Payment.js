@@ -45,7 +45,7 @@ const Payment = (props) => {
       currency: 'MXN',
     };
   });
-  // console.log('CART', cart);
+  console.log('CART', items);
 
   // const [idOrder] = useState(0);
 
