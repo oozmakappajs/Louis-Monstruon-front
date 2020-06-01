@@ -8,14 +8,17 @@ import Footer from './Footer';
 import '../assets/styles/main.scss';
 
 const Layout = (props) => {
-  const [{ settings: { theme } }] = getGlobalState();
+  const [{ settings: { theme }, productAct: { name = 'Product name' } }] = getGlobalState();
   const { location: { pathname }, children, history } = props;
 
   const userPath = pathname.match(/^\/profile\/.*/) ? pathname.match(/^\/profile\/.*/)[0] : '/profile';
+  const productsPath = pathname.match(/^\/(woman|man|kid|accessories)\/[1-4]$/) ? pathname.match(/^\/(woman|man|kid|accessories)\/[1-4]$/)[0] : '/category/products';
+  const productPath = pathname.match(/^\/(woman|man|kid|accessories)\/[1-4]\/.*/) ? pathname.match(/^\/(woman|man|kid|accessories)\/[1-4]\/.*/)[0] : '/category/products/id-name-product';
 
   let headerType;
   let headerTitle;
   let contentStyle = '';
+  const categoryName = pathname.split('/', 2);
 
   switch (pathname) {
     case '/notifications':
@@ -44,6 +47,14 @@ const Layout = (props) => {
       break;
     case '/payment':
       contentStyle = 'modalView';
+      break;
+    case productsPath:
+      headerType = 'twoIcons';
+      headerTitle = categoryName[1].toUpperCase();
+      break;
+    case productPath:
+      headerType = 'leftIcons';
+      headerTitle = name;
       break;
     case userPath:
       headerType = 'rightIcons';

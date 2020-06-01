@@ -37,7 +37,7 @@ const Profile = (props) => {
           <p>
             ¿Notienes una cuenta?
             {' '}
-            <Button name="base-purple" buttonType="button" action={() => { goTo('/register'); }}>Registrate</Button>
+            <Button name="base-purple" buttonType="button" action={() => { goTo('/register?step=1'); }}>Registrate</Button>
           </p>
         </section>
       </>
