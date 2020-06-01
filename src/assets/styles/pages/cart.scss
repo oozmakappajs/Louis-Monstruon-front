@@ -1,0 +1,75 @@
+@import '../lib/palette';
+
+.cart {
+  grid-area: 1 / 1 / 3 / 2;
+  overflow-y: auto;
+  padding-bottom: 15px;
+  &.light {
+    & .CartCard {
+      background: map-get(map-get($palette, greyColors), lighter);
+    }
+  }
+  &.dark {
+    & .CartCard {
+      background: map-get(map-get($palette, darkTheme), lighter);
+    }
+  }
+}
+
+.total_amount {
+  grid-area: 3 / 1 / 4 / 2;
+  &.light {
+    & .CartContainer__info {
+      &-item {
+        border-bottom: solid 1px map-get(map-get($palette, greyColors), silver);
+      }
+    }
+  }
+  &.dark {
+    & .CartContainer__info {
+      &-item {
+        border-bottom: solid 1px map-get(map-get($palette, darkTheme), lighter);
+      }
+    }
+  }
+  &.light,
+  &.dark {
+    & .CartContainer__info {
+      box-shadow: 0px -1px 5px #000000;
+      &-item--total {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .cart {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+
+  .total_amount {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+}
+
+@media screen and (min-width: 570px) { 
+  .cart {
+    grid-area: 1 / 1 / 4 / 2;
+    &::-webkit-scrollbar {
+      width: 8px;
+      border-radius: 8px;
+      background: map-get(map-get($palette, greyColors), moon);
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 8px;
+      border-radius: 8px;
+      background: map-get(map-get($palette, lightTheme), content);
+      cursor: pointer;
+    }
+  }
+
+  .total_amount {
+    grid-area: 1 / 2 / 4 / 3;
+  }
+}

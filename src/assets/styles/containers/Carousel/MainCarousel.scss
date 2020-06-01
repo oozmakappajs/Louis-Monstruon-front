@@ -1,0 +1,38 @@
+.MainCarousel {
+  white-space: nowrap;
+  &-item {
+    min-height: 150px;
+    min-width: calc(100% - 40px);
+    width: calc(100% - 40px);
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .MainCarousel {
+    &-item {
+      min-width: calc(50% - 40px);
+      width: calc(50% - 40px);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .MainCarousel {
+    &-item {
+      min-width: calc(35% - 40px);
+      width: calc(35% - 40px);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .MainCarousel {
+    &-item {
+      min-width: calc(25% - 40px);
+      width: calc(25% - 40px);
+    }
+  }
+}

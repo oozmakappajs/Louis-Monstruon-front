@@ -1,0 +1,90 @@
+@import "../lib/palette";
+
+.UserDetails {
+  font-family: 'Quicksand Regular';
+  font-size: 12px;
+  min-height: 144px;
+  width: 100%; 
+  margin: 20px 0;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 0px 2px #00000029;
+  border-radius: 5px;
+  opacity: 1;
+  p {
+    width: calc(100% - 25px);
+    text-align: start;
+  }
+  p,
+  &__adress,
+  &__state {
+    margin-top: 5px;
+    padding-left: 25px;
+    font-size: 14px;
+  }
+  &__user{
+    display: flex;
+    align-items: center;
+  }
+  &__input {
+   margin: 5px;
+   height: 18px;
+   width: 18px;
+  }
+  &__name{
+    font-size: 16px;
+  }
+  &__adress,
+  &__state {
+    width: calc(100% - 25px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      text-align: start;
+    }
+  }
+  &__adress {
+    span {
+      width: calc(100% / 2);
+    }
+  }
+  &__state {
+    span {
+      width: calc(100% / 3);
+    }
+  }
+  &__empty {
+    align-items: center;
+    justify-content: center;
+    p {
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      padding: 0;
+      opacity: 0.6;
+    }
+    button {
+      background: none;
+      svg {
+        width: 36px;
+        height: 36px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  &__add {
+    margin-top: 5px;
+    color: #5B70DB;
+    background: transparent;
+    outline: 0;
+    font-size: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

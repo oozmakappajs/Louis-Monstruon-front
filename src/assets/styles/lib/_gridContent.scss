@@ -1,0 +1,23 @@
+.content {
+  grid-area: content;
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  min-width: 260px;
+  height:100%;
+  grid-template-columns: 100%;
+  grid-template-rows: 35% 32.5% 32.5%;
+  overflow-y: auto;
+}
+
+@media screen and (min-width: 375px) {
+  .content {
+    grid-template-rows: 36% 32% 32%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .content {
+    grid-template-columns: 50% 50%;
+  }
+}

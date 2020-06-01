@@ -1,0 +1,112 @@
+@import '../../lib/palette';
+
+.SwitchButton {
+  margin-bottom: 15px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 65px;
+  height: 32px;
+  & input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+.slider {
+  display: flex;
+  position: absolute;
+  padding-left: 5px;
+  color: grey;
+  font-size: 10px;
+  border-radius: 34px;
+  box-shadow: 0px 0px 4px #00000029;
+  -webkit-transition: .4s;
+  transition: .4s;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &::before {
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    left: 2px;
+    bottom: 2px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+    content: " ";
+    z-index: 99;
+  }
+  &__theme {
+    &::before {
+      background-image: url(../../../icons/sun.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 24px 24px;
+    }
+    &::after {
+      position: absolute;
+      height: 28px;
+      width: 28px;
+      left: 32px;
+      bottom: 2px;
+      background-image: url(../../../icons/moon.svg);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 24px 24px;
+      content: " ";
+      z-index: 10;
+    }
+  }
+  &__off {
+    padding-left: 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    &::before {
+      content: "On";
+      background-image: none;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &::after {
+      content: "Off";
+      background-image: none;
+      color: gray;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      margin-left: 14px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__icon {
+    font-size: 14px;
+    color: map-get(map-get($palette,darkTheme),content);
+  }
+}
+
+.slider_checked + .slider__theme::before {
+  background-image: url(../../../icons/moon.svg);
+}
+
+.slider_checked + .slider__off::before {
+  content: "Off";
+}
+
+.slider_checked + .slider::before {
+  -webkit-transform: translateX(33px);
+  -ms-transform: translateX(33px);
+  transform: translateX(33px);
+}

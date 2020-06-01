@@ -1,28 +1,40 @@
 $palette: (
     primary: (
       blue: #5BDBC3,
-      purple:#594592,
+      gradient : radial-gradient(circle, rgba(91,219,195,0.2147233893557423) 0%, rgba(89,69,146,0.0802696078431373) 100%),
+    ),
+    secondary: (
+      purple:#594592
     ),
     lightTheme: (
+      white: #FFFFFF,
       background: #F2F6F5,
       content:#2B2B28,
       lighter: #48525C
     ),
     darkTheme: (
+      black: #151A23,
       background: #222831,
       content: #EBEBE3,
+      lighter: #39414D,
     ),
     greyColors: (
-      moon: #999999,
       snow: #F4F4F4,
+      lighter:#F1F1F1,
+      silver: #CCCCCC,
+      light: #C1C1C1,
+      moon: #999999,
       nickel: #666666,
       coal:#333333,
-      silver: #CCCCCC,
       black: #000000,
     ),
     alert: (
       failure:#A50907,
       warning: #F9C805,
       success: #2DB428,
-    )
+    ),
+    buttons: (
+      blue: #005EA6,
+      gradient: transparent linear-gradient(90deg, #5533FF 0%, #0BD6FC 100%),
+    ),
 );

@@ -1,0 +1,18 @@
+.GoogleText {
+  font-size: 18px;
+  font-family: 'Quicksand Bold';
+  margin-left: 5px;
+  &--blue {
+    color: #4285F4;;
+  }
+  &--red {
+    color:#EA4335;
+  }
+  &--yellow {
+    color: #FBBC05;
+  }
+
+  &--green {
+    color:#34A853;;
+  }
+}

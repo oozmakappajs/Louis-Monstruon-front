@@ -1,10 +1,5 @@
 {
   "version": 2,
-  "name": "Louis Monstruon",
-  "alias": [
-    "lm",
-    "louismonstruon"
-  ],
   "builds": [
     {
       "use": "@now/static-build",
@@ -12,6 +7,10 @@
     }
   ],
   "routes": [
+    {
+      "src": "(.*).css",
+      "dest": "/$1.css"
+    },
     {
       "src": "(.*).js",
       "dest": "/$1.js"
@@ -25,8 +24,23 @@
       "dest": "/$1.png"
     },
     {
+      "src": "(.*).jpg",
+      "dest": "/$1.jpg"
+    },
+    {
+      "src": "(.*).svg",
+      "dest": "/$1.svg"
+    },
+    {
+      "src": "(.*).ttf",
+      "dest": "/$1.ttf"
+    },
+    {
       "src": "/.*",
-      "dest": "/index.html"
+      "dest": "/index.html",
+      "headers": {
+        "X-Robots-Tag": "all"
+      }
     }
   ]
 }

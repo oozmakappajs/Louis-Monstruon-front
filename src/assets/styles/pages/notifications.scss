@@ -1,0 +1,80 @@
+@import '../lib/palette';
+
+.notifications {
+  grid-area: 1 / 1 / 4 / 2;
+  padding: 10px 0 20px;
+  height: calc(100% - (8vh + 50px));
+  overflow-y: auto;
+  &.light {
+    & .CartNotification {
+      background: map-get(map-get($palette, greyColors), lighter);
+    }
+    & .notifications_deleteAll {
+      background: map-get(map-get($palette, lightTheme), white);
+    }
+  }
+  &.dark {
+    & .CartNotification {
+      background: map-get(map-get($palette, darkTheme), lighter);
+    }
+    & .notifications_deleteAll {
+      background: map-get(map-get($palette, darkTheme), background);
+    }
+  }
+  &_deleteAll {
+    position: fixed;
+    height: 40px;
+    padding: 15px 20px;
+    box-shadow: 0px -1px 2px #00000029;
+    left: 0;
+    right: 0;
+    bottom: 8vh;
+  }
+  &_withoutPermisions {
+    font-family: 'Quicksand Bold';
+    font-size: 22px;
+    margin: 10px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .notifications {
+    &_deleteAll {
+      bottom: 10vh;
+    }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .notifications {
+    &_deleteAll {
+      bottom: 11vh;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .notifications {
+    grid-area: 1 / 1 / 4 / 3;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .notifications {
+    &_deleteAll {
+      bottom: 0;
+    }
+    &::-webkit-scrollbar {
+      width: 8px;
+      border-radius: 8px;
+      background: map-get(map-get($palette, greyColors), moon);
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 8px;
+      border-radius: 8px;
+      background: map-get(map-get($palette, lightTheme), content);
+      cursor: pointer;
+    }
+  }
+}

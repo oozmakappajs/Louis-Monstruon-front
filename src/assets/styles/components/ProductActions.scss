@@ -1,0 +1,57 @@
+@import '../lib/palette';
+
+.ProductContainer {
+  font-size: 20px;
+  font-family: 'Quicksand Regular';
+  padding: 10px;
+  opacity: 1;
+  &__text {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    box-shadow: 0px 0px 6px #00000029;
+    border-radius: 5px;
+  }
+  &__info {
+    &-price {
+      width: calc(100% - 11px);
+      display: flex;
+      justify-content: space-between;
+      padding: 0 6px 0 5px;
+      margin: 15px 0;
+      align-items: center;
+      height: 30px;
+      &-container {
+        display: flex;
+        align-items: center;
+      }
+      &-text {
+        margin-right: 10px;
+        font-size: 28px;
+      }
+    }
+    &-buttons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &--btn {
+        width: calc(100% - 50px);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 570px) {
+  .ProductContainer {
+    &__text {
+      margin-top: 45px;
+      padding: 15px 10px;
+    }
+  }
+}

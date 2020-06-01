@@ -1,0 +1,144 @@
+@import '../lib/palette';
+
+.paymentSteps {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &_header {
+    width: calc(100% - 50px);
+    margin: 0 25px;
+    &.light {
+      & .PageSlider__item {
+        background: map-get(map-get($palette,lightTheme), white);
+        &-active {
+          background: map-get(map-get($palette,greyColors), coal);
+        }
+        &:hover, &:active {
+          background: map-get(map-get($palette,greyColors), coal);
+        }
+      }
+    }
+    &.dark {
+      & .PageSlider__item {
+        background: map-get(map-get($palette,greyColors), moon);
+        &-active {
+          background: map-get(map-get($palette,greyColors), lighter);
+        }
+        &:hover, &:active {
+          background: map-get(map-get($palette,greyColors), lighter);
+        }
+      }
+    }
+  }
+  &__separator {
+    width: calc(100% - 50px);
+    margin: 0 25px;
+    border: 1px solid #CCCCCC;
+  }
+  &_content {
+    width: calc(100% - 50px);
+    margin: 0 25px;
+    font-family: 'Quicksand Regular';
+    text-align: center;
+    overflow-y: auto;
+    &.light {
+      & .UserDetails {
+        background: map-get(map-get($palette,lightTheme),white);
+        &__circle{
+          background: map-get(map-get($palette,primary),blue);
+        }
+        &__empty {
+          background: map-get(map-get($palette,greyColors),lighter);
+          p {
+            color: map-get(map-get($palette,greyColors),moon);
+          }
+          button {
+            svg {
+              color: map-get(map-get($palette,greyColors),moon);
+            }
+          }
+        }
+      }
+    }
+    &.dark {
+      & .UserDetails {
+        background: map-get(map-get($palette,darkTheme),lighter);
+        &__circle{
+          background: map-get(map-get($palette,secondary),purple);
+        }
+        &__empty {
+          background: #AAAAAA;
+          p {
+            color: map-get(map-get($palette,greyColors),nickel);
+          }
+          button {
+            svg {
+              color: map-get(map-get($palette,greyColors),nickel);
+            }
+          }
+        }
+      }
+    }
+    &-icon {
+      width: 100%;
+      height: 42px;
+      svg {
+        width: 42px;
+        height: 42px;
+        text-align: center;
+        color: map-get(map-get($palette,alert),success);
+      }
+    }
+    &-text {
+      &--success {
+        font-size: 40px;
+      }
+    }
+  }
+  &_actions {
+    width: calc(100% - 50px);
+    margin: 0 25px;
+    margin-bottom: 10px;
+    button {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .paymentSteps {
+    margin: 0;
+  }
+}
+
+// @media screen and (min-width: 600px) {
+//   .modalView {
+//     width: 100%;
+//     grid-template-rows: 7vh 85vh 8vh;
+//     &_header {
+//       height: 7vh;
+//     }
+//     &_content {
+//       width: 70%;
+//       padding: 0 15%;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 768px) {
+//   .modalView {
+//     &_content {
+//       width: 60%;
+//       padding: 0 20%;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 1024px) {
+//   .modalView {
+//     &_content {
+//       width: 50%;
+//       padding: 0 25%;
+//     }
+//   }
+// }
