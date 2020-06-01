@@ -65,18 +65,18 @@ const Login = (props) => {
       <main className={`modalView_content ${theme} login__modal`}>
         <section className="login">
           <Logo />
-          <form className="login__form" onSubmit={handleSubmit}>
+          <form className="login__form" onSubmit={handleSubmit} id="loginForm">
             <div className="login__form-inputs">
               <InputComponent type="email" title="Email" name="email" action={handleInput} required={true} />
-              <InputComponent type="password" title="Contraseña" name="password" action={handleInput} required={true} />
+              <InputComponent type="password" title="Password" name="password" action={handleInput} required={true} />
             </div>
-            <Button name="base-blue" buttonType="submit">Iniciar sesion</Button>
+            <Button name="base-blue" buttonType="submit" form="loginForm">Login</Button>
           </form>
         </section>
         <section className="goToRegister">
           <div className="login__separator" />
-          <Button name="base-purple" buttonType="button" action={() => { goTo('/register?step=1'); }}>Registrate</Button>
-          <Button name="image" buttonType="button">Registrate con </Button>
+          <Button name="base-purple" buttonType="button" action={() => { goTo('/register?step=1'); }}>Sign up</Button>
+          <Button name="image" buttonType="button">Sign up with </Button>
         </section>
       </main>
     </>

@@ -93,7 +93,7 @@ const Register = (props) => {
             <section className="nextStep">
               <Button name="success" buttonType="submit" form="formRegisterStep1">Next</Button>
               <div className="register__separator" />
-              <Button name="image" buttonType="button">Register with </Button>
+              <Button name="image" buttonType="button">Sign up with </Button>
             </section>
           </main>
         )
@@ -114,7 +114,7 @@ const Register = (props) => {
             <section className="nextStep">
               <Button name="success" buttonType="submit" form="formRegisterStep2">Finish</Button>
               <div className="register__separator" />
-              <Button name="image" buttonType="button">Register with </Button>
+              <Button name="image" buttonType="button">Sign up with </Button>
             </section>
           </main>
         )

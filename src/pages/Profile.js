@@ -30,14 +30,14 @@ const Profile = (props) => {
           kw="Stripe, Clothes, Store"
         />
         <section className={`profile_header ${theme}`}>
-          <h1 className="profile_title-noAuth">Necesitas Iniciar sesion para acceder a tu perfil</h1>
+          <h1 className="profile_title-noAuth">You need to Login to access your profile</h1>
         </section>
         <section className="profile_content profile_content-noAuth">
-          <Button name="base-blue" buttonType="button" action={() => { goTo('/login'); }}>Iniciar sesión</Button>
+          <Button name="base-blue" buttonType="button" action={() => { goTo('/login'); }}>Login</Button>
           <p>
-            ¿Notienes una cuenta?
+            You do not have an account?
             {' '}
-            <Button name="base-purple" buttonType="button" action={() => { goTo('/register?step=1'); }}>Registrate</Button>
+            <Button name="base-purple" buttonType="button" action={() => { goTo('/register?step=1'); }}>Sign up</Button>
           </p>
         </section>
       </>
@@ -52,7 +52,7 @@ const Profile = (props) => {
         kw="Stripe, Clothes, Store"
       />
       <section className={`profile_header ${theme}`}>
-        <UserProfile user={user}>Nombre</UserProfile>
+        <UserProfile user={user}>Name</UserProfile>
         <UserGroupedButtons handleTabActive={handleTabActive} active={active} />
       </section>
       <section className={`profile_content ${theme}`}>

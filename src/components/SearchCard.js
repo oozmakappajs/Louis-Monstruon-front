@@ -22,8 +22,8 @@ const SearchCard = (props) => {
               />
             </div>
             <div className="SearchCard__details">
-              <p className="SearchCard__title">Nombre</p>
-              <p className="SearchCard__price">precio</p>
+              <p className="SearchCard__title">Name</p>
+              <p className="SearchCard__price">Price</p>
             </div>
           </Link>
         )
