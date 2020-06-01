@@ -28,14 +28,14 @@ const PayplaCheckoutButton = ({ order }) => {
             total: order.total,
             currency: paypalConf.currency,
           },
-          description: 'Compra en Louis Monstruon',
+          description: 'Buy in Louis Monstruon',
           custom: order.customer || '',
           item_list: {
             items: order.items,
           },
         },
       ],
-      note_to_payer: 'contactanos para para devoluciones',
+      note_to_payer: 'contact us for questions',
     };
     return actions.payment.create({ payment });
   };
@@ -43,20 +43,20 @@ const PayplaCheckoutButton = ({ order }) => {
     return actions.payment.execute()
       .then((response) => {
         console.log(response);
-        swal(`Cool! Tu pago se proceso CORRECTAMENTE, con el ID ${response.id}`);
+        swal(`Cool!Your payment was processed CORRECTLY with the ID ${response.id}`);
       })
       .catch((error) => {
         console.log(error);
-        swal('3312,TENEMOS UN 3312, Hay un error con proceso de pago :( ');
+        swal('3312, WE HAVE A 3312, There is an error with the payment process :(');
       });
   };
   const onError = (error) => {
     console.log(error);
-    swal('No se pudo realizar el pago :(');
+    swal('Payment failed :(');
   };
 
   const onCancel = (data, actions) => {
-    swal('Se cancelo proceso');
+    swal('Process was canceled');
   };
 
   return (

@@ -16,7 +16,7 @@
     width: 60px;
     border-radius: 50%;
     object-fit: contain;
-    background: map-get(map-get($palette,greyColors),nickel);
+    background: map-get(map-get($palette,primary),gradient);
   }
   &__title {
    font-family: 'Quicksand Regular';

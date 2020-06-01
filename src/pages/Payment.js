@@ -15,6 +15,7 @@ const Payment = (props) => {
   const [{ settings: { theme } }] = getGlobalState();
   const [step, setStep] = useState(0);
   const [payWithStripe, usePayWithStripe] = useState('');
+  const [{ cart }] = getGlobalState();
 
   const handleStep = () => {
     setStep(step + 1);
@@ -24,6 +25,36 @@ const Payment = (props) => {
     setStep(step + 1);
     usePayWithStripe(true);
   };
+  const { products } = cart;
+
+  const passPriceToString = (price) => {
+    const addIva = price * 0.16;
+    const restructurePrice = (price + addIva) * 100;
+    const passToString = `${restructurePrice}.00`;
+    return passToString;
+  };
+
+  const items = products.map((item) => {
+    const { price } = item;
+    const changingPrice = passPriceToString(price);
+    return {
+      sku: `${item.id}`,
+      name: item.name,
+      price: changingPrice,
+      quantity: item.quantity,
+      currency: 'MXN',
+    };
+  });
+  console.log('CART', cart);
+
+  const [idOrder] = useState(0);
+
+  const [orderState] = useState({
+    custumer: `idOrderNum${idOrder + 1}`,
+    total: passAmoutToString(cart.amount),
+    items,
+  });
+  console.log(' the state ORDER', orderState);
 
   const order = {
     custumer: '12345678',
