@@ -6,10 +6,9 @@ import paypal from 'paypal-checkout';
 const PayplaCheckoutButton = ({ order }) => {
   const paypalConf = {
     currency: 'MXN',
-    env: 'sandbox',
+    env: 'production',
     client: {
-      sandbox: 'AbIoq_r-mjiJO5SlvJdfYokwyu4J3ebPrEzQQbdpxGrgVOlBatrYeWbX5v4jqICvxTy6IPO9Iw5zCJXC',
-      production: '-- id --',
+      production: 'AQdBh3hj3OgiahwN9ipkAS-YG9DB0lj6ychrPrSnPfds4CnpUfqcuwBmIya8DeBA_slUyZIOL56C5Qi6',
     },
     style: {
       size: 'medium',
