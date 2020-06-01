@@ -21,12 +21,14 @@ const Header = (props) => {
       {
         props.type === 'logo' && (
           <header className={`header ${props.theme}`}>
-            <Link className="header__page-name header__page-name--arrow pl header__brand" to="/" aria-label="Go to Home">
-              LOUIS MONSTRUON
-            </Link>
-            <button type="button" aria-label="Open settings" className="header__icon" onClick={() => { handleGo(); }}>
-              <SettingsOutlined />
-            </button>
+            <div className="header__container">
+              <button type="button" aria-label="Open settings" className="header__icon" onClick={() => { handleGo(); }}>
+                <SettingsOutlined />
+              </button>
+              <Link className="header__page-name header__page-name--arrow pr header__brand" to="/" aria-label="Go to Home">
+                LOUIS MONSTRUON
+              </Link>
+            </div>
           </header>
         )
       }
@@ -47,7 +49,7 @@ const Header = (props) => {
                 <ArrowBackIos className="header__icon--arrow" />
               </button>
               <p className="header__page-name" to="/">
-                Categorias
+                {props.title}
               </p>
               <Link className="header__icon header__icon--list" to="/" aria-label="Open filter modal">
                 <FilterList />

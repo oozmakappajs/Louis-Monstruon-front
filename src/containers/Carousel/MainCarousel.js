@@ -13,7 +13,7 @@ const MainCarousel = (props) => {
           let url;
 
           if (item.subcategory === 1) {
-            url = `/men/${item.subcategory}/${item.id}`;
+            url = `/man/${item.subcategory}/${item.id}`;
           } else if (item.subcategory === 2) {
             url = `/woman/${item.subcategory}/${item.id}`;
           } else if (item.subcategory === 3) {
