@@ -8,10 +8,10 @@ const UserGroupedButtons = (props) => {
   return (
     <div className="UserGroupedButtons">
       <button type="button" className={`UserGroupedButtons__item ${!active && 'UserGroupedButtons__item-active'}`} onClick={handleTabActive}>
-        Favoritos
+        Favorites
       </button>
       <button type="button" className={`UserGroupedButtons__item ${active && 'UserGroupedButtons__item-active'}`} onClick={handleTabActive}>
-        historial de compra
+        Shopping history
       </button>
     </div>
   );

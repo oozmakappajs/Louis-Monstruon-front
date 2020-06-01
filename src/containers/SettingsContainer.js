@@ -16,7 +16,7 @@ const SettingsContainer = (props) => {
     <section className={`settings ${settings.theme}`}>
       <ul className="Settings__menu">
         <li className="Settings__menu-item">
-          <p>Tema</p>
+          <p>Theme</p>
           <SwitchButton
             selected={settings.theme}
             action={() => changeSetting('CHANGE_THEME', themeSelected)}
@@ -33,7 +33,7 @@ const SettingsContainer = (props) => {
           />
         </li>
         <li className="Settings__menu-item">
-          <p>Cuenta</p>
+          <p>Acount</p>
           <div className="Settings__menu-item--icon">
             <ArrowBackIos />
           </div>
@@ -41,8 +41,8 @@ const SettingsContainer = (props) => {
         <li className="Settings__menu-item">
           {
             isAuth ?
-              <Button name="error" action={() => { changeSetting('REMOVE_AUTHORIZATION'); push('/'); }}>Cerrar sesión</Button> :
-              <Button name="success" action={goToLogin}>Iniciar sesión</Button>
+              <Button name="error" action={() => { changeSetting('REMOVE_AUTHORIZATION'); push('/'); }}>Logout</Button> :
+              <Button name="success" action={goToLogin}>Login</Button>
           }
         </li>
       </ul>

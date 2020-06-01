@@ -7,6 +7,7 @@ import '../../assets/styles/containers/Carousel/MainCarousel.scss';
 const MainCarousel = (props) => {
   return (
     <section className="featured MainCarousel">
+      <h1>Featured</h1>
       {
         props.featured !== (null || undefined) &&
         props.featured.map((item) => {

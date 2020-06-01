@@ -16,12 +16,12 @@ const UserCard = (props) => {
         />
       </div>
       <div className="UserCard__details">
-        <p className="UserCard__title">Nombre de producto</p>
+        <p className="UserCard__title">Product name</p>
         {
           props.icon ? (
             <>
               <div className="UserCard__icon">
-                <p className="UserCard__price">precio</p>
+                <p className="UserCard__price">Price</p>
                 <IconButton type="fav" isFav />
               </div>
             </>
@@ -32,7 +32,7 @@ const UserCard = (props) => {
                   <p className="UserCard__date">dd/mm/yyyy</p>
                   <div>
                     <AttachMoney />
-                    <span>precio</span>
+                    <span>Price</span>
                   </div>
                 </div>
               </>
