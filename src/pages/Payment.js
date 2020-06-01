@@ -27,19 +27,19 @@ const Payment = (props) => {
 
   const order = {
     custumer: '12345678',
-    total: '550.00',
+    total: '20.00',
     items: [
       {
         sku: '112',
         name: 'Dino jacket',
-        price: '300.00',
+        price: '10.00',
         quantity: 1,
         currency: 'MXN',
       },
       {
         sku: '2',
         name: 'Dino pants',
-        price: '250.00',
+        price: '10.00',
         quantity: 1,
         currency: 'MXN',
       },
