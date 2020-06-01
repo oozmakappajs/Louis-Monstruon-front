@@ -17,8 +17,6 @@ const Payment = (props) => {
   const [payWithStripe, usePayWithStripe] = useState('');
   const [{ cart }] = getGlobalState();
 
-  console.log(cart);
-
   const handleStep = () => {
     setStep(step + 1);
   };
@@ -27,27 +25,61 @@ const Payment = (props) => {
     setStep(step + 1);
     usePayWithStripe(true);
   };
+  const { products } = cart;
 
-  const order = {
-    custumer: '12345678',
-    total: '20.00',
-    items: [
-      {
-        sku: '112',
-        name: 'Dino jacket',
-        price: '10.00',
-        quantity: 1,
-        currency: 'MXN',
-      },
-      {
-        sku: '2',
-        name: 'Dino pants',
-        price: '10.00',
-        quantity: 1,
-        currency: 'MXN',
-      },
-    ],
+  const passPriceToString = (price) => {
+    const restructurePrice = price * 100;
+    const passToString = `${restructurePrice}.00`;
+    return passToString;
   };
+  const [counterId] = useState(0);
+
+  const items = products.map((item) => {
+    const { price } = item;
+    const changingPrice = passPriceToString(price);
+    return {
+      sku: `${counterId}`,
+      name: item.name,
+      price: changingPrice,
+      quantity: item.quantity,
+      currency: 'MXN',
+    };
+  });
+
+  console.log('cart:', cart);
+  // console.log('Poduct:', products);
+  // console.log('id:', cart.id);
+  // console.log('amount:', cart.amount);
+  // console.log('eachPoduct:', items);
+
+  const [order] = useState({
+    custumer: cart.id,
+    total: passPriceToString(cart.amount),
+    items: [items],
+  });
+
+  console.log('THE FUCKING ORDER BABE;', order);
+
+  // const order = {
+  //   custumer: '12345678',
+  //   total: '20.00',
+  //   items: [
+  //     {
+  //       sku: '112',
+  //       name: 'Dino jacket',
+  //       price: '10.00',
+  //       quantity: 1,
+  //       currency: 'MXN',
+  //     },
+  //     {
+  //       sku: '2',
+  //       name: 'Dino pants',
+  //       price: '10.00',
+  //       quantity: 1,
+  //       currency: 'MXN',
+  //     },
+  //   ],
+  // };
 
   return (
     <>
