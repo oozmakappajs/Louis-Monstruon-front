@@ -10,7 +10,7 @@ const ProductActions = () => {
       <div className="ProductActions__info">
         <div className="ProductActions__info-price">
           <div className="ProductActions__info-price-container">
-            <p>Precio</p>
+            <p>Price</p>
             <QuantityCounter />
           </div>
           <IconButton type="fav" className="ProductActions__info-price--heart" />
@@ -18,7 +18,7 @@ const ProductActions = () => {
         <div className="ProductActions__info-buttons">
           <div className="ProductActions__info-buttons--btn">
             <Button name="success">
-              Pagar
+              Buy now
             </Button>
           </div>
           <div className="ProductActions__info-buttons--icon">

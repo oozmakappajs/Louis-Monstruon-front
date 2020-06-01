@@ -23,19 +23,19 @@ const Layout = (props) => {
   switch (pathname) {
     case '/notifications':
       headerType = 'page';
-      headerTitle = 'Notificaciones';
+      headerTitle = 'Notifications';
       break;
     case '/search':
       headerType = 'search';
       break;
     case '/cart':
       headerType = 'page';
-      headerTitle = 'Carrito';
+      headerTitle = 'Cart';
       contentStyle = 'CartContainer';
       break;
     case '/settings':
       headerType = 'leftIcons';
-      headerTitle = 'Configuraciones';
+      headerTitle = 'Settings';
       break;
     case '/login':
       headerType = 'back';

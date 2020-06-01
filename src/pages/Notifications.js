@@ -26,7 +26,7 @@ const Notifications = (props) => {
           kw="Stripe, Clothes, Store"
         />
         <section className="notifications">
-          <h1 className="notifications_withoutPermisions">Request Notifications Permision Modal</h1>
+          <h1 className="notifications_withoutPermisions">You have no notifications at the moment</h1>
         </section>
       </>
     );
@@ -57,7 +57,7 @@ const Notifications = (props) => {
         <CartNotification />
         <CartNotification />
         <div className="notifications_deleteAll">
-          <Button name="error" action={handleDeleteNotifications}>Borrar Todo</Button>
+          <Button name="error" action={handleDeleteNotifications}>Delete all</Button>
         </div>
       </section>
     </>

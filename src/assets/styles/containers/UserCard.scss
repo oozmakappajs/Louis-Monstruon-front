@@ -18,6 +18,7 @@
     object-fit: contain;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    background: map-get(map-get($palette,lightTheme), white);
     &-container {
       height: 100%;
       width: 80px;

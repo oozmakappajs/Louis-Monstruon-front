@@ -61,7 +61,7 @@ const CartContainer = (props) => {
             </p>
           </div>
         </div>
-        <Button name="success" action={goToPayment}>Pagar</Button>
+        <Button name="success" action={goToPayment}>Buy</Button>
       </div>
     </>
   );

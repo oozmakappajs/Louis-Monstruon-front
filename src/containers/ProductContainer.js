@@ -48,7 +48,7 @@ const ProductContainer = (props) => {
         </div>
         <div className="ProductContainer__info-buttons">
           <div className="ProductContainer__info-buttons--btn">
-            <Button name="success" action={() => goToPayment(item)}>Comprar ahora</Button>
+            <Button name="success" action={() => goToPayment(item)}>Buy now</Button>
           </div>
           <div className="ProductContainer__info-buttons--icon">
             <IconButton type="cart" action={() => addToCart(item)} isBuying />

@@ -6,6 +6,10 @@
   padding: 12px;
   overflow-x: auto;
   overflow-y: hidden;
+  h1 {
+    font-family: 'Quicksand Bold';
+    margin: 0 0 10px 10px;
+  }
 }
 
 .categories {
@@ -15,7 +19,8 @@
   &-title {
     margin-top: 10px;
     display: block;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand Bold';
+    text-transform: uppercase;
   }
 }
 
