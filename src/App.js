@@ -19,7 +19,6 @@ const Register = React.lazy(() => import('./pages/Register'));
 const Payment = React.lazy(() => import('./pages/Payment'));
 
 const App = () => {
-
   return (
     <BrowserRouter>
       <Layout>
@@ -45,4 +44,3 @@ const App = () => {
 };
 
 export default App;
-

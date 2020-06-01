@@ -75,7 +75,7 @@ const Login = (props) => {
         </section>
         <section className="goToRegister">
           <div className="login__separator" />
-          <Button name="base-purple" buttonType="button" action={() => { goTo('/register'); }}>Registrate</Button>
+          <Button name="base-purple" buttonType="button" action={() => { goTo('/register?step=1'); }}>Registrate</Button>
           <Button name="image" buttonType="button">Registrate con </Button>
         </section>
       </main>

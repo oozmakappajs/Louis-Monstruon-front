@@ -8,7 +8,12 @@ import '../../assets/styles/components/elements/Button.scss';
 
 const Button = (props) => {
   return (
-    <button type={props.buttonType} className={`Button Button--${props.name}`} onClick={props.action}>
+    <button
+      type={props.buttonType}
+      form={props.form ? props.form : ''}
+      className={`Button Button--${props.name}`}
+      onClick={props.action}
+    >
       {props.children}
       {
         props.name === 'image' &&
@@ -21,6 +26,7 @@ const Button = (props) => {
 Button.propTypes = {
   name: PropTypes.string.isRequired,
   buttonType: PropTypes.string,
+  form: PropTypes.string,
   action: PropTypes.func,
   children: PropTypes.node.isRequired,
 };
