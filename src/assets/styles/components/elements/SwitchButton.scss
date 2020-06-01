@@ -33,7 +33,6 @@
   bottom: 0;
   &::before {
     position: absolute;
-    content: "";
     height: 28px;
     width: 28px;
     left: 2px;
@@ -53,7 +52,6 @@
     }
     &::after {
       position: absolute;
-      content: "";
       height: 28px;
       width: 28px;
       left: 32px;
